@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://lixin.ai/ReMaRk/assets/fig_teaser.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141a24'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23f2a65a'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d9480f'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='19' font-weight='800' text-anchor='middle' fill='%23fff'%3ER%3C/text%3E%3C/svg%3E">
 <script>
   /* 先于首帧确定主题，避免闪烁；存储不可用时跟随系统 */
   (function () {
@@ -191,6 +191,28 @@
     .copy { top: 8px; right: 8px; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+
+  /* ===== ReMaRk 自己的配色和标识（和 ErrOPD 区分）：冷灰底、无衬线粗标题、橙色主色 ===== */
+  :root { --bg: #f6f7fa; --bg-2: #edf0f5; --line: #e1e5ec; --line-2: #cfd5df; --accent: #c2410c; --rkl: #1d6fb8; --fkl: #d9480f;
+          --head: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0d1117; --bg-2: #121821; --surface: #161d27; --line: #232c39; --line-2: #2f3a4a; --accent: #fb8a4c; --rkl: #6cb4f0; --fkl: #ff8f4d; } }
+  :root[data-theme="dark"] { --bg: #0d1117; --bg-2: #121821; --surface: #161d27; --line: #232c39; --line-2: #2f3a4a; --accent: #fb8a4c; --rkl: #6cb4f0; --fkl: #ff8f4d; }
+  h1, h2, .brand, .card .num, .eq { font-family: var(--head); }
+  h1 { font-weight: 800; letter-spacing: -.025em; }
+  h1 .name { letter-spacing: -.035em; font-size: 1.2em; }
+  h1 .q { font-weight: 650; letter-spacing: -.015em; font-size: .7em; line-height: 1.18; max-width: 860px; margin-left: auto; margin-right: auto; }
+  h2 { font-weight: 800; letter-spacing: -.02em; }
+  .brand { font-weight: 800; letter-spacing: -.02em; }
+  .card .num { font-weight: 800; letter-spacing: -.02em; }
+  .hero { position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -40% -10% auto -10%; height: 760px; z-index: -1; pointer-events: none;
+                  background: radial-gradient(42% 46% at 28% 40%, color-mix(in srgb, var(--rkl) 13%, transparent), transparent 70%),
+                              radial-gradient(40% 44% at 74% 36%, color-mix(in srgb, var(--fkl) 14%, transparent), transparent 70%); }
+  .venue i { background: var(--accent); }
+  .btn:not(.ghost) { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .tldr { border-left: 4px solid var(--accent); }
+  :root[data-theme="dark"] .btn:not(.ghost) { color: #1b0d04; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn:not(.ghost) { color: #1b0d04; } }
 </style>
 </head>
 <body>
