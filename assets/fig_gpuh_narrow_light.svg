@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 582" width="340" height="582" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" style="font-variant-numeric: tabular-nums">
+<line x1="0.0" y1="10.0" x2="24.0" y2="10.0" stroke="#047857" stroke-width="2.2"/>
+<path d="M12.0 4.5L16.4 10.0L12.0 15.5L7.6 10.0Z" fill="#047857"/>
+<text x="31.0" y="14.5" font-size="12.5" fill="#334155">ReMaRk</text>
+<line x1="102.0" y1="10.0" x2="126.0" y2="10.0" stroke="#8494aa" stroke-width="2"/>
+<circle cx="114.0" cy="10.0" r="4.4" fill="#8494aa"/>
+<text x="133.0" y="14.5" font-size="12.5" fill="#334155">Rank-GRPO</text>
+<text x="0.0" y="40.0" font-size="12" fill="#64748b">Val. R@20 (best ckpt so far)</text>
+<text x="0.0" y="66.0" font-size="13" fill="#0b1220" font-weight="600">Qwen3.5-2B (2 seeds)</text>
+<line x1="26.0" y1="148.0" x2="334.0" y2="148.0" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="152.0" font-size="12" fill="#64748b" text-anchor="end">20</text>
+<line x1="26.0" y1="99.6" x2="334.0" y2="99.6" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="103.6" font-size="12" fill="#64748b" text-anchor="end">25</text>
+<line x1="26.0" y1="182.0" x2="334.0" y2="182.0" stroke="#cbd5e1" stroke-width="1"/>
+<line x1="26.0" y1="182.0" x2="26.0" y2="186.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="26.0" y="200.0" font-size="12" fill="#64748b" text-anchor="middle">0</text>
+<line x1="296.4" y1="182.0" x2="296.4" y2="186.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="296.4" y="200.0" font-size="12" fill="#64748b" text-anchor="middle">50</text>
+<line x1="26.0" y1="78.0" x2="26.0" y2="182.0" stroke="#cbd5e1" stroke-width="1"/>
+<path d="M26.0 176.2L37.6 145.5L48.1 134.6L58.5 124.0L68.9 120.1L79.3 118.8L89.7 114.8L100.2 113.2L110.7 107.7L121.0 105.9L131.5 105.9L141.9 104.0L152.4 102.0L162.9 100.9L173.3 98.9L183.8 97.5L194.3 97.5L204.8 97.5L215.2 96.9L226.9 93.3L236.4 93.3L246.1 91.7L256.4 91.7L267.0 91.7L277.3 90.6L287.7 90.6L299.2 90.6L308.9 90.4L313.8 89.5L319.3 88.9L319.3 91.7L313.8 91.7L308.9 91.7L299.2 91.7L287.7 91.7L277.3 91.7L267.0 92.1L256.4 93.4L246.1 94.4L236.4 94.4L226.9 96.9L215.2 97.1L204.8 97.8L194.3 100.4L183.8 100.7L173.3 103.8L162.9 103.8L152.4 103.8L141.9 106.3L131.5 106.5L121.0 112.2L110.7 117.3L100.2 117.9L89.7 117.9L79.3 121.6L68.9 125.7L58.5 128.6L48.1 137.2L37.6 146.2L26.0 176.2Z" fill="#8494aa" opacity=".18"/>
+<path d="M26.0 176.2L37.6 145.9L48.1 135.9L58.5 126.3L68.9 122.9L79.3 120.2L89.7 116.4L100.2 115.6L110.7 112.5L121.0 109.1L131.5 106.2L141.9 105.1L152.4 102.9L162.9 102.3L173.3 101.4L183.8 99.1L194.3 98.9L204.8 97.6L215.2 97.0L226.9 95.1L236.4 93.8L246.1 93.1L256.4 92.5L267.0 91.9L277.3 91.2L287.7 91.2L299.2 91.2L308.9 91.0L313.8 90.6L319.3 90.3" fill="none" stroke="#8494aa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="319.3" cy="90.3" r="4.5" fill="#8494aa" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M26.0 176.2L39.8 133.3L50.0 121.0L60.2 111.1L70.3 105.5L80.3 101.0L90.3 98.0L100.4 92.3L110.8 92.3L120.9 92.1L131.1 91.7L141.3 90.5L151.2 89.1L161.3 89.1L171.6 89.1L181.9 89.1L192.0 88.5L202.3 88.5L212.6 87.7L212.6 88.5L202.3 89.2L192.0 89.2L181.9 89.2L171.6 89.2L161.3 90.2L151.2 90.2L141.3 90.6L131.1 92.3L120.9 92.3L110.8 94.5L100.4 97.8L90.3 99.0L80.3 102.8L70.3 107.3L60.2 115.3L50.0 122.2L39.8 135.4L26.0 176.2Z" fill="#047857" opacity=".18"/>
+<path d="M26.0 176.2L39.8 134.4L50.0 121.6L60.2 113.2L70.3 106.4L80.3 101.9L90.3 98.5L100.4 95.0L110.8 93.4L120.9 92.2L131.1 92.0L141.3 90.5L151.2 89.7L161.3 89.7L171.6 89.2L181.9 89.2L192.0 88.8L202.3 88.8L212.6 88.1" fill="none" stroke="#047857" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M212.6 82.1L217.4 88.1L212.6 94.1L207.8 88.1Z" fill="#047857" stroke="#ffffff" stroke-width="1.2"/>
+<text x="180.0" y="218.0" font-size="12.5" fill="#334155" text-anchor="middle">GPU-h</text>
+<text x="0.0" y="244.0" font-size="13" fill="#0b1220" font-weight="600">Qwen3.5-4B</text>
+<line x1="26.0" y1="337.5" x2="334.0" y2="337.5" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="341.5" font-size="12" fill="#64748b" text-anchor="end">20</text>
+<line x1="26.0" y1="293.8" x2="334.0" y2="293.8" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="297.8" font-size="12" fill="#64748b" text-anchor="end">25</text>
+<line x1="26.0" y1="360.0" x2="334.0" y2="360.0" stroke="#cbd5e1" stroke-width="1"/>
+<line x1="26.0" y1="360.0" x2="26.0" y2="364.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="26.0" y="378.0" font-size="12" fill="#64748b" text-anchor="middle">0</text>
+<line x1="247.8" y1="360.0" x2="247.8" y2="364.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="247.8" y="378.0" font-size="12" fill="#64748b" text-anchor="middle">50</text>
+<line x1="26.0" y1="256.0" x2="26.0" y2="360.0" stroke="#cbd5e1" stroke-width="1"/>
+<path d="M26.0 354.8L41.9 315.8L56.1 305.9L69.7 301.5L83.3 289.7L97.3 285.5L111.5 285.5L125.5 283.0L139.4 281.7L153.7 278.0L167.7 278.0L181.9 277.8L195.8 276.2L209.6 275.3L223.3 275.3L236.7 274.5L250.7 274.5L264.7 274.5L278.6 273.6L291.8 271.2L305.6 270.6L319.3 268.5" fill="none" stroke="#8494aa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="319.3" cy="268.5" r="4.5" fill="#8494aa" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M26.0 354.8L43.3 302.5L58.5 289.4L73.1 280.5L87.8 277.2L102.4 274.7L117.0 271.1L131.8 269.1L147.2 269.1L162.1 267.8L176.5 267.8L191.6 265.5L206.1 264.7" fill="none" stroke="#047857" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M206.1 258.7L210.9 264.7L206.1 270.7L201.3 264.7Z" fill="#047857" stroke="#ffffff" stroke-width="1.2"/>
+<text x="180.0" y="396.0" font-size="12.5" fill="#334155" text-anchor="middle">GPU-h</text>
+<text x="0.0" y="422.0" font-size="13" fill="#0b1220" font-weight="600">Qwen3.5-9B</text>
+<line x1="26.0" y1="522.7" x2="334.0" y2="522.7" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="526.7" font-size="12" fill="#64748b" text-anchor="end">20</text>
+<line x1="26.0" y1="479.3" x2="334.0" y2="479.3" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="483.3" font-size="12" fill="#64748b" text-anchor="end">25</text>
+<line x1="26.0" y1="435.9" x2="334.0" y2="435.9" stroke="#e8edf3" stroke-width="1"/>
+<text x="20.0" y="439.9" font-size="12" fill="#64748b" text-anchor="end">30</text>
+<line x1="26.0" y1="538.0" x2="334.0" y2="538.0" stroke="#cbd5e1" stroke-width="1"/>
+<line x1="26.0" y1="538.0" x2="26.0" y2="542.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="26.0" y="556.0" font-size="12" fill="#64748b" text-anchor="middle">0</text>
+<line x1="151.1" y1="538.0" x2="151.1" y2="542.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="151.1" y="556.0" font-size="12" fill="#64748b" text-anchor="middle">50</text>
+<line x1="276.2" y1="538.0" x2="276.2" y2="542.0" stroke="#cbd5e1" stroke-width="1"/>
+<text x="276.2" y="556.0" font-size="12" fill="#64748b" text-anchor="middle">100</text>
+<line x1="26.0" y1="434.0" x2="26.0" y2="538.0" stroke="#cbd5e1" stroke-width="1"/>
+<path d="M26.0 532.8L37.1 495.1L47.5 483.2L57.4 473.3L67.3 464.8L77.6 463.7L87.9 463.2L98.1 460.0L108.2 459.9L118.7 457.0L128.9 457.0L139.3 456.1L149.3 456.1L159.4 456.1L169.4 456.1L179.2 451.8L189.4 451.0L199.6 451.0L209.7 450.9L219.3 449.5L229.4 449.5L239.4 449.5L249.6 449.5L259.8 446.6L270.0 446.6L279.7 446.6L289.5 446.6L299.4 446.6L309.1 446.6L319.3 442.7" fill="none" stroke="#8494aa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="319.3" cy="442.7" r="4.5" fill="#8494aa" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M26.0 532.8L37.9 483.9L48.9 463.8L59.6 458.2L70.3 454.2L81.0 453.1L91.7 449.3L102.5 449.3L113.7 449.3L124.6 448.3L135.1 447.2L146.1 445.5" fill="none" stroke="#047857" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M146.1 439.5L150.9 445.5L146.1 451.5L141.3 445.5Z" fill="#047857" stroke="#ffffff" stroke-width="1.2"/>
+<text x="180.0" y="574.0" font-size="12.5" fill="#334155" text-anchor="middle">GPU-h</text>
+</svg>

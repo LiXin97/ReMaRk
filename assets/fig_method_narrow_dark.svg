@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 698" width="340" height="698" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" style="font-variant-numeric: tabular-nums">
+<text x="2.0" y="16.0" font-size="14" fill="#a7b4c6" font-weight="700">Rank-GRPO</text>
+<text x="178.0" y="16.0" font-size="14" fill="#34d399" font-weight="700">ReMaRk <tspan font-weight="400" font-size="12.5">(ours)</tspan></text>
+<rect x="0.0" y="30.0" width="340.0" height="1.0" fill="#2c3a4f"/>
+<circle cx="11.0" cy="51.0" r="11.0" fill="#1a2333" stroke="#2c3a4f" stroke-width="1"/>
+<text x="11.0" y="55.5" font-size="12.5" fill="#e8eef6" text-anchor="middle" font-weight="700">1</text>
+<text x="28.0" y="56.0" font-size="15" fill="#e8eef6" font-weight="700">Sample</text>
+<text x="340.0" y="56.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">Change sampling</text>
+<line x1="168.0" y1="68.0" x2="168.0" y2="204.0" stroke="#2c3a4f" stroke-width="1" stroke-dasharray="3 4"/>
+<rect x="20.0" y="70.0" width="112.0" height="46.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<circle cx="123.0" cy="79.0" r="3.6" fill="#7dbb9f"/>
+<rect x="15.0" y="76.0" width="112.0" height="46.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<circle cx="118.0" cy="85.0" r="3.6" fill="#dcb664"/>
+<rect x="10.0" y="82.0" width="112.0" height="46.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<circle cx="113.0" cy="91.0" r="3.6" fill="#a495d6"/>
+<rect x="5.0" y="88.0" width="112.0" height="46.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<circle cx="108.0" cy="97.0" r="3.6" fill="#d68fa1"/>
+<rect x="0.0" y="94.0" width="112.0" height="46.0" fill="#111824" stroke="#b8c4d4" stroke-width="1.2" rx="3"/>
+<circle cx="103.0" cy="103.0" r="3.6" fill="#8fa2cc"/>
+<text x="7.0" y="111.0" font-size="11" fill="#e8eef6" font-weight="600">Request</text>
+<rect x="7.0" y="119.0" width="82.0" height="4.0" fill="#2f3d52" rx="2"/>
+<rect x="7.0" y="127.0" width="62.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="0.0" y="162.0" font-size="12" fill="#e8eef6">One row per responder</text>
+<rect x="-0.0" y="174.0" width="112.1" height="24.0" fill="#1a2333" stroke="#2c3a4f" stroke-width="1" rx="12"/>
+<text x="56.0" y="190.3" font-size="12" fill="#a7b4c6" text-anchor="middle" font-weight="600">Row sampling</text>
+<rect x="176.0" y="78.0" width="130.0" height="46.0" fill="#111824" stroke="#34d399" stroke-width="1.6" rx="3"/>
+<text x="183.0" y="95.0" font-size="11" fill="#e8eef6" font-weight="600">Request</text>
+<rect x="183.0" y="103.0" width="100.0" height="4.0" fill="#2f3d52" rx="2"/>
+<rect x="183.0" y="111.0" width="80.0" height="4.0" fill="#2f3d52" rx="2"/>
+<path d="M180.6 147.6C180.6 140.8 184.4 139.4 188.0 139.4C191.6 139.4 195.4 140.8 195.4 147.6Z" fill="#8fa2cc"/>
+<circle cx="188.0" cy="135.6" r="3.4" fill="#8fa2cc"/>
+<path d="M207.1 147.6C207.1 140.8 210.9 139.4 214.5 139.4C218.1 139.4 221.9 140.8 221.9 147.6Z" fill="#d68fa1"/>
+<circle cx="214.5" cy="135.6" r="3.4" fill="#d68fa1"/>
+<path d="M233.6 147.6C233.6 140.8 237.4 139.4 241.0 139.4C244.6 139.4 248.4 140.8 248.4 147.6Z" fill="#a495d6"/>
+<circle cx="241.0" cy="135.6" r="3.4" fill="#a495d6"/>
+<path d="M260.1 147.6C260.1 140.8 263.9 139.4 267.5 139.4C271.1 139.4 274.9 140.8 274.9 147.6Z" fill="#dcb664"/>
+<circle cx="267.5" cy="135.6" r="3.4" fill="#dcb664"/>
+<path d="M286.6 147.6C286.6 140.8 290.4 139.4 294.0 139.4C297.6 139.4 301.4 140.8 301.4 147.6Z" fill="#7dbb9f"/>
+<circle cx="294.0" cy="135.6" r="3.4" fill="#7dbb9f"/>
+<text x="176.0" y="162.0" font-size="12" fill="#e8eef6">One row per request</text>
+<rect x="172.7" y="172.5" width="134.6" height="39.0" fill="#123327" stroke="#1f6b4f" stroke-width="1" rx="12"/>
+<text x="240.0" y="188.8" font-size="12" fill="#34d399" text-anchor="middle" font-weight="600">Uniform request</text>
+<text x="240.0" y="203.8" font-size="12" fill="#34d399" text-anchor="middle" font-weight="600">sampling</text>
+<rect x="0.0" y="218.0" width="340.0" height="1.0" fill="#2c3a4f"/>
+<circle cx="11.0" cy="239.0" r="11.0" fill="#1a2333" stroke="#2c3a4f" stroke-width="1"/>
+<text x="11.0" y="243.5" font-size="12.5" fill="#e8eef6" text-anchor="middle" font-weight="700">2</text>
+<text x="28.0" y="244.0" font-size="15" fill="#e8eef6" font-weight="700">Generate</text>
+<line x1="168.0" y1="256.0" x2="168.0" y2="392.0" stroke="#2c3a4f" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="15.0" y1="274.0" x2="15.0" y2="269.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="8.0" y1="281.0" x2="3.0" y2="281.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="15.0" y1="302.0" x2="15.0" y2="307.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="36.0" y1="281.0" x2="41.0" y2="281.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="22.0" y1="274.0" x2="22.0" y2="269.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="8.0" y1="288.0" x2="3.0" y2="288.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="22.0" y1="302.0" x2="22.0" y2="307.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="36.0" y1="288.0" x2="41.0" y2="288.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="29.0" y1="274.0" x2="29.0" y2="269.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="8.0" y1="295.0" x2="3.0" y2="295.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="29.0" y1="302.0" x2="29.0" y2="307.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="36.0" y1="295.0" x2="41.0" y2="295.0" stroke="#b8c4d4" stroke-width="2"/>
+<rect x="8.0" y="274.0" width="28.0" height="28.0" fill="#111824" stroke="#b8c4d4" stroke-width="2.2" rx="5"/>
+<text x="22.0" y="292.0" font-size="11" fill="#e8eef6" text-anchor="middle" font-weight="700">LLM</text>
+<line x1="44.0" y1="288.0" x2="58.0" y2="288.0" stroke="#b8c4d4" stroke-width="1.6"/>
+<path d="M64.0 288.0L58.0 284.3L58.0 291.7Z" fill="#b8c4d4"/>
+<rect x="78.0" y="252.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="73.0" y="257.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="68.0" y="262.0" width="44.0" height="58.0" fill="#111824" stroke="#b8c4d4" stroke-width="1.2" rx="3"/>
+<text x="74.0" y="274.5" font-size="9.5" fill="#8a98ad">1</text>
+<rect x="84.0" y="269.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="74.0" y="284.5" font-size="9.5" fill="#8a98ad">2</text>
+<rect x="84.0" y="279.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="74.0" y="294.5" font-size="9.5" fill="#8a98ad">3</text>
+<rect x="84.0" y="289.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="74.0" y="304.5" font-size="9.5" fill="#8a98ad">4</text>
+<rect x="84.0" y="299.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="74.0" y="314.5" font-size="9.5" fill="#8a98ad">5</text>
+<rect x="84.0" y="309.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="0.0" y="344.0" font-size="12" fill="#e8eef6">Generate candidate lists</text>
+<line x1="191.0" y1="274.0" x2="191.0" y2="269.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="184.0" y1="281.0" x2="179.0" y2="281.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="191.0" y1="302.0" x2="191.0" y2="307.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="212.0" y1="281.0" x2="217.0" y2="281.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="198.0" y1="274.0" x2="198.0" y2="269.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="184.0" y1="288.0" x2="179.0" y2="288.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="198.0" y1="302.0" x2="198.0" y2="307.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="212.0" y1="288.0" x2="217.0" y2="288.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="205.0" y1="274.0" x2="205.0" y2="269.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="184.0" y1="295.0" x2="179.0" y2="295.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="205.0" y1="302.0" x2="205.0" y2="307.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="212.0" y1="295.0" x2="217.0" y2="295.0" stroke="#b8c4d4" stroke-width="2"/>
+<rect x="184.0" y="274.0" width="28.0" height="28.0" fill="#111824" stroke="#b8c4d4" stroke-width="2.2" rx="5"/>
+<text x="198.0" y="292.0" font-size="11" fill="#e8eef6" text-anchor="middle" font-weight="700">LLM</text>
+<line x1="220.0" y1="288.0" x2="234.0" y2="288.0" stroke="#b8c4d4" stroke-width="1.6"/>
+<path d="M240.0 288.0L234.0 284.3L234.0 291.7Z" fill="#b8c4d4"/>
+<rect x="254.0" y="252.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="249.0" y="257.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="244.0" y="262.0" width="44.0" height="58.0" fill="#111824" stroke="#b8c4d4" stroke-width="1.2" rx="3"/>
+<text x="250.0" y="274.5" font-size="9.5" fill="#8a98ad">1</text>
+<rect x="260.0" y="269.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="250.0" y="284.5" font-size="9.5" fill="#8a98ad">2</text>
+<rect x="260.0" y="279.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="250.0" y="294.5" font-size="9.5" fill="#8a98ad">3</text>
+<rect x="260.0" y="289.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="250.0" y="304.5" font-size="9.5" fill="#8a98ad">4</text>
+<rect x="260.0" y="299.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="250.0" y="314.5" font-size="9.5" fill="#8a98ad">5</text>
+<rect x="260.0" y="309.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="176.0" y="344.0" font-size="12" fill="#e8eef6">Generate candidate lists</text>
+<rect x="0.0" y="358.0" width="340.0" height="1.0" fill="#2c3a4f"/>
+<circle cx="11.0" cy="379.0" r="11.0" fill="#1a2333" stroke="#2c3a4f" stroke-width="1"/>
+<text x="11.0" y="383.5" font-size="12.5" fill="#e8eef6" text-anchor="middle" font-weight="700">3</text>
+<text x="28.0" y="384.0" font-size="15" fill="#e8eef6" font-weight="700">Score</text>
+<text x="340.0" y="384.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">Pool references</text>
+<line x1="168.0" y1="396.0" x2="168.0" y2="532.0" stroke="#2c3a4f" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="0.0" y="402.0" font-size="12" fill="#e8eef6" font-weight="700">Single-responder</text>
+<text x="0.0" y="417.0" font-size="12" fill="#e8eef6" font-weight="700">reward</text>
+<rect x="0.0" y="430.0" width="70.0" height="24.0" fill="#111824" stroke="#b8c4d4" stroke-width="1.2" rx="3"/>
+<path d="M4.9 449.1C4.9 443.5 8.0 442.4 11.0 442.4C14.0 442.4 17.1 443.5 17.1 449.1Z" fill="#8fa2cc"/>
+<circle cx="11.0" cy="439.1" r="2.9" fill="#8fa2cc"/>
+<text x="22.0" y="446.0" font-size="11" fill="#e8eef6" font-weight="600">User</text>
+<path d="M70 442H104Q110 442 110 448V458" fill="none" stroke="#a7b4c6" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M110.0 464.0L106.3 458.0L113.7 458.0Z" fill="#a7b4c6"/>
+<path d="M119.8 491.8L127.5 499.5" stroke="#b8c4d4" stroke-width="3.9" stroke-linecap="round"/>
+<circle cx="110.0" cy="482.0" r="14.0" fill="#111824" stroke="#b8c4d4" stroke-width="2.4"/>
+<circle cx="104.7" cy="476.1" r="2.1" fill="#34d399"/>
+<rect x="108.3" y="475.3" width="8.7" height="1.7" fill="#2f3d52" rx="1"/>
+<circle cx="104.7" cy="482.0" r="2.0" fill="none" stroke="#8a98ad" stroke-width="1.2"/>
+<rect x="108.3" y="481.2" width="8.7" height="1.7" fill="#2f3d52" rx="1"/>
+<circle cx="104.7" cy="487.9" r="2.0" fill="none" stroke="#8a98ad" stroke-width="1.2"/>
+<rect x="108.3" y="487.0" width="8.7" height="1.7" fill="#2f3d52" rx="1"/>
+<text x="0.0" y="474.0" font-size="12" fill="#b8c4d4">One responder</text>
+<text x="176.0" y="402.0" font-size="12" fill="#34d399" font-weight="700">Union reward</text>
+<text x="176.0" y="417.0" font-size="12" fill="#b8c4d4">Binary item rewards</text>
+<rect x="176.0" y="428.0" width="44.0" height="14.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="2"/>
+<path d="M178.9 439.8C178.9 436.0 181.0 435.2 183.0 435.2C185.0 435.2 187.1 436.0 187.1 439.8Z" fill="#8fa2cc"/>
+<circle cx="183.0" cy="433.1" r="1.9" fill="#8fa2cc"/>
+<text x="190.0" y="438.5" font-size="9.5" fill="#e8eef6" font-weight="600">User</text>
+<path d="M220 435C228 435 228 468 234 468" fill="none" stroke="#34d399" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="176.0" y="444.0" width="44.0" height="14.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="2"/>
+<path d="M178.9 455.8C178.9 452.0 181.0 451.2 183.0 451.2C185.0 451.2 187.1 452.0 187.1 455.8Z" fill="#d68fa1"/>
+<circle cx="183.0" cy="449.1" r="1.9" fill="#d68fa1"/>
+<text x="190.0" y="454.5" font-size="9.5" fill="#e8eef6" font-weight="600">User</text>
+<path d="M220 451C228 451 228 468 234 468" fill="none" stroke="#34d399" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="176.0" y="460.0" width="44.0" height="14.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="2"/>
+<path d="M178.9 471.8C178.9 468.0 181.0 467.2 183.0 467.2C185.0 467.2 187.1 468.0 187.1 471.8Z" fill="#a495d6"/>
+<circle cx="183.0" cy="465.1" r="1.9" fill="#a495d6"/>
+<text x="190.0" y="470.5" font-size="9.5" fill="#e8eef6" font-weight="600">User</text>
+<path d="M220 467C228 467 228 468 234 468" fill="none" stroke="#34d399" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="176.0" y="476.0" width="44.0" height="14.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="2"/>
+<path d="M178.9 487.8C178.9 484.0 181.0 483.2 183.0 483.2C185.0 483.2 187.1 484.0 187.1 487.8Z" fill="#dcb664"/>
+<circle cx="183.0" cy="481.1" r="1.9" fill="#dcb664"/>
+<text x="190.0" y="486.5" font-size="9.5" fill="#e8eef6" font-weight="600">User</text>
+<path d="M220 483C228 483 228 468 234 468" fill="none" stroke="#34d399" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="176.0" y="492.0" width="44.0" height="14.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="2"/>
+<path d="M178.9 503.8C178.9 500.0 181.0 499.2 183.0 499.2C185.0 499.2 187.1 500.0 187.1 503.8Z" fill="#7dbb9f"/>
+<circle cx="183.0" cy="497.1" r="1.9" fill="#7dbb9f"/>
+<text x="190.0" y="502.5" font-size="9.5" fill="#e8eef6" font-weight="600">User</text>
+<path d="M220 499C228 499 228 468 234 468" fill="none" stroke="#34d399" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M234 464L234 454Q234 450 238 450L246.92 450L250.32 458L268 458L268 482L234 482Z" fill="#123327" stroke="#34d399" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="239.0" y="454.0" width="24.0" height="7.0" fill="#111824" stroke="#1f6b4f" stroke-width="1" rx="1.5"/>
+<line x1="270.0" y1="472.0" x2="276.0" y2="472.0" stroke="#34d399" stroke-width="1.6"/>
+<path d="M282.0 472.0L276.0 468.3L276.0 475.7Z" fill="#34d399"/>
+<path d="M307.1 481.1L314.2 488.2" stroke="#b8c4d4" stroke-width="3.6" stroke-linecap="round"/>
+<circle cx="298.0" cy="472.0" r="13.0" fill="#111824" stroke="#b8c4d4" stroke-width="2.4"/>
+<circle cx="293.1" cy="466.5" r="1.9" fill="#34d399"/>
+<rect x="296.4" y="465.8" width="8.1" height="1.6" fill="#2f3d52" rx="1"/>
+<circle cx="293.1" cy="472.0" r="1.8" fill="none" stroke="#8a98ad" stroke-width="1.2"/>
+<rect x="296.4" y="471.2" width="8.1" height="1.6" fill="#2f3d52" rx="1"/>
+<circle cx="293.1" cy="477.5" r="1.8" fill="none" stroke="#8a98ad" stroke-width="1.2"/>
+<rect x="296.4" y="476.7" width="8.1" height="1.6" fill="#2f3d52" rx="1"/>
+<rect x="0.0" y="522.0" width="340.0" height="1.0" fill="#2c3a4f"/>
+<circle cx="11.0" cy="543.0" r="11.0" fill="#1a2333" stroke="#2c3a4f" stroke-width="1"/>
+<text x="11.0" y="547.5" font-size="12.5" fill="#e8eef6" text-anchor="middle" font-weight="700">4</text>
+<text x="28.0" y="548.0" font-size="15" fill="#e8eef6" font-weight="700">Update</text>
+<text x="340.0" y="548.0" font-size="12.5" fill="#b8c4d4" text-anchor="end" font-weight="700">Same GRPO update</text>
+<line x1="168.0" y1="560.0" x2="168.0" y2="696.0" stroke="#2c3a4f" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="0.0" y="566.0" font-size="12" fill="#e8eef6" font-weight="700">Rank-wise group</text>
+<text x="0.0" y="581.0" font-size="12" fill="#e8eef6" font-weight="700">normalization</text>
+<rect x="14.0" y="588.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="9.0" y="593.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="4.0" y="598.0" width="44.0" height="58.0" fill="#111824" stroke="#b8c4d4" stroke-width="1.2" rx="3"/>
+<text x="10.0" y="610.5" font-size="9.5" fill="#8a98ad">1</text>
+<rect x="20.0" y="605.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="10.0" y="620.5" font-size="9.5" fill="#8a98ad">2</text>
+<rect x="20.0" y="615.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="10.0" y="630.5" font-size="9.5" fill="#8a98ad">3</text>
+<rect x="20.0" y="625.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="10.0" y="640.5" font-size="9.5" fill="#8a98ad">4</text>
+<rect x="20.0" y="635.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="10.0" y="650.5" font-size="9.5" fill="#8a98ad">5</text>
+<rect x="20.0" y="645.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<line x1="64.0" y1="627.0" x2="72.0" y2="627.0" stroke="#b8c4d4" stroke-width="1.6"/>
+<path d="M78.0 627.0L72.0 623.3L72.0 630.7Z" fill="#b8c4d4"/>
+<path d="M86.0 627.0A26 26 0 0 1 130.2 608.8" fill="none" stroke="#8a98ad" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M134.4 614.0L130.6 608.0L138.1 608.0Z" fill="#8a98ad"/>
+<path d="M138.0 627.0A26 26 0 0 1 93.8 645.2" fill="none" stroke="#8a98ad" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.6 640.0L85.9 646.0L93.4 646.0Z" fill="#8a98ad"/>
+<line x1="106.0" y1="615.0" x2="106.0" y2="610.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="100.0" y1="621.0" x2="95.0" y2="621.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="106.0" y1="639.0" x2="106.0" y2="644.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="124.0" y1="621.0" x2="129.0" y2="621.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="112.0" y1="615.0" x2="112.0" y2="610.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="100.0" y1="627.0" x2="95.0" y2="627.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="112.0" y1="639.0" x2="112.0" y2="644.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="124.0" y1="627.0" x2="129.0" y2="627.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="118.0" y1="615.0" x2="118.0" y2="610.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="100.0" y1="633.0" x2="95.0" y2="633.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="118.0" y1="639.0" x2="118.0" y2="644.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="124.0" y1="633.0" x2="129.0" y2="633.0" stroke="#b8c4d4" stroke-width="2"/>
+<rect x="100.0" y="615.0" width="24.0" height="24.0" fill="#111824" stroke="#b8c4d4" stroke-width="2.2" rx="5"/>
+<text x="112.0" y="631.0" font-size="11" fill="#e8eef6" text-anchor="middle" font-weight="700">LLM</text>
+<text x="112.0" y="686.0" font-size="12" fill="#e8eef6" text-anchor="middle">GRPO update</text>
+<text x="176.0" y="566.0" font-size="12" fill="#e8eef6" font-weight="700">Rank-wise group</text>
+<text x="176.0" y="581.0" font-size="12" fill="#e8eef6" font-weight="700">normalization</text>
+<rect x="190.0" y="588.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="185.0" y="593.0" width="44.0" height="58.0" fill="#111824" stroke="#2c3a4f" stroke-width="1" rx="3"/>
+<rect x="180.0" y="598.0" width="44.0" height="58.0" fill="#111824" stroke="#b8c4d4" stroke-width="1.2" rx="3"/>
+<text x="186.0" y="610.5" font-size="9.5" fill="#8a98ad">1</text>
+<rect x="196.0" y="605.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="186.0" y="620.5" font-size="9.5" fill="#8a98ad">2</text>
+<rect x="196.0" y="615.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="186.0" y="630.5" font-size="9.5" fill="#8a98ad">3</text>
+<rect x="196.0" y="625.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="186.0" y="640.5" font-size="9.5" fill="#8a98ad">4</text>
+<rect x="196.0" y="635.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<text x="186.0" y="650.5" font-size="9.5" fill="#8a98ad">5</text>
+<rect x="196.0" y="645.0" width="22.0" height="4.0" fill="#2f3d52" rx="2"/>
+<line x1="240.0" y1="627.0" x2="248.0" y2="627.0" stroke="#b8c4d4" stroke-width="1.6"/>
+<path d="M254.0 627.0L248.0 623.3L248.0 630.7Z" fill="#b8c4d4"/>
+<path d="M262.0 627.0A26 26 0 0 1 306.2 608.8" fill="none" stroke="#8a98ad" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M310.4 614.0L306.6 608.0L314.1 608.0Z" fill="#8a98ad"/>
+<path d="M314.0 627.0A26 26 0 0 1 269.8 645.2" fill="none" stroke="#8a98ad" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M265.6 640.0L261.9 646.0L269.4 646.0Z" fill="#8a98ad"/>
+<line x1="282.0" y1="615.0" x2="282.0" y2="610.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="276.0" y1="621.0" x2="271.0" y2="621.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="282.0" y1="639.0" x2="282.0" y2="644.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="300.0" y1="621.0" x2="305.0" y2="621.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="288.0" y1="615.0" x2="288.0" y2="610.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="276.0" y1="627.0" x2="271.0" y2="627.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="288.0" y1="639.0" x2="288.0" y2="644.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="300.0" y1="627.0" x2="305.0" y2="627.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="294.0" y1="615.0" x2="294.0" y2="610.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="276.0" y1="633.0" x2="271.0" y2="633.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="294.0" y1="639.0" x2="294.0" y2="644.0" stroke="#b8c4d4" stroke-width="2"/>
+<line x1="300.0" y1="633.0" x2="305.0" y2="633.0" stroke="#b8c4d4" stroke-width="2"/>
+<rect x="276.0" y="615.0" width="24.0" height="24.0" fill="#111824" stroke="#b8c4d4" stroke-width="2.2" rx="5"/>
+<text x="288.0" y="631.0" font-size="11" fill="#e8eef6" text-anchor="middle" font-weight="700">LLM</text>
+<text x="288.0" y="686.0" font-size="12" fill="#e8eef6" text-anchor="middle">GRPO update</text>
+</svg>

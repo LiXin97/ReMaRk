@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 618" width="340" height="618" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" style="font-variant-numeric: tabular-nums">
+<line x1="0.0" y1="12.0" x2="22.0" y2="12.0" stroke="#34d399" stroke-width="2"/>
+<path d="M11.0 6.5L15.4 12.0L11.0 17.5L6.6 12.0Z" fill="#34d399"/>
+<text x="29.0" y="16.5" font-size="12.5" fill="#b8c4d4">per row (seed 3407)</text>
+<circle cx="196.5" cy="12.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<text x="208.5" y="16.5" font-size="12.5" fill="#b8c4d4">other seeds</text>
+<line x1="0.0" y1="34.0" x2="22.0" y2="34.0" stroke="#8a98ad" stroke-width="1.6"/>
+<circle cx="11.0" cy="34.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<text x="29.0" y="38.5" font-size="12.5" fill="#b8c4d4">per request</text>
+<rect x="0.0" y="56.0" width="340.0" height="46.0" fill="#0e141e"/>
+<rect x="0.0" y="148.0" width="340.0" height="46.0" fill="#0e141e"/>
+<rect x="0.0" y="240.0" width="340.0" height="46.0" fill="#0e141e"/>
+<rect x="0.0" y="332.0" width="340.0" height="46.0" fill="#0e141e"/>
+<rect x="0.0" y="434.0" width="340.0" height="46.0" fill="#0e141e"/>
+<rect x="0.0" y="526.0" width="340.0" height="46.0" fill="#0e141e"/>
+<line x1="29.1" y1="52.0" x2="29.1" y2="574.0" stroke="#8a98ad" stroke-width="1.2"/>
+<line x1="115.5" y1="52.0" x2="115.5" y2="574.0" stroke="#1c2636" stroke-width="1"/>
+<line x1="201.9" y1="52.0" x2="201.9" y2="574.0" stroke="#1c2636" stroke-width="1"/>
+<line x1="288.3" y1="52.0" x2="288.3" y2="574.0" stroke="#1c2636" stroke-width="1"/>
+<line x1="0.0" y1="383.0" x2="340.0" y2="383.0" stroke="#2c3a4f" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="6.0" y="71.0" font-size="12.5" fill="#e8eef6">Qwen3.5-2B</text>
+<text x="334.0" y="71.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.57</text>
+<line x1="152.5" y1="94.0" x2="302.7" y2="94.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="152.5" y1="91.0" x2="152.5" y2="97.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="302.7" y1="91.0" x2="302.7" y2="97.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="227.2" cy="94.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="124.3" y1="83.0" x2="206.7" y2="83.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="124.3" y1="79.5" x2="124.3" y2="86.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="206.7" y1="79.5" x2="206.7" y2="86.5" stroke="#34d399" stroke-width="2.2"/>
+<circle cx="164.3" cy="83.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="148.8" cy="83.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="149.7" cy="83.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<path d="M164.3 77.2L169.0 83.0L164.3 88.8L159.7 83.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="117.0" font-size="12.5" fill="#e8eef6">Qwen3.5-4B</text>
+<text x="334.0" y="117.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.54</text>
+<line x1="186.1" y1="140.0" x2="323.6" y2="140.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="186.1" y1="137.0" x2="186.1" y2="143.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="323.6" y1="137.0" x2="323.6" y2="143.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="252.1" cy="140.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="123.8" y1="129.0" x2="201.6" y2="129.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="123.8" y1="125.5" x2="123.8" y2="132.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="201.6" y1="125.5" x2="201.6" y2="132.5" stroke="#34d399" stroke-width="2.2"/>
+<circle cx="162.5" cy="129.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="194.2" cy="129.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="158.5" cy="129.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<path d="M162.5 123.2L167.2 129.0L162.5 134.8L157.9 129.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="163.0" font-size="12.5" fill="#e8eef6">Qwen3.5-9B</text>
+<text x="334.0" y="163.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.46</text>
+<line x1="171.0" y1="186.0" x2="307.8" y2="186.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="171.0" y1="183.0" x2="171.0" y2="189.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="307.8" y1="183.0" x2="307.8" y2="189.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="236.3" cy="186.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="117.0" y1="175.0" x2="195.6" y2="175.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="117.0" y1="171.5" x2="117.0" y2="178.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="195.6" y1="171.5" x2="195.6" y2="178.5" stroke="#34d399" stroke-width="2.2"/>
+<circle cx="155.2" cy="175.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="176.9" cy="175.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="213.1" cy="175.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<path d="M155.2 169.2L159.8 175.0L155.2 180.8L150.5 175.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="209.0" font-size="12.5" fill="#e8eef6">Qwen3.5-27B</text>
+<text x="334.0" y="209.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.45</text>
+<line x1="88.3" y1="232.0" x2="223.4" y2="232.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="88.3" y1="229.0" x2="88.3" y2="235.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="223.4" y1="229.0" x2="223.4" y2="235.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="155.1" cy="232.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="113.4" y1="221.0" x2="197.0" y2="221.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="113.4" y1="217.5" x2="113.4" y2="224.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="197.0" y1="217.5" x2="197.0" y2="224.5" stroke="#34d399" stroke-width="2.2"/>
+<path d="M154.8 215.2L159.4 221.0L154.8 226.8L150.1 221.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="255.0" font-size="12.5" fill="#e8eef6">Qwen3.5-35B-A3B</text>
+<text x="334.0" y="255.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.47</text>
+<line x1="127.3" y1="278.0" x2="269.4" y2="278.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="127.3" y1="275.0" x2="127.3" y2="281.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="269.4" y1="275.0" x2="269.4" y2="281.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="197.9" cy="278.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="118.1" y1="267.0" x2="192.8" y2="267.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="118.1" y1="263.5" x2="118.1" y2="270.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="192.8" y1="263.5" x2="192.8" y2="270.5" stroke="#34d399" stroke-width="2.2"/>
+<path d="M155.7 261.2L160.3 267.0L155.7 272.8L151.1 267.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="301.0" font-size="12.5" fill="#e8eef6">Llama-3.2-3B</text>
+<text x="334.0" y="301.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.28</text>
+<line x1="108.9" y1="324.0" x2="247.2" y2="324.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="108.9" y1="321.0" x2="108.9" y2="327.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="247.2" y1="321.0" x2="247.2" y2="327.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="178.4" cy="324.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="103.1" y1="313.0" x2="176.7" y2="313.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="103.1" y1="309.5" x2="103.1" y2="316.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="176.7" y1="309.5" x2="176.7" y2="316.5" stroke="#34d399" stroke-width="2.2"/>
+<circle cx="139.8" cy="313.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="159.6" cy="313.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<path d="M139.8 307.2L144.4 313.0L139.8 318.8L135.1 313.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="347.0" font-size="12.5" fill="#e8eef6">Llama-3.1-8B</text>
+<text x="334.0" y="347.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.00</text>
+<line x1="76.5" y1="370.0" x2="216.0" y2="370.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="76.5" y1="367.0" x2="76.5" y2="373.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="216.0" y1="367.0" x2="216.0" y2="373.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="146.1" cy="370.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="76.8" y1="359.0" x2="153.7" y2="359.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="76.8" y1="355.5" x2="76.8" y2="362.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="153.7" y1="355.5" x2="153.7" y2="362.5" stroke="#34d399" stroke-width="2.2"/>
+<path d="M115.8 353.2L120.5 359.0L115.8 364.8L111.2 359.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="403.0" font-size="12.5" fill="#e8eef6">pooled (2B, 4B, 9B)</text>
+<text x="334.0" y="403.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+1.52</text>
+<line x1="133.3" y1="415.0" x2="188.4" y2="415.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="133.3" y1="411.5" x2="133.3" y2="418.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="188.4" y1="411.5" x2="188.4" y2="418.5" stroke="#34d399" stroke-width="2.2"/>
+<path d="M160.7 409.2L165.3 415.0L160.7 420.8L156.0 415.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="449.0" font-size="12.5" fill="#e8eef6">Reddit-Books (2B)</text>
+<text x="334.0" y="449.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+0.81</text>
+<line x1="16.4" y1="472.0" x2="160.5" y2="472.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="16.4" y1="469.0" x2="16.4" y2="475.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="160.5" y1="469.0" x2="160.5" y2="475.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="89.5" cy="472.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="45.2" y1="461.0" x2="155.6" y2="461.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="45.2" y1="457.5" x2="45.2" y2="464.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="155.6" y1="457.5" x2="155.6" y2="464.5" stroke="#34d399" stroke-width="2.2"/>
+<circle cx="99.2" cy="461.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="142.4" cy="461.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="75.5" cy="461.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<path d="M99.2 455.2L103.9 461.0L99.2 466.8L94.6 461.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="495.0" font-size="12.5" fill="#e8eef6">Reddit-Books (4B)</text>
+<text x="334.0" y="495.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+0.98</text>
+<line x1="73.3" y1="518.0" x2="225.5" y2="518.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="73.3" y1="515.0" x2="73.3" y2="521.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="225.5" y1="515.0" x2="225.5" y2="521.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="146.7" cy="518.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="59.0" y1="507.0" x2="171.2" y2="507.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="59.0" y1="503.5" x2="59.0" y2="510.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="171.2" y1="503.5" x2="171.2" y2="510.5" stroke="#34d399" stroke-width="2.2"/>
+<circle cx="114.1" cy="507.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<circle cx="131.7" cy="507.0" r="3.2" fill="#34d399" opacity="0.42"/>
+<path d="M114.1 501.2L118.8 507.0L114.1 512.8L109.5 507.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="6.0" y="541.0" font-size="12.5" fill="#e8eef6">Reddit-Music (2B)</text>
+<text x="334.0" y="541.0" font-size="12.5" fill="#34d399" text-anchor="end" font-weight="700">+0.78</text>
+<line x1="71.7" y1="564.0" x2="175.1" y2="564.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="71.7" y1="561.0" x2="71.7" y2="567.0" stroke="#8a98ad" stroke-width="1.5"/>
+<line x1="175.1" y1="561.0" x2="175.1" y2="567.0" stroke="#8a98ad" stroke-width="1.5"/>
+<circle cx="122.3" cy="564.0" r="3.8" fill="#111824" stroke="#8a98ad" stroke-width="1.8"/>
+<line x1="61.8" y1="553.0" x2="129.8" y2="553.0" stroke="#34d399" stroke-width="2.2"/>
+<line x1="61.8" y1="549.5" x2="61.8" y2="556.5" stroke="#34d399" stroke-width="2.2"/>
+<line x1="129.8" y1="549.5" x2="129.8" y2="556.5" stroke="#34d399" stroke-width="2.2"/>
+<path d="M96.1 547.2L100.8 553.0L96.1 558.8L91.5 553.0Z" fill="#34d399" stroke="#111824" stroke-width="1"/>
+<text x="29.1" y="590.0" font-size="12" fill="#8a98ad" text-anchor="middle">0</text>
+<text x="115.5" y="590.0" font-size="12" fill="#8a98ad" text-anchor="middle">1</text>
+<text x="201.9" y="590.0" font-size="12" fill="#8a98ad" text-anchor="middle">2</text>
+<text x="288.3" y="590.0" font-size="12" fill="#8a98ad" text-anchor="middle">3</text>
+<text x="170.0" y="610.0" font-size="12.5" fill="#b8c4d4" text-anchor="middle">Δ test R@20 (points)</text>
+</svg>
