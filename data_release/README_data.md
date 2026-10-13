@@ -7,11 +7,13 @@ Reddit-v2 (the movie dataset) is not re-hosted; it comes from the Rank-GRPO rele
 Files were written by `remark/scripts/release_export_ids.py`, which also asserts the alignment described below
 (`export_counts.json` holds the counts it verified).
 
-| dataset | requests file | responses file | catalog file |
-|---|---|---|---|
-| Reddit-Books | `books_requests.jsonl` | `books_responses.jsonl` | `books_catalog.tsv` |
-| Reddit-Books-Late | `books_late_requests.jsonl` | `books_late_responses.jsonl` | `books_late_catalog.tsv` |
-| Reddit-Music | `music_requests.jsonl` | `music_responses.jsonl` | `music_catalog.tsv` |
+| dataset | requests file | responses file | SFT targets file | catalog file |
+|---|---|---|---|---|
+| Reddit-Books | `books_requests.jsonl` | `books_responses.jsonl` | `books_sft_targets.jsonl` | `books_catalog.tsv` |
+| Reddit-Books-Late | `books_late_requests.jsonl` | `books_late_responses.jsonl` | `books_late_sft_targets.jsonl` | `books_late_catalog.tsv` |
+| Reddit-Music | `music_requests.jsonl` | `music_responses.jsonl` | `music_sft_targets.jsonl` | `music_catalog.tsv` |
+
+The `*_sft_targets.jsonl` files are written by `remark/scripts/release_export_sft_targets.py`.
 
 ## Fields
 
@@ -29,6 +31,13 @@ Files were written by `remark/scripts/release_export_ids.py`, which also asserts
 - `item_ids`: indices into the catalog file (`item_id` column), in the order the responder named the items; de-duplicated, with the items the requester already named removed. This is exactly the ground-truth list of the corresponding row of the training/evaluation datasets.
 - `comment_ids`: Reddit ids of the responder's top-level comments in this request.
 - Consensus weights are not stored: the weight of item `i` in a request is the fraction of its responders whose `item_ids` contain `i` (this is how the `grpo_consensus` / `grpo_union` training sets are built; union = the set of items).
+
+`*_sft_targets.jsonl` (one line per train request with `in_sft_train` = true, in the order of the requests file)
+- `request_id`
+- `item_ids`: the SFT target of the request as catalog indices, in list order (15 to 20 items). **These lists are LLM-generated**: the
+  teacher list is a GPT-5.6 recommendation list for the request, grounded to the catalog, with seen items and duplicates removed.
+  Every SFT training row of the request (one per responder) has this list as its completion, rendered one `title (year)` /
+  `name (year)` per line. The export checks that every line maps to a catalog item and that the rows align with `*_responses.jsonl`.
 
 `books_catalog.tsv`: `item_id`, `goodreads_work_ids`. `item_id` is the 0-based line index of the catalog (also the position in the sorted `(title, first-publication year)` list used by the code). `goodreads_work_ids` lists the Goodreads work id(s) of the item, comma separated (several works can share one `(title, year)` item; most-rated first). Titles and years are not included: they come from the UCSD Book Graph (Wan and McAuley, RecSys 2018; academic use) through the work id, i.e. look `goodreads_work_ids` up in the Book Graph works file. The item title in the datasets is the work's most frequent surface form in the Reddit mentions (made a fixed point of the Rank-GRPO title parser), so it can differ slightly from the Book Graph display title; the year is the Book Graph first-publication year.
 
@@ -75,4 +84,5 @@ Prompts are the request text of the Reddit submission (title and body, and the t
 to rebuild each prompt and then attach `item_ids` as the label lists. Deleted or removed posts cannot be recovered.
 
 ## Licences and sources
+The IDs and labels in this directory are released under CC BY-NC 4.0. Labels were produced with LLMs: item mentions were extracted from human-written comments by GPT-5.6 and grounded by deterministic rules; SFT targets are GPT-5.6 recommendation lists grounded to the catalogs.
 Reddit ids are public identifiers; no Reddit content is redistributed. Goodreads data (UCSD Book Graph) is academic-use only and is not redistributed here: only work ids are listed. MusicBrainz core data is CC0.

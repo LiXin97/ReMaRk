@@ -9,7 +9,12 @@
   "sft_train_requests": 31172,
   "sft_train_rows": 146633,
   "catalog": 74474,
-  "catalog_items_without_work": 0
+  "catalog_items_without_work": 0,
+  "sft_target_requests": 31172,
+  "sft_rows_covered": 146633,
+  "items_min": 15,
+  "items_max": 20,
+  "items_mean": 19.69
  },
  "books_late": {
   "train_requests": 32539,
@@ -21,7 +26,12 @@
   "sft_train_requests": 31172,
   "sft_train_rows": 146633,
   "catalog": 75537,
-  "catalog_items_without_work": 0
+  "catalog_items_without_work": 0,
+  "sft_target_requests": 31172,
+  "sft_rows_covered": 146633,
+  "items_min": 15,
+  "items_max": 20,
+  "items_mean": 19.69
  },
  "music": {
   "train_requests": 19159,
@@ -36,6 +46,11 @@
   "test_responses": 15893,
   "test_skipped_by_prompt_filter": 1,
   "catalog": 38881,
-  "catalog_items_without_mbid": 0
+  "catalog_items_without_mbid": 0,
+  "sft_target_requests": 18645,
+  "sft_rows_covered": 140231,
+  "items_min": 15,
+  "items_max": 20,
+  "items_mean": 18.96
  }
 }

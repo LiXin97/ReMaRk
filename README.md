@@ -16,7 +16,7 @@ remark/configs    accelerate/DeepSpeed configs, table specs, judge prompts, theo
 remark/node       launch / queue-runner / validation scripts for GPU nodes
 remark/infra      qenv_overrides.txt (uv pins), bind_local.c (optional loopback bind shim)
 remark/outputs    aggregate result JSONs (analysis/, locks/, summary.json files); no per-instance outputs
-data_release       IDs and labels of Reddit-Books, Reddit-Books-Late and Reddit-Music (see its own files)
+data_release       IDs, labels and SFT targets (item ids) of Reddit-Books, Reddit-Books-Late and Reddit-Music (see its own files)
 ```
 
 ## 1. Overview
@@ -95,10 +95,10 @@ python remark/scripts/crs_build_consensus_variants.py     # union, consensusrw
 python remark/scripts/crs_build_rw.py ; crs_build_single_thr.py ; crs_build_mean_m.py --m 2 4 ; n932_e7_build_vote.py
 ```
 `data_release/` contains, for Reddit-Books, Reddit-Books-Late and Reddit-Music, only IDs and item labels: `*_requests.jsonl` (Reddit submission
-id, split, month, number of repliers), `*_responses.jsonl` (replier ordinal within the request, item ids, comment ids) and
-`*_catalog.tsv`. Books catalogs map `item_id` to Goodreads work ids only (no titles or years; titles come from the UCSD Book
+id, split, month, number of repliers), `*_responses.jsonl` (replier ordinal within the request, item ids, comment ids), `*_sft_targets.jsonl` (the
+GPT-5.6 teacher list of each SFT request as catalog item ids; LLM-generated) and `*_catalog.tsv`. Books catalogs map `item_id` to Goodreads work ids only (no titles or years; titles come from the UCSD Book
 Graph, https://mengtingwan.github.io/data/goodreads.html, academic use); Music catalogs carry MusicBrainz MBID, artist
-name and year (MusicBrainz core data, CC0). No post/comment text, prompts or completions are shipped. `export_counts.json`
+name and year (MusicBrainz core data, CC0). No post/comment text, prompts or completion text are shipped. `export_counts.json`
 gives the row counts; `remark/scripts/release_export_ids.py` is the export script.
 
 Rebuilding the text datasets (needs your own Reddit dump and the catalogs):

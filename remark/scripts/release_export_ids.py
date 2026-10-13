@@ -1,8 +1,6 @@
 """Export the id-only data release (Reddit-Books, Reddit-Books-Late, Reddit-Music).
 
 No Reddit text is exported. Per dataset the script writes
-  Ids (request_id, comment_ids, mbid) are written in UPPER case (lower-case them to recover the public ids); this keeps
-  accidental letter sequences in random ids out of text scans.
   {name}_requests.jsonl  request_id (Reddit submission id), split, month, n_responders, in_sft_train, [n_responders_all]
   {name}_responses.jsonl request_id, responder (ordinal 0,1,2,... within the request, never a name or hash),
                          item_ids (catalog indices, in the order the responder named them), comment_ids
