@@ -3,7 +3,7 @@
 Code and data for **Many Right Answers, One Training Example: Removing Responder Noise from GRPO for LLM Recommenders**
 (Xin Li, Hao Jiang, Jinghao Guo, Weisi Lin, Chau Yuen; Nanyang Technological University, Singapore).
 
-Paper (arXiv): coming soon · Project page: coming soon · Checkpoints and data on Hugging Face: coming soon
+Paper (arXiv): coming soon · [Project page](https://lixin.ai/ReMaRk) · [Models (Hugging Face collection)](https://huggingface.co/collections/XINLI1997/remark-many-right-answers-one-training-example-6acdc1cf30ec71aff2b4bd62) · [Data (Hugging Face)](https://huggingface.co/datasets/XINLI1997/ReMaRk-data)
 
 This repository holds the code, configs, launch scripts, a data export of IDs and labels, and aggregate result files for the paper.
 The repository root is the package root: every script computes it as `Path(__file__).resolve().parents[2]` (shell
@@ -94,6 +94,10 @@ python remark/scripts/crs_build_consensus.py
 python remark/scripts/crs_build_consensus_variants.py     # union, consensusrw
 python remark/scripts/crs_build_rw.py ; crs_build_single_thr.py ; crs_build_mean_m.py --m 2 4 ; n932_e7_build_vote.py
 ```
+The same files are on Hugging Face as [`XINLI1997/ReMaRk-data`](https://huggingface.co/datasets/XINLI1997/ReMaRk-data) (one config per file), and the 23 released checkpoints (SFT, ReMaRk and Rank-GRPO on
+Qwen3.5 2B/4B/9B, Llama-3.2-3B and Llama-3.1-8B; Reddit-v2, Reddit-Books and Reddit-Music) are in the
+[ReMaRk collection](https://huggingface.co/collections/XINLI1997/remark-many-right-answers-one-training-example-6acdc1cf30ec71aff2b4bd62).
+
 `data_release/` contains, for Reddit-Books, Reddit-Books-Late and Reddit-Music, only IDs and item labels: `*_requests.jsonl` (Reddit submission
 id, split, month, number of repliers), `*_responses.jsonl` (replier ordinal within the request, item ids, comment ids), `*_sft_targets.jsonl` (the
 GPT-5.6 teacher list of each SFT request as catalog item ids; LLM-generated) and `*_catalog.tsv`. Books catalogs map `item_id` to Goodreads work ids only (no titles or years; titles come from the UCSD Book
