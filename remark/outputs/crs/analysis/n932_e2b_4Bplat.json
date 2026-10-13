@@ -1,0 +1,143 @@
+{
+ "pair": "4Bplat",
+ "a_run": "test_4B_union_group_s3407_p0c_ms8000_step3000",
+ "b_run": "test_4B_single_group_s3407_p0c_ms8000_step5250",
+ "requests_sampled": 500,
+ "prompt_file": "remark/configs/judge_precision_prompt.txt",
+ "prompt_sha256": "5352a4722bfc7d5429b0d47d44e6f92b2d80dc09818c5a0676f6c41a16a0a4b1",
+ "pop_cutoffs_q50_q80": [
+  45.0,
+  179.0
+ ],
+ "judges": {
+  "gemini-3.1-pro-preview": {
+   "requests": 500,
+   "missing_calls": 0,
+   "unparsed_items": 20,
+   "remark_p20": 0.5827,
+   "rankgrpo_p20": 0.5745,
+   "diff": 0.008200000000000002,
+   "ci95": [
+    -0.006105,
+    0.021099999999999994
+   ],
+   "strata": {
+    "tail": {
+     "remark_precision": 0.4789518900343643,
+     "rankgrpo_precision": 0.4936768149882904,
+     "diff": -0.014724924953926133,
+     "ci95": [
+      -0.04252301905252184,
+      0.011525139882068224
+     ],
+     "remark_items": 2328,
+     "rankgrpo_items": 2135,
+     "remark_share": 0.2328,
+     "rankgrpo_share": 0.2135
+    },
+    "torso": {
+     "remark_precision": 0.5693450742982938,
+     "rankgrpo_precision": 0.5715073022871314,
+     "diff": -0.002162227988837584,
+     "ci95": [
+      -0.019393596263819025,
+      0.015007985432524911
+     ],
+     "remark_items": 3634,
+     "rankgrpo_items": 3629,
+     "remark_share": 0.3634,
+     "rankgrpo_share": 0.3629
+    },
+    "head": {
+     "remark_precision": 0.6553434168113067,
+     "rankgrpo_precision": 0.6177998111425873,
+     "diff": 0.03754360566871939,
+     "ci95": [
+      0.015026565449409557,
+      0.059540069591275974
+     ],
+     "remark_items": 4033,
+     "rankgrpo_items": 4236,
+     "remark_share": 0.4033,
+     "rankgrpo_share": 0.4236
+    }
+   },
+   "usage": {
+    "prompt_tokens": 548647,
+    "completion_tokens": 90514,
+    "thoughts_tokens": 2853971
+   }
+  },
+  "gpt-5.6-sol": {
+   "requests": 500,
+   "missing_calls": 0,
+   "unparsed_items": 20,
+   "remark_p20": 0.6736,
+   "rankgrpo_p20": 0.6678,
+   "diff": 0.0058000000000000005,
+   "ci95": [
+    -0.003999999999999998,
+    0.016099999999999996
+   ],
+   "strata": {
+    "tail": {
+     "remark_precision": 0.5902061855670103,
+     "rankgrpo_precision": 0.5878220140515222,
+     "diff": 0.002384171515488087,
+     "ci95": [
+      -0.021123641790686924,
+      0.027119358202721884
+     ],
+     "remark_items": 2328,
+     "rankgrpo_items": 2135,
+     "remark_share": 0.2328,
+     "rankgrpo_share": 0.2135
+    },
+    "torso": {
+     "remark_precision": 0.6717116125481563,
+     "rankgrpo_precision": 0.674841554147148,
+     "diff": -0.0031299415989917145,
+     "ci95": [
+      -0.017751623346731173,
+      0.012541360272069908
+     ],
+     "remark_items": 3634,
+     "rankgrpo_items": 3629,
+     "remark_share": 0.3634,
+     "rankgrpo_share": 0.3629
+    },
+    "head": {
+     "remark_precision": 0.7242747334490454,
+     "rankgrpo_precision": 0.7020774315391879,
+     "diff": 0.02219730190985747,
+     "ci95": [
+      0.008342669112854969,
+      0.03652890481588097
+     ],
+     "remark_items": 4033,
+     "rankgrpo_items": 4236,
+     "remark_share": 0.4033,
+     "rankgrpo_share": 0.4236
+    }
+   },
+   "usage": {
+    "prompt_tokens": 471628,
+    "completion_tokens": 595104,
+    "thoughts_tokens": 0
+   }
+  }
+ },
+ "judge_agreement": {
+  "judges": [
+   "gemini-3.1-pro-preview",
+   "gpt-5.6-sol"
+  ],
+  "items": 19995,
+  "kappa_item": 0.7152050549426356,
+  "agreement_item": 0.8652663165791448,
+  "yes_rate": [
+   0.5787446861715428,
+   0.6708677169292323
+  ]
+ }
+}

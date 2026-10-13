@@ -1,0 +1,28 @@
+{
+ "split": "test",
+ "n_contexts": 2050,
+ "per_size": [
+  {
+   "a": "test_2B_union_s3407_step1500",
+   "b": "test_2B_single_group_s3407_step2000",
+   "diff": 0.008711581500741434
+  },
+  {
+   "a": "test_4B_union_s3407_step2000",
+   "b": "test_4B_single_group_s3407_step2000",
+   "diff": 0.0145588186954173
+  },
+  {
+   "a": "test_9B_union_s3407_step2000",
+   "b": "test_9B_single_group_s3407_step2000",
+   "diff": 0.014728419427925467
+  }
+ ],
+ "pooled_mean_diff": 0.012666273208028066,
+ "ci95": [
+  0.009664163844424912,
+  0.01572125789435043
+ ],
+ "n_boot": 2000,
+ "seed": 42
+}

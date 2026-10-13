@@ -1,0 +1,538 @@
+{
+ "log_inventory_considered": [
+  "_final/grpo_2B_single_group_s3407_p0c.log",
+  "o/grpo_2B_union_group_s3407_p0c_G16.log",
+  "node/grpo_2B_single_group_s3407_p0c.log",
+  "node/grpo_2B_single_group_s3407_p0c_ms4000.log",
+  "node/grpo_2B_union_group_s3407_p0c.log",
+  "node/grpo_reddit_books_2B_single_group_s3407_p0c.log",
+  "node/grpo_reddit_books_2B_single_group_s3407_p0c_cap384.log",
+  "node/grpo_reddit_books_2B_single_group_s3407_p0c_cap384_ex.log",
+  "node/grpo_2B_single_group_s1234_p0c.log",
+  "node/grpo_2B_single_group_s42_p0c.log",
+  "node/grpo_2B_union_group_s1234_p0c.log",
+  "node/grpo_2B_union_group_s42_p0c.log",
+  "node/grpo_reddit_books_2B_union_group_s3407_p0c_cap384_ex.log",
+  "node/grpo_reddit_books_2B_union_group_s42_p0c_cap384_ex.log",
+  "node/grpo_2B_union_group_s1234_p0c.log",
+  "node/grpo_2B_union_group_s3407_p0c_ms4000.log",
+  "node/grpo_2B_union_group_s42_p0c.log",
+  "node/grpo_2B_union_group_s3407_p0c_ms4000.log",
+  "node/grpo_llama3b_single_group_s3407_p0c.log",
+  "node/grpo_llama3b_single_group_s42_p0c.log",
+  "node/grpo_llama3b_union_group_s3407_p0c.log",
+  "node/grpo_llama3b_union_group_s42_p0c.log",
+  "node/grpo_2B_single_group_s3407_p0c_G16.log",
+  "node/grpo_llama8b_single_group_s3407_p0c.log",
+  "node/grpo_llama8b_union_group_s3407_p0c.log",
+  "node/grpo_2B_union_group_s3407_p0c_cap320_ms4000.log",
+  "node/grpo_reddit_books_2B_union_group_s1234_p0c_cap384_ex.log"
+ ],
+ "pairs": {
+  "llama3b_s3407": {
+   "remark": {
+    "run": "llama3b_union_group_s3407_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_llama3b_union_group_s3407_p0c.log",
+      "resumed_from": 250,
+      "n_records": 175,
+      "steps_covered": [
+       251,
+       2000
+      ]
+     }
+    ],
+    "steps_covered": 1750,
+    "share_of_2000_steps_covered": 0.875,
+    "effective_shaping_0.1x_scale": {
+     "n": 175,
+     "mean": 0.2322382857142857,
+     "p10": 0.23024,
+     "p50": 0.23220000000000002,
+     "p90": 0.2343,
+     "min": 0.2283,
+     "max": 0.23750000000000002
+    },
+    "shaping_scale": {
+     "n": 175,
+     "mean": 2.3223828571428573,
+     "p10": 2.3024,
+     "p50": 2.322,
+     "p90": 2.343,
+     "min": 2.283,
+     "max": 2.375
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "251-500": 0.23423200000000002,
+     "501-1000": 0.23252800000000004,
+     "1001-1500": 0.23177199999999998,
+     "1501-2000": 0.231418
+    }
+   },
+   "rankgrpo": {
+    "run": "llama3b_single_group_s3407_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_llama3b_single_group_s3407_p0c.log",
+      "resumed_from": 250,
+      "n_records": 175,
+      "steps_covered": [
+       251,
+       2000
+      ]
+     }
+    ],
+    "steps_covered": 1750,
+    "share_of_2000_steps_covered": 0.875,
+    "effective_shaping_0.1x_scale": {
+     "n": 175,
+     "mean": 0.24579600000000004,
+     "p10": 0.24298,
+     "p50": 0.2457,
+     "p90": 0.2485,
+     "min": 0.2396,
+     "max": 0.2522
+    },
+    "shaping_scale": {
+     "n": 175,
+     "mean": 2.4579600000000004,
+     "p10": 2.4297999999999997,
+     "p50": 2.457,
+     "p90": 2.485,
+     "min": 2.396,
+     "max": 2.522
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "251-500": 0.248612,
+     "501-1000": 0.246558,
+     "1001-1500": 0.24526400000000004,
+     "1501-2000": 0.244158
+    }
+   },
+   "ratio_remark_over_rankgrpo_mean": 0.9448415991891067
+  },
+  "llama3b_s42": {
+   "remark": {
+    "run": "llama3b_union_group_s42_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_llama3b_union_group_s42_p0c.log",
+      "resumed_from": null,
+      "n_records": 161,
+      "steps_covered": [
+       1,
+       1610
+      ]
+     }
+    ],
+    "note": "log copy ends before step 2,000",
+    "steps_covered": 1610,
+    "share_of_2000_steps_covered": 0.805,
+    "effective_shaping_0.1x_scale": {
+     "n": 161,
+     "mean": 0.23294223602484473,
+     "p10": 0.23060000000000003,
+     "p50": 0.23260000000000003,
+     "p90": 0.2359,
+     "min": 0.22870000000000001,
+     "max": 0.242
+    },
+    "shaping_scale": {
+     "n": 161,
+     "mean": 2.3294223602484476,
+     "p10": 2.306,
+     "p50": 2.326,
+     "p90": 2.359,
+     "min": 2.287,
+     "max": 2.42
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.23489800000000002,
+     "501-1000": 0.232602,
+     "1001-1500": 0.231638,
+     "1501-1610": 0.23152727272727275
+    }
+   },
+   "rankgrpo": {
+    "run": "llama3b_single_group_s42_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_llama3b_single_group_s42_p0c.log",
+      "resumed_from": null,
+      "n_records": 157,
+      "steps_covered": [
+       1,
+       1570
+      ]
+     }
+    ],
+    "note": "log copy ends before step 2,000",
+    "steps_covered": 1570,
+    "share_of_2000_steps_covered": 0.785,
+    "effective_shaping_0.1x_scale": {
+     "n": 157,
+     "mean": 0.2469114649681529,
+     "p10": 0.24350000000000002,
+     "p50": 0.2464,
+     "p90": 0.2514,
+     "min": 0.23860000000000003,
+     "max": 0.2555
+    },
+    "shaping_scale": {
+     "n": 157,
+     "mean": 2.4691146496815284,
+     "p10": 2.435,
+     "p50": 2.464,
+     "p90": 2.514,
+     "min": 2.386,
+     "max": 2.555
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.25025800000000004,
+     "501-1000": 0.245758,
+     "1001-1500": 0.24520200000000003,
+     "1501-1570": 0.2434571428571429
+    }
+   },
+   "ratio_remark_over_rankgrpo_mean": 0.9434241381010399
+  },
+  "llama8b_s3407": {
+   "remark": {
+    "run": "llama8b_union_group_s3407_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_llama8b_union_group_s3407_p0c.log",
+      "resumed_from": null,
+      "n_records": 200,
+      "steps_covered": [
+       1,
+       2000
+      ]
+     }
+    ],
+    "note": "",
+    "steps_covered": 2000,
+    "share_of_2000_steps_covered": 1.0,
+    "effective_shaping_0.1x_scale": {
+     "n": 200,
+     "mean": 0.2308645,
+     "p10": 0.22869,
+     "p50": 0.23035,
+     "p90": 0.23352,
+     "min": 0.2271,
+     "max": 0.2403
+    },
+    "shaping_scale": {
+     "n": 200,
+     "mean": 2.3086450000000003,
+     "p10": 2.2869,
+     "p50": 2.3034999999999997,
+     "p90": 2.3352,
+     "min": 2.271,
+     "max": 2.403
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.23343200000000003,
+     "501-1000": 0.230616,
+     "1001-1500": 0.230262,
+     "1501-2000": 0.229148
+    }
+   },
+   "rankgrpo": {
+    "run": "llama8b_single_group_s3407_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_llama8b_single_group_s3407_p0c.log",
+      "resumed_from": null,
+      "n_records": 200,
+      "steps_covered": [
+       1,
+       2000
+      ]
+     }
+    ],
+    "note": "",
+    "steps_covered": 2000,
+    "share_of_2000_steps_covered": 1.0,
+    "effective_shaping_0.1x_scale": {
+     "n": 200,
+     "mean": 0.2438765,
+     "p10": 0.2409,
+     "p50": 0.2431,
+     "p90": 0.248,
+     "min": 0.23860000000000003,
+     "max": 0.2542
+    },
+    "shaping_scale": {
+     "n": 200,
+     "mean": 2.438765,
+     "p10": 2.409,
+     "p50": 2.431,
+     "p90": 2.48,
+     "min": 2.386,
+     "max": 2.542
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.24770599999999998,
+     "501-1000": 0.24339400000000005,
+     "1001-1500": 0.24263200000000001,
+     "1501-2000": 0.241774
+    }
+   },
+   "ratio_remark_over_rankgrpo_mean": 0.9466451257091192
+  },
+  "qwen2B_s3407": {
+   "remark": {
+    "run": "2B_union_group_s3407_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_group_s3407_p0c.log",
+      "resumed_from": null,
+      "n_records": 200,
+      "steps_covered": [
+       1,
+       2000
+      ]
+     }
+    ],
+    "note": "",
+    "steps_covered": 2000,
+    "share_of_2000_steps_covered": 1.0,
+    "effective_shaping_0.1x_scale": {
+     "n": 200,
+     "mean": 0.232919,
+     "p10": 0.23060000000000003,
+     "p50": 0.23255000000000003,
+     "p90": 0.2356,
+     "min": 0.2292,
+     "max": 0.24070000000000003
+    },
+    "shaping_scale": {
+     "n": 200,
+     "mean": 2.3291899999999996,
+     "p10": 2.306,
+     "p50": 2.3255,
+     "p90": 2.356,
+     "min": 2.292,
+     "max": 2.407
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.23512,
+     "501-1000": 0.233156,
+     "1001-1500": 0.23206799999999997,
+     "1501-2000": 0.23133199999999998
+    }
+   },
+   "rankgrpo": {
+    "run": "2B_single_group_s3407_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s3407_p0c.log",
+      "resumed_from": null,
+      "n_records": 200,
+      "steps_covered": [
+       1,
+       2000
+      ]
+     }
+    ],
+    "note": "",
+    "steps_covered": 2000,
+    "share_of_2000_steps_covered": 1.0,
+    "effective_shaping_0.1x_scale": {
+     "n": 200,
+     "mean": 0.2471235,
+     "p10": 0.24438000000000001,
+     "p50": 0.2469,
+     "p90": 0.2505,
+     "min": 0.2411,
+     "max": 0.2549
+    },
+    "shaping_scale": {
+     "n": 200,
+     "mean": 2.471235,
+     "p10": 2.4438,
+     "p50": 2.469,
+     "p90": 2.505,
+     "min": 2.411,
+     "max": 2.549
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.24967000000000003,
+     "501-1000": 0.24702200000000005,
+     "1001-1500": 0.24630000000000002,
+     "1501-2000": 0.245502
+    }
+   },
+   "ratio_remark_over_rankgrpo_mean": 0.9425206425127517
+  },
+  "qwen2B_s42": {
+   "remark": {
+    "run": "2B_union_group_s42_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_group_s42_p0c.log",
+      "resumed_from": 500,
+      "n_records": 150,
+      "steps_covered": [
+       501,
+       2000
+      ]
+     }
+    ],
+    "steps_covered": 1500,
+    "share_of_2000_steps_covered": 0.75,
+    "effective_shaping_0.1x_scale": {
+     "n": 150,
+     "mean": 0.23249933333333342,
+     "p10": 0.23099,
+     "p50": 0.23255000000000003,
+     "p90": 0.23392,
+     "min": 0.2299,
+     "max": 0.2359
+    },
+    "shaping_scale": {
+     "n": 150,
+     "mean": 2.324993333333333,
+     "p10": 2.3099000000000003,
+     "p50": 2.3255,
+     "p90": 2.3392,
+     "min": 2.299,
+     "max": 2.359
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "501-1000": 0.233118,
+     "1001-1500": 0.232396,
+     "1501-2000": 0.23198400000000002
+    }
+   },
+   "rankgrpo": {
+    "run": "2B_single_group_s42_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s42_p0c.log",
+      "resumed_from": null,
+      "n_records": 200,
+      "steps_covered": [
+       1,
+       2000
+      ]
+     }
+    ],
+    "note": "",
+    "steps_covered": 2000,
+    "share_of_2000_steps_covered": 1.0,
+    "effective_shaping_0.1x_scale": {
+     "n": 200,
+     "mean": 0.24757000000000004,
+     "p10": 0.24458000000000005,
+     "p50": 0.2472,
+     "p90": 0.25061,
+     "min": 0.2405,
+     "max": 0.2549
+    },
+    "shaping_scale": {
+     "n": 200,
+     "mean": 2.4757,
+     "p10": 2.4458,
+     "p50": 2.472,
+     "p90": 2.5061,
+     "min": 2.405,
+     "max": 2.549
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.250068,
+     "501-1000": 0.247618,
+     "1001-1500": 0.24659000000000006,
+     "1501-2000": 0.24600400000000003
+    }
+   },
+   "ratio_remark_over_rankgrpo_mean": 0.9391256345006801
+  },
+  "qwen2B_s1234": {
+   "remark": {
+    "run": "2B_union_group_s1234_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_group_s1234_p0c.log",
+      "resumed_from": 250,
+      "n_records": 175,
+      "steps_covered": [
+       251,
+       2000
+      ]
+     }
+    ],
+    "steps_covered": 1750,
+    "share_of_2000_steps_covered": 0.875,
+    "effective_shaping_0.1x_scale": {
+     "n": 175,
+     "mean": 0.2325742857142857,
+     "p10": 0.2308,
+     "p50": 0.23250000000000004,
+     "p90": 0.23460000000000003,
+     "min": 0.2292,
+     "max": 0.2368
+    },
+    "shaping_scale": {
+     "n": 175,
+     "mean": 2.325742857142857,
+     "p10": 2.308,
+     "p50": 2.325,
+     "p90": 2.346,
+     "min": 2.292,
+     "max": 2.368
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "251-500": 0.23377600000000004,
+     "501-1000": 0.232938,
+     "1001-1500": 0.23251800000000003,
+     "1501-2000": 0.23166599999999998
+    }
+   },
+   "rankgrpo": {
+    "run": "2B_single_group_s1234_p0c",
+    "segments": [
+     {
+      "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s1234_p0c.log",
+      "resumed_from": null,
+      "n_records": 200,
+      "steps_covered": [
+       1,
+       2000
+      ]
+     }
+    ],
+    "note": "",
+    "steps_covered": 2000,
+    "share_of_2000_steps_covered": 1.0,
+    "effective_shaping_0.1x_scale": {
+     "n": 200,
+     "mean": 0.2474035,
+     "p10": 0.2445,
+     "p50": 0.24710000000000001,
+     "p90": 0.25091,
+     "min": 0.2417,
+     "max": 0.2569
+    },
+    "shaping_scale": {
+     "n": 200,
+     "mean": 2.474035,
+     "p10": 2.445,
+     "p50": 2.471,
+     "p90": 2.5090999999999997,
+     "min": 2.417,
+     "max": 2.569
+    },
+    "by_500_steps_mean_0.1x_scale (label = steps actually covered)": {
+     "1-500": 0.25007200000000007,
+     "501-1000": 0.24733999999999998,
+     "1001-1500": 0.24683,
+     "1501-2000": 0.24537199999999998
+    }
+   },
+   "ratio_remark_over_rankgrpo_mean": 0.9400606123772934
+  }
+ }
+}

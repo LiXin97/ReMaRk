@@ -1,0 +1,16 @@
+You are an expert film curator. A user posted the request below on a movie recommendation forum. Two recommender systems each answered with a ranked list of movies.
+
+Decide which list is the better set of recommendations for this user. Consider how well the movies fit what the user asked for (genre, tone, themes, era, constraints), whether the list respects anything the user said they have already seen or dislike, and the overall quality and variety of the suggestions. Do not prefer a list because its movies are more famous or because of its position (A or B). If the two lists are about equally good, answer tie.
+
+Request:
+<<<
+{request}
+>>>
+
+List A:
+{list_a}
+
+List B:
+{list_b}
+
+Answer on the first line with exactly one word: A, B, or tie. On the second line give a one-sentence reason.

@@ -1,0 +1,15 @@
+{
+ "run": "2B_union_group_s3407_p0c_ms1500",
+ "best_step": 1000,
+ "val_R@20": {
+  "250": 0.21422864870812716,
+  "500": 0.22969045320206258,
+  "750": 0.23651834743338973,
+  "1000": 0.24706367987052028,
+  "1250": 0.24656613193572052,
+  "1500": 0.2525124157401037
+ },
+ "rule": "first validated checkpoint whose validation R@20 reaches Rank-GRPO's 2B step-2,000 validation (0.2419); locked by hand, tested once",
+ "target": 0.2419,
+ "locked_at_utc": "2026-10-05 00:02:09"
+}

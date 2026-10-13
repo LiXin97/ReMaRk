@@ -1,0 +1,55 @@
+{
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "split": "test",
+ "n": 10972,
+ "unique_contexts": 2050,
+ "rows_without_output": 0,
+ "parse_empty": 34,
+ "mean_parsed_items": 19.928363106088224,
+ "in_catalog_rate": 0.7962168540250807,
+ "model": "gpt-5.6-sol (API, zero-shot, default sampling, max_tokens 2048)",
+ "api_calls": 2108,
+ "api_missing": 0,
+ "empty_first_answers": 58,
+ "retried_4096": 58,
+ "still_empty": 4,
+ "usage": {
+  "prompt_tokens": 418878,
+  "completion_tokens": 1352849,
+  "total_tokens": 1771727
+ },
+ "truncate_R@5": 0.09671429745392299,
+ "truncate_N@5": 0.07693823051141699,
+ "truncate_R@10": 0.1503675020744726,
+ "truncate_N@10": 0.09466331341882853,
+ "truncate_R@20": 0.22629594418520546,
+ "truncate_N@20": 0.11607305763089253,
+ "filter_R@5": 0.11211930800613114,
+ "filter_N@5": 0.0882689764624737,
+ "filter_R@10": 0.17209291975867122,
+ "filter_N@10": 0.10815726216504201,
+ "filter_R@20": 0.22629594418520546,
+ "filter_N@20": 0.12363094320255628,
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 1974,
+   "recall": 0.13323201621073963
+  },
+  "tail(<=median)": {
+   "n": 12626,
+   "recall": 0.14945350863297957
+  },
+  "mid": {
+   "n": 7530,
+   "recall": 0.22377158034528552
+  },
+  "head(top20%)": {
+   "n": 4983,
+   "recall": 0.278346377684126
+  },
+  "top10%": {
+   "n": 2504,
+   "recall": 0.30870607028753994
+  }
+ }
+}

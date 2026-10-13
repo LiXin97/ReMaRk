@@ -1,0 +1,13 @@
+{
+ "run": "4B_union_group_s3407_p0c_ms1500",
+ "best_step": 1000,
+ "val_R@20": {
+  "250": 0.2416050804844803,
+  "500": 0.25350517556416574,
+  "750": 0.26514742293048676,
+  "1000": 0.27239271739022086
+ },
+ "target": 0.2669,
+ "rule": "first validated checkpoint whose validation R@20 reaches Rank-GRPO's step-2,000 validation; locked by hand, tested once",
+ "locked_at_utc": "2026-10-05 04:18:47"
+}

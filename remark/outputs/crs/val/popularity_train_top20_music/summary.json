@@ -1,0 +1,57 @@
+{
+ "model": "popularity_train_top20_music",
+ "data": "remark/data/crs/music/sft_dataset",
+ "split": "validation",
+ "n": 15060,
+ "unique_contexts": 1961,
+ "parse_empty": 0,
+ "in_catalog_rate": 1.0,
+ "truncate_R@5": 0.025757836734257137,
+ "truncate_N@5": 0.018338521332193054,
+ "truncate_R@10": 0.04041763422742703,
+ "truncate_N@10": 0.023363496327261604,
+ "truncate_R@20": 0.06590868381052019,
+ "truncate_N@20": 0.030454163388278287,
+ "filter_R@5": 0.025757836734257137,
+ "filter_N@5": 0.018338521332193054,
+ "filter_R@10": 0.04041763422742703,
+ "filter_N@10": 0.023363496327261604,
+ "filter_R@20": 0.06590868381052019,
+ "filter_N@20": 0.030454163388278287,
+ "gt_pop_quantiles_50_80_90": [
+  60.0,
+  237.0,
+  398.0
+ ],
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 1070,
+   "recall": 0.0
+  },
+  "tail(<=median)": {
+   "n": 13334,
+   "recall": 0.0
+  },
+  "mid": {
+   "n": 7952,
+   "recall": 0.0
+  },
+  "head(top20%)": {
+   "n": 5300,
+   "recall": 0.3069811320754717
+  },
+  "top10%": {
+   "n": 2645,
+   "recall": 0.6151228733459357
+  }
+ },
+ "request_truncate_R@5": 0.018899231611194094,
+ "request_truncate_N@5": 0.01349482714132755,
+ "request_truncate_R@10": 0.030598401257342554,
+ "request_truncate_N@10": 0.01748851900351925,
+ "request_truncate_R@20": 0.051292582027324604,
+ "request_truncate_N@20": 0.023319735907877948,
+ "rows_with_seen_exclusion": 1741,
+ "contexts_with_row_varying_lists": 0,
+ "definition": "top-20 (title, year) by training-GT frequency (sft_dataset/train, every row's items; ties by title then year), minus the row's seen_titles (exact title), truncated to 20"
+}

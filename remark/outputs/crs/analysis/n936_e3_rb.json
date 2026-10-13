@@ -1,0 +1,289 @@
+{
+ "note": "E3 readout (internal check, not pre-registered): exact Rao-Blackwellization (RB) of Rank-GRPO, 2B Reddit-v2.\n\nArms (Table 2 protocol, best-validation lock, tested once):\n  RB_row  = 2B_single_group_<seed>_p0c_rb (rows sampled per responder, as Rank-GRPO), seeds 3407 / 42 / 1234;\n  RB_req  = 2B_singlethr_group_s3407_p0c_rb (one random responder per request = request-uniform sampling; the RB table\n            holds every responder of the request, --rb_table_path);\n  TR      = 2B_singlethr_group_s3407_p0c (Rank-GRPO with request-uniform sampling, no RB);\n  ReMaRk  = union reward + group scaling + request sampling; Rank-GRPO = single + group + row sampling.\nSplits the s3407 gap ReMaRk - RB_row into sampling (RB_req - RB_row) and reward (ReMaRk - RB_req); also RB_req - TR (RB\nunder request sampling) and, over three seeds, RB_row - Rank-GRPO and ReMaRk - RB_row (per-seed paired bootstrap over\ncontexts, 2,000 resamples, seed 42; Welch 95% CI on the seed means). Per row and per request.\nOutput: outputs/crs/analysis/n936_e3_rb.json",
+ "units": "points (x100)",
+ "tests": {
+  "RB_row": {
+   "3407": "test_2B_single_group_s3407_p0c_rb_step2000",
+   "42": "test_2B_single_group_s42_p0c_rb_step1750",
+   "1234": "test_2B_single_group_s1234_p0c_rb_step1750"
+  },
+  "RB_req": "test_2B_singlethr_group_s3407_p0c_rb_step1750",
+  "TR_req": "test_2B_singlethr_group_s3407_p0c_step2000",
+  "ReMaRk": {
+   "3407": "test_2B_union_group_step2000",
+   "42": "test_2B_union_group_s42_p0c_step2000",
+   "1234": "test_2B_union_group_s1234_p0c_step2000"
+  },
+  "Rank-GRPO": {
+   "3407": "test_2B_single_group_s3407_step2000",
+   "42": "test_2B_single_group_s42_step2000",
+   "1234": "test_2B_single_group_s1234_step2000"
+  }
+ },
+ "s3407": {
+  "ReMaRk - RB_row": {
+   "row": {
+    "a": 22.53041353970365,
+    "b": 21.904111213007372,
+    "diff": 0.6263023266962814,
+    "ci_low": 0.2273898817426517,
+    "ci_high": 1.0016624499628999,
+    "p_le_0": 0.0
+   },
+   "unit": {
+    "a": 23.23532680535656,
+    "b": 22.14656251953491,
+    "diff": 1.0887642858216495,
+    "ci_low": 0.40220167091776615,
+    "ci_high": 1.7821386775897226,
+    "p_le_0": 0.0
+   }
+  },
+  "RB_req - RB_row (sampling)": {
+   "row": {
+    "a": 21.726374136274664,
+    "b": 21.904111213007372,
+    "diff": -0.17773707673270558,
+    "ci_low": -0.6634367921182313,
+    "ci_high": 0.31806328689922053,
+    "p_le_0": 0.7595
+   },
+   "unit": {
+    "a": 23.328096696025003,
+    "b": 22.14656251953491,
+    "diff": 1.1815341764900942,
+    "ci_low": 0.3419686539923445,
+    "ci_high": 2.041443628656481,
+    "p_le_0": 0.0025
+   }
+  },
+  "ReMaRk - RB_req (reward)": {
+   "row": {
+    "a": 22.53041353970365,
+    "b": 21.726374136274664,
+    "diff": 0.8040394034289868,
+    "ci_low": 0.33479437098591386,
+    "ci_high": 1.2721464289846343,
+    "p_le_0": 0.0
+   },
+   "unit": {
+    "a": 23.23532680535656,
+    "b": 23.328096696025003,
+    "diff": -0.09276989066844432,
+    "ci_low": -0.8970040735186011,
+    "ci_high": 0.7261836841170445,
+    "p_le_0": 0.586
+   }
+  },
+  "RB_req - TR_req (RB under request sampling)": {
+   "row": {
+    "a": 21.726374136274664,
+    "b": 21.126049004708623,
+    "diff": 0.6003251315660418,
+    "ci_low": 0.17825172086480032,
+    "ci_high": 1.0219518612886298,
+    "p_le_0": 0.002
+   },
+   "unit": {
+    "a": 23.328096696025003,
+    "b": 22.13149193119727,
+    "diff": 1.1966047648277334,
+    "ci_low": 0.4716460124632389,
+    "ci_high": 1.9158710820607316,
+    "p_le_0": 0.0
+   }
+  },
+  "RB_row - Rank-GRPO": {
+   "row": {
+    "a": 21.904111213007372,
+    "b": 20.96521526670901,
+    "diff": 0.938895946298362,
+    "ci_low": 0.47356097582062945,
+    "ci_high": 1.4323490517554123,
+    "p_le_0": 0.0
+   },
+   "unit": {
+    "a": 22.14656251953491,
+    "b": 20.94287131126309,
+    "diff": 1.203691208271822,
+    "ci_low": 0.43681115101627177,
+    "ci_high": 1.9882671196342003,
+    "p_le_0": 0.001
+   }
+  },
+  "RB_req - Rank-GRPO": {
+   "row": {
+    "a": 21.726374136274664,
+    "b": 20.96521526670901,
+    "diff": 0.7611588695656563,
+    "ci_low": 0.2849903155503458,
+    "ci_high": 1.2297050307685438,
+    "p_le_0": 0.0005
+   },
+   "unit": {
+    "a": 23.328096696025003,
+    "b": 20.94287131126309,
+    "diff": 2.3852253847619163,
+    "ci_low": 1.467067769024543,
+    "ci_high": 3.3324727759841264,
+    "p_le_0": 0.0
+   }
+  }
+ },
+ "per_seed": {
+  "3407": {
+   "RB_row - Rank-GRPO": {
+    "row": {
+     "a": 21.904111213007372,
+     "b": 20.96521526670901,
+     "diff": 0.938895946298362,
+     "ci_low": 0.47356097582062945,
+     "ci_high": 1.4323490517554123,
+     "p_le_0": 0.0
+    },
+    "unit": {
+     "a": 22.14656251953491,
+     "b": 20.94287131126309,
+     "diff": 1.203691208271822,
+     "ci_low": 0.43681115101627177,
+     "ci_high": 1.9882671196342003,
+     "p_le_0": 0.001
+    }
+   },
+   "ReMaRk - RB_row": {
+    "row": {
+     "a": 22.53041353970365,
+     "b": 21.904111213007372,
+     "diff": 0.6263023266962814,
+     "ci_low": 0.2273898817426517,
+     "ci_high": 1.0016624499628999,
+     "p_le_0": 0.0
+    },
+    "unit": {
+     "a": 23.23532680535656,
+     "b": 22.14656251953491,
+     "diff": 1.0887642858216495,
+     "ci_low": 0.40220167091776615,
+     "ci_high": 1.7821386775897226,
+     "p_le_0": 0.0
+    }
+   }
+  },
+  "42": {
+   "RB_row - Rank-GRPO": {
+    "row": {
+     "a": 21.972382861921798,
+     "b": 21.066444283053894,
+     "diff": 0.9059385788679021,
+     "ci_low": 0.46136010047847853,
+     "ci_high": 1.3466520312545467,
+     "p_le_0": 0.0
+    },
+    "unit": {
+     "a": 22.285256121697575,
+     "b": 21.632536413112973,
+     "diff": 0.6527197085845977,
+     "ci_low": 0.0077652702302454905,
+     "ci_high": 1.3032570596928337,
+     "p_le_0": 0.0235
+    }
+   },
+   "ReMaRk - RB_row": {
+    "row": {
+     "a": 22.451486963977935,
+     "b": 21.972382861921798,
+     "diff": 0.4791041020561334,
+     "ci_low": 0.09183595800319203,
+     "ci_high": 0.8697472615522083,
+     "p_le_0": 0.0075
+    },
+    "unit": {
+     "a": 22.983774707885036,
+     "b": 22.285256121697575,
+     "diff": 0.6985185861874644,
+     "ci_low": 0.022627627517326113,
+     "ci_high": 1.4052588598103992,
+     "p_le_0": 0.0185
+    }
+   }
+  },
+  "1234": {
+   "RB_row - Rank-GRPO": {
+    "row": {
+     "a": 21.964182510832682,
+     "b": 21.010421696327064,
+     "diff": 0.9537608145056198,
+     "ci_low": 0.5033798110135878,
+     "ci_high": 1.4045714219611043,
+     "p_le_0": 0.0
+    },
+    "unit": {
+     "a": 22.32521883542182,
+     "b": 21.528635544499934,
+     "diff": 0.7965832909218888,
+     "ci_low": 0.07782382811921963,
+     "ci_high": 1.567553651935432,
+     "p_le_0": 0.015
+    }
+   },
+   "ReMaRk - RB_row": {
+    "row": {
+     "a": 22.40656186447954,
+     "b": 21.964182510832682,
+     "diff": 0.44237935364685566,
+     "ci_low": 0.05450555200700664,
+     "ci_high": 0.8312560872310064,
+     "p_le_0": 0.013
+    },
+    "unit": {
+     "a": 23.08144360057362,
+     "b": 22.32521883542182,
+     "diff": 0.7562247651517979,
+     "ci_low": 0.04302675335139958,
+     "ci_high": 1.4631189944816296,
+     "p_le_0": 0.0205
+    }
+   }
+  }
+ },
+ "welch_3_seeds": {
+  "row": {
+   "means": {
+    "RB_row": 21.94689219525395,
+    "Rank-GRPO": 21.014027082029987,
+    "ReMaRk": 22.462820789387038
+   },
+   "RB_row - Rank-GRPO": {
+    "diff": 0.9328651132239657,
+    "ci_low": 0.8283341820890718,
+    "ci_high": 1.0373960443588597,
+    "df": 3.672884998555043
+   },
+   "ReMaRk - RB_row": {
+    "diff": 0.515928594133086,
+    "ci_low": 0.3876893609384148,
+    "ci_high": 0.6441678273277572,
+    "df": 3.256796591039601
+   }
+  },
+  "unit": {
+   "means": {
+    "RB_row": 22.252345825551433,
+    "Rank-GRPO": 21.368014422958666,
+    "ReMaRk": 23.100181704605074
+   },
+   "RB_row - Rank-GRPO": {
+    "diff": 0.8843314025927668,
+    "ci_low": 0.027350774313568242,
+    "ci_high": 1.7413120308719652,
+    "df": 2.253334316099101
+   },
+   "ReMaRk - RB_row": {
+    "diff": 0.8478358790536406,
+    "ci_low": 0.5862167283687343,
+    "ci_high": 1.1094550297385468,
+    "df": 3.6835293503676936
+   }
+  }
+ }
+}

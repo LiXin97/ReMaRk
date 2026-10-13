@@ -1,0 +1,80 @@
+{
+ "data": "remark/data/crs/reddit_books/sft_dataset",
+ "split": "test",
+ "n": 6333,
+ "unique_contexts": 1150,
+ "rows_without_output": 0,
+ "parse_empty": 224,
+ "mean_parsed_items": 10.326701405337124,
+ "in_catalog_rate": 0.27468309912995614,
+ "model": "/tmp/models/Qwen3.5-2B-Base",
+ "dataset": "reddit_books",
+ "probe": "3-shot base-model completion, greedy, max 400 tokens",
+ "shots": [
+  {
+   "train_index": 24019,
+   "items": [
+    "Elantris (2005)",
+    "Harry Potter and the Philosopher's Stone (1997)",
+    "Mistborn: The Final Empire (2006)",
+    "The Amazing Maurice and His Educated Rodents (2001)",
+    "The Wee Free Men (2003)",
+    "Troll Mountain (2014)"
+   ]
+  },
+  {
+   "train_index": 4086,
+   "items": [
+    "Blue Dahlia (2004)",
+    "Dance Upon the Air (2001)",
+    "Face the Fire (2002)",
+    "Heaven and Earth (2001)",
+    "Key of Knowledge (2003)",
+    "Key of Light (2003)",
+    "Key of Valor (2003)"
+   ]
+  },
+  {
+   "train_index": 897,
+   "items": [
+    "Storm Front (2000)",
+    "Assassin's Apprentice (1995)",
+    "Furies of Calderon (2004)"
+   ]
+  }
+ ],
+ "truncate_R@5": 0.013836760501509773,
+ "truncate_N@5": 0.01326869946368217,
+ "truncate_R@10": 0.013836760501509773,
+ "truncate_N@10": 0.013041195153593125,
+ "truncate_R@20": 0.013836760501509773,
+ "truncate_N@20": 0.012973815781609175,
+ "filter_R@5": 0.013836760501509773,
+ "filter_N@5": 0.014405469930454813,
+ "filter_R@10": 0.013836760501509773,
+ "filter_N@10": 0.014142171575191143,
+ "filter_R@20": 0.013836760501509773,
+ "filter_N@20": 0.014062279906060746,
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 1092,
+   "recall": 0.0
+  },
+  "tail(<=median)": {
+   "n": 6052,
+   "recall": 0.0008261731658955717
+  },
+  "mid": {
+   "n": 3586,
+   "recall": 0.018404907975460124
+  },
+  "head(top20%)": {
+   "n": 2407,
+   "recall": 0.03240548400498546
+  },
+  "top10%": {
+   "n": 1190,
+   "recall": 0.037815126050420166
+  }
+ }
+}

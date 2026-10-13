@@ -1,0 +1,12 @@
+{
+ "run": "llama_cont15800_union_group_s3407",
+ "best_step": 250,
+ "val_R@20": {
+  "250": 0.26718603619701753,
+  "500": 0.26063541883468155,
+  "750": 0.25734725830061833,
+  "1000": 0.2565684186718398
+ },
+ "locked_at_utc": "2026-09-30 23:13:39",
+ "rule": "best validation per-row R@20 on the registered grid, ties to the earlier step; tested once"
+}

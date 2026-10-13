@@ -1,0 +1,358 @@
+{
+ "note": "(review item 2, author spec 10-08): Rank-GRPO with twice the requests per step (\"req2x\") vs ReMaRk at equal compute.\n\nreq2x = 2B Rank-GRPO (per-responder, row sampling, group scaling, P0c) with gradient_accumulation_steps 6 -> 12, i.e. 96\nrequests per step instead of 48; G = 8, lr 1e-6, KL unchanged; 2,000 steps, validation every 250, best-validation lock,\ntested once. Runs 2B_single_group_<seed>_p0c_req2x. Compared with the same-seed main-table runs:\nReMaRk 2B_union_group_<seed>_p0c and Rank-GRPO 2B_single_group_<seed>_p0c.\n1. validation R@20 curves by step and by GPU-h. GPU-h (n927 definition) = 4 GPUs x training wall-clock from the tqdm\n   elapsed time in the training log at that step (validation runs outside the trainer, so it is excluded).\n2. test: req2x locked test minus ReMaRk and minus Rank-GRPO main tests, per row and per request (crs_compare paired\n   bootstrap over contexts, 2,000 resamples, seed 42).\n3. main readout: req2x validation at the GPU-h of ReMaRk step 2,000 (linear interpolation on the GPU-h axis) and at\n   step 1,000, vs ReMaRk validation at step 2,000.\n4. steps and GPU-h to first reach Rank-GRPO's step-2,000 validation (24.19 for s3407; linear interpolation between\n   validation points), req2x vs ReMaRk.\n5. groups with signal per step: (1 - rank/frac_group_zero_std) x groups per step (requests per step: 96 req2x, 48 the\n   main runs), mean over the logged steps.",
+ "units": "points (x100); GPU-h",
+ "seeds": {
+  "s3407": {
+   "runs": {
+    "req2x": "2B_single_group_s3407_p0c_req2x",
+    "remark": "2B_union_group_s3407_p0c",
+    "rankgrpo": "2B_single_group_s3407_p0c"
+   },
+   "logs": {
+    "req2x": "train_logs/node-x/grpo_2B_single_group_s3407_p0c_req2x.log",
+    "remark": "train_logs/node-b/grpo_2B_union_group_s3407_p0c.log",
+    "rankgrpo": "train_logs/node-a/grpo_2B_single_group_s3407_p0c.log"
+   },
+   "curves": {
+    "req2x": {
+     "by_step": {
+      "250": 20.813865140852933,
+      "500": 21.916064042767413,
+      "750": 22.63566853531132,
+      "1000": 23.06161835899683,
+      "1250": 23.64624766236515,
+      "1500": 24.046956319367546,
+      "1750": 24.533901275971044,
+      "2000": 24.850014665774957
+     },
+     "gpu_h_at_val_step": {
+      "250": 3.7822222222222224,
+      "500": 7.3755555555555565,
+      "750": 11.07,
+      "1000": 14.763333333333334,
+      "1250": 18.525555555555556,
+      "1500": 22.286666666666665,
+      "1750": 25.98777777777778,
+      "2000": 29.623333333333335
+     },
+     "total_gpu_h_2000": 29.623333333333335,
+     "signal": {
+      "logged_steps": 200,
+      "frac_group_zero_std": 0.5518649999999999,
+      "requests_per_step": 96,
+      "signal_groups_per_step": 43.02096
+     }
+    },
+    "remark": {
+     "by_step": {
+      "250": 21.184489405568467,
+      "500": 22.724040581252552,
+      "750": 23.57149182938579,
+      "1000": 24.119365242622028,
+      "1250": 24.580065484831195,
+      "1500": 25.0406468201145,
+      "1750": 25.433380136808033,
+      "2000": 25.566896611461942
+     },
+     "gpu_h_at_val_step": {
+      "250": 1.771111111111111,
+      "500": 3.6533333333333333,
+      "750": 5.423333333333334,
+      "1000": 7.174444444444444,
+      "1250": 8.932222222222222,
+      "1500": 10.688888888888888,
+      "1750": 12.465555555555556,
+      "2000": 14.307777777777776
+     },
+     "total_gpu_h_2000": 14.307777777777776,
+     "signal": {
+      "logged_steps": 200,
+      "frac_group_zero_std": 0.299216,
+      "requests_per_step": 48,
+      "signal_groups_per_step": 33.637632
+     }
+    },
+    "rankgrpo": {
+     "by_step": {
+      "250": 20.161327061193095,
+      "500": 21.559093157122067,
+      "750": 21.878606087802012,
+      "1000": 22.647205999659917,
+      "1250": 23.01175620506835,
+      "1500": 23.507035962234248,
+      "1750": 23.691297115205654,
+      "2000": 24.191278951071197
+     },
+     "gpu_h_at_val_step": {
+      "250": 2.0355555555555553,
+      "500": 3.776666666666667,
+      "750": 5.4477777777777785,
+      "1000": 7.1177777777777775,
+      "1250": 8.837777777777779,
+      "1500": 10.567777777777778,
+      "1750": 12.282222222222224,
+      "2000": 13.984444444444446
+     },
+     "total_gpu_h_2000": 13.984444444444446,
+     "signal": {
+      "logged_steps": 200,
+      "frac_group_zero_std": 0.5574705,
+      "requests_per_step": 48,
+      "signal_groups_per_step": 21.241416
+     }
+    }
+   },
+   "test": {
+    "req2x": "test_2B_single_group_s3407_p0c_req2x_step2000",
+    "lock_step": 2000,
+    "req2x_R@20": 21.59456273367513,
+    "minus_remark": {
+     "row": {
+      "a": 21.59456273367513,
+      "b": 22.53041353970365,
+      "diff": -0.93585080602852,
+      "ci_low": -1.3357857062045784,
+      "ci_high": -0.5371973431501814,
+      "p_le_0": 1.0
+     },
+     "unit": {
+      "a": 21.971317307032074,
+      "b": 23.23532680535656,
+      "diff": -1.2640094983244885,
+      "ci_low": -1.969679206812743,
+      "ci_high": -0.5640442855329415,
+      "p_le_0": 1.0
+     }
+    },
+    "minus_rankgrpo": {
+     "row": {
+      "a": 21.59456273367513,
+      "b": 20.96521526670901,
+      "diff": 0.6293474669661231,
+      "ci_low": 0.20688106455252608,
+      "ci_high": 1.0681805842709389,
+      "p_le_0": 0.0015
+     },
+     "unit": {
+      "a": 21.971317307032074,
+      "b": 20.94287131126309,
+      "diff": 1.0284459957689835,
+      "ci_low": 0.3191200004077214,
+      "ci_high": 1.8112359671863556,
+      "p_le_0": 0.005
+     }
+    }
+   },
+   "gpu_h_aligned": {
+    "remark_gpu_h_at_2000": 14.307777777777776,
+    "remark_val_2000": 25.566896611461942,
+    "req2x_gpu_h_at_1000": 14.763333333333334,
+    "req2x_val_1000": 23.06161835899683,
+    "req2x_val_at_remark_2000_gpu_h": 23.009079421658967,
+    "req2x_step_at_remark_2000_gpu_h": 966.8571428571428,
+    "remark_minus_req2x_at_equal_gpu_h": 2.557817189802975,
+    "remark2000_minus_req2x1000": 2.5052782524651107
+   },
+   "reach_rankgrpo_2000_val": {
+    "target": 24.191278951071197,
+    "req2x": {
+     "step": 1574.0959680075139,
+     "gpu_h": 23.386408604511235
+    },
+    "remark": {
+     "step": 1039.0241321039503,
+     "gpu_h": 7.451245178355279
+    },
+    "rankgrpo": {
+     "step": 2000.0,
+     "gpu_h": 13.984444444444446
+    }
+   }
+  },
+  "s42": {
+   "runs": {
+    "req2x": "2B_single_group_s42_p0c_req2x",
+    "remark": "2B_union_group_s42_p0c",
+    "rankgrpo": "2B_single_group_s42_p0c"
+   },
+   "logs": {
+    "req2x": "train_logs/node-x2/grpo_2B_single_group_s42_p0c_req2x.log",
+    "remark": [
+     "train_logs/node-e/grpo_2B_union_group_s42_p0c.log",
+     "train_logs/node-h/grpo_2B_union_group_s42_p0c.log"
+    ],
+    "rankgrpo": "train_logs/node-d/grpo_2B_single_group_s42_p0c.log"
+   },
+   "curves": {
+    "req2x": {
+     "by_step": {
+      "250": 20.55231983520082,
+      "500": 22.150129963819623,
+      "750": 22.237941367621858,
+      "1000": 22.96913956284876,
+      "1250": 23.525837024247338,
+      "1500": 24.06484374923759,
+      "1750": 24.490406049327472,
+      "2000": 24.26328533935021
+     },
+     "gpu_h_at_val_step": {
+      "250": 3.6375,
+      "500": 7.275,
+      "750": 10.9125,
+      "1000": 14.55,
+      "1250": 18.1875,
+      "1500": 21.825,
+      "1750": 25.4625,
+      "2000": 29.1
+     },
+     "total_gpu_h_2000": 29.1,
+     "signal": {
+      "logged_steps": 150,
+      "frac_group_zero_std": 0.546070619568348,
+      "requests_per_step": 96,
+      "signal_groups_per_step": 43.57722052143859
+     }
+    },
+    "remark": {
+     "by_step": {
+      "250": 21.192275119778387,
+      "500": 22.508791507839838,
+      "750": 23.322032181260994,
+      "1000": 23.86145956564523,
+      "1250": 24.266157873231865,
+      "1500": 25.150728974897675,
+      "1750": 25.413466504356354,
+      "2000": 25.701511363824125
+     },
+     "gpu_h_at_val_step": {
+      "250": 2.5055555555555555,
+      "500": 4.5200000000000005,
+      "750": 6.95,
+      "1000": 8.953333333333333,
+      "1250": 10.920000000000002,
+      "1500": 12.866666666666667,
+      "1750": 14.933333333333334,
+      "2000": 16.962222222222223
+     },
+     "total_gpu_h_2000": 16.962222222222223,
+     "signal": {
+      "logged_steps": 200,
+      "frac_group_zero_std": 0.301457,
+      "requests_per_step": 48,
+      "signal_groups_per_step": 33.530064
+     }
+    },
+    "rankgrpo": {
+     "by_step": {
+      "250": 19.97079787072024,
+      "500": 21.150848392297167,
+      "750": 22.025643054782194,
+      "1000": 22.511280913358426,
+      "1250": 22.941438499672966,
+      "1500": 23.352572259842177,
+      "1750": 23.159488278219722,
+      "2000": 23.858748595121586
+     },
+     "gpu_h_at_val_step": {
+      "250": 1.8344444444444445,
+      "500": 3.52,
+      "750": 5.153333333333332,
+      "1000": 6.774444444444445,
+      "1250": 8.391111111111112,
+      "1500": 10.03111111111111,
+      "1750": 11.687777777777777,
+      "2000": 13.365555555555556
+     },
+     "total_gpu_h_2000": 13.365555555555556,
+     "signal": {
+      "logged_steps": 200,
+      "frac_group_zero_std": 0.5571755,
+      "requests_per_step": 48,
+      "signal_groups_per_step": 21.255575999999998
+     }
+    }
+   },
+   "gpu_h_note": {
+    "rule": "main GPU-h = 4 GPUs x 13.095 s/step x steps (4-GPU measurement, extrapolated to 2,000)",
+    "resumes": "resumed twice (500, 1250), each with a fresh optimizer (seed 42+k)",
+    "lost_logs": "segments 0..500 (node-p) and 500..~1440 (node-x) lost with the nodes",
+    "measured_segments": [
+     {
+      "offset": 1250,
+      "steps": 750,
+      "elapsed_h": 1.938,
+      "gpu_h_8gpu": 15.5,
+      "s_per_step": 9.3
+     }
+    ],
+    "8gpu_segment": "offset 1250 on node-x2 (8 GPUs, GA 6, same 96 requests/step): GPU-h = 8 x elapsed"
+   },
+   "test": {
+    "req2x": "test_2B_single_group_s42_p0c_req2x_step1750",
+    "lock_step": 1750,
+    "req2x_R@20": 21.352910750909704,
+    "minus_remark": {
+     "row": {
+      "a": 21.352910750909704,
+      "b": 22.451486963977935,
+      "diff": -1.098576213068226,
+      "ci_low": -1.5110365508178374,
+      "ci_high": -0.6795481333164317,
+      "p_le_0": 1.0
+     },
+     "unit": {
+      "a": 21.48059113705531,
+      "b": 22.983774707885036,
+      "diff": -1.5031835708297283,
+      "ci_low": -2.250759901963921,
+      "ci_high": -0.7372536669204044,
+      "p_le_0": 1.0
+     }
+    },
+    "minus_rankgrpo": {
+     "row": {
+      "a": 21.352910750909704,
+      "b": 21.066444283053894,
+      "diff": 0.28646646785580965,
+      "ci_low": -0.12999103072254486,
+      "ci_high": 0.687826520331427,
+      "p_le_0": 0.0855
+     },
+     "unit": {
+      "a": 21.48059113705531,
+      "b": 21.632536413112973,
+      "diff": -0.15194527605766622,
+      "ci_low": -0.8126389367075557,
+      "ci_high": 0.5053315236835738,
+      "p_le_0": 0.6765
+     }
+    }
+   },
+   "gpu_h_aligned": {
+    "remark_gpu_h_at_2000": 16.962222222222223,
+    "remark_val_2000": 25.701511363824125,
+    "req2x_gpu_h_at_1000": 14.55,
+    "req2x_val_1000": 22.96913956284876,
+    "req2x_val_at_remark_2000_gpu_h": 23.33831564187016,
+    "req2x_step_at_remark_2000_gpu_h": 1165.7884688812526,
+    "remark_minus_req2x_at_equal_gpu_h": 2.3631957219539643,
+    "remark2000_minus_req2x1000": 2.732371800975365
+   },
+   "reach_rankgrpo_2000_val": {
+    "target": 23.858748595121586,
+    "req2x": {
+     "step": 1404.4097482643976,
+     "gpu_h": 20.434161837246986
+    },
+    "remark": {
+     "step": 998.7435887562797,
+     "gpu_h": 8.941908826423777
+    },
+    "rankgrpo": {
+     "step": 2000.0,
+     "gpu_h": 13.365555555555556
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "note": "Reddit-Music artist-name-only matching.\n\nRe-scores the Table 2 Music pair test outputs (crs_eval per_instance.jsonl, no regeneration) with the registered truncate\nprotocol except that a recommendation matches a ground-truth artist on the name alone (the |year diff| <= 2 test is\ndropped). Seen and out-of-catalog filtering also use names: a recommended name that the user already mentioned, or that\nis no catalog artist under any year, counts as a miss. Ground-truth artists are deduplicated by name per row. Per-row and\nper-request (mean over contexts of the within-context mean) R@20 / N@20 with the crs_compare paired bootstrap (contexts,\n2,000 resamples, seed 42). The registered year-matching numbers are recomputed alongside as a check.",
+ "runs": {
+  "remark": "remark/outputs/crs/test/test_music_2B_union_group_s3407_p0c_ex_step1250",
+  "rankgrpo": "remark/outputs/crs/test/test_music_2B_single_group_s3407_p0c_ex_step2000"
+ },
+ "n_rows": 15893,
+ "n_contexts": 1931,
+ "rows_with_duplicate_gt_names": 0,
+ "units": "points (x100); a = ReMaRk, b = Rank-GRPO, diff = a - b, 95% paired bootstrap CI",
+ "results": {
+  "name_R@20_row": {
+   "a": 14.490426140147243,
+   "b": 13.402772672601234,
+   "diff": 1.0876534675460072,
+   "ci_low": 0.6725135653969818,
+   "ci_high": 1.5146051554167397,
+   "p_le_0": 0.0
+  },
+  "name_R@20_unit": {
+   "a": 14.056060294361522,
+   "b": 12.771387900654862,
+   "diff": 1.284672393706658,
+   "ci_low": 0.7417064388022625,
+   "ci_high": 1.8687002808814068,
+   "p_le_0": 0.0
+  },
+  "name_N@20_row": {
+   "a": 7.102190159003229,
+   "b": 6.590196041426738,
+   "diff": 0.5119941175764902,
+   "ci_low": 0.3298521486612585,
+   "ci_high": 0.6958976426333863,
+   "p_le_0": 0.0
+  },
+  "name_N@20_unit": {
+   "a": 6.974895658334804,
+   "b": 6.555472073873165,
+   "diff": 0.41942358446163586,
+   "ci_low": 0.15214520053509736,
+   "ci_high": 0.6802078004553834,
+   "p_le_0": 0.003
+  },
+  "year_R@20_row": {
+   "a": 14.482036702449303,
+   "b": 13.402772672601234,
+   "diff": 1.0792640298480691,
+   "ci_low": 0.6599996235463802,
+   "ci_high": 1.5077917676375132,
+   "p_le_0": 0.0
+  },
+  "year_R@20_unit": {
+   "a": 14.04842508475842,
+   "b": 12.771387900654862,
+   "diff": 1.277037184103556,
+   "ci_low": 0.7342583122629945,
+   "ci_high": 1.865359994316886,
+   "p_le_0": 0.0
+  },
+  "year_N@20_row": {
+   "a": 7.099247789154861,
+   "b": 6.590196041426738,
+   "diff": 0.509051747728122,
+   "ci_low": 0.3253039445919726,
+   "ci_high": 0.6901279806334571,
+   "p_le_0": 0.0
+  },
+  "year_N@20_unit": {
+   "a": 6.972262735709112,
+   "b": 6.555472073873165,
+   "diff": 0.41679066183594476,
+   "ci_low": 0.15078793461608433,
+   "ci_high": 0.676890548124736,
+   "p_le_0": 0.003
+  }
+ }
+}

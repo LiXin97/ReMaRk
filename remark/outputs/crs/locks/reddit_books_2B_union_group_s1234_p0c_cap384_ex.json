@@ -1,0 +1,12 @@
+{
+ "run": "reddit_books_2B_union_group_s1234_p0c_cap384_ex",
+ "best_step": 2000,
+ "val_R@20": {
+  "1250": 0.31380429934314197,
+  "1500": 0.31277608907203097,
+  "1750": 0.3077604141554344,
+  "2000": 0.31643139226042755
+ },
+ "locked_at_utc": "2026-10-02 06:37:39",
+ "rule": "best validation per-row R@20, ties to the earlier step; tested once"
+}

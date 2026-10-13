@@ -1,0 +1,15 @@
+{
+ "tag": "reddit_qwen2B",
+ "model": "/tmp/models/diag_reddit",
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "n_contexts": 500,
+ "mean_rows_per_context": 8.338,
+ "zero_group_rate_S": 0.5500535191601613,
+ "zero_group_rate_C": 0.124,
+ "within_group_std_S": 0.021819450766464007,
+ "within_group_std_C": 0.025346064978614673,
+ "cross_row_noise_S": 0.17521893127102295,
+ "mean_abs_spearman_advS_advC": 0.5385762804917335,
+ "n_rho": 1477,
+ "verdict": "PASS"
+}

@@ -1,0 +1,118 @@
+{
+ "val": {
+  "t2_remark": {
+   "1000": 30.74,
+   "1500": 31.27,
+   "2000": 31.19
+  },
+  "t2_rankgrpo": {
+   "1000": 28.58,
+   "1500": 29.69,
+   "2000": 30.53
+  },
+  "r1d_remark": {
+   "1000": 30.79,
+   "1500": 31.21,
+   "2000": 31.23
+  },
+  "r1d_rankgrpo": {
+   "1000": 28.9,
+   "1500": 30.27,
+   "2000": 30.27
+  }
+ },
+ "val_run_to_run": {
+  "remark": {
+   "1000": [
+    0.05,
+    -0.47,
+    0.62
+   ],
+   "1500": [
+    -0.06,
+    -0.53,
+    0.43
+   ],
+   "2000": [
+    0.04,
+    -0.48,
+    0.52
+   ]
+  },
+  "rankgrpo": {
+   "1000": [
+    0.32,
+    -0.25,
+    0.91
+   ],
+   "1500": [
+    0.58,
+    0.03,
+    1.11
+   ],
+   "2000": [
+    -0.26,
+    -0.83,
+    0.32
+   ]
+  }
+ },
+ "val_gap": {
+  "t2": {
+   "1000": [
+    2.15,
+    1.51,
+    2.78
+   ],
+   "1500": [
+    1.58,
+    0.94,
+    2.22
+   ],
+   "2000": [
+    0.66,
+    0.01,
+    1.3
+   ]
+  },
+  "r1d": {
+   "1000": [
+    1.88,
+    1.22,
+    2.57
+   ],
+   "1500": [
+    0.94,
+    0.3,
+    1.58
+   ],
+   "2000": [
+    0.96,
+    0.33,
+    1.58
+   ]
+  }
+ },
+ "test": {
+  "test_books_union_group_p0d_step1500": [
+   30.16,
+   16.69,
+   "po_qwen_selected/reddit_books_2B_union_group_s3407_p0c_cap384_ex/checkpoint-1500"
+  ],
+  "test_books_single_group_p0d_step2000": [
+   29.34,
+   15.96,
+   "local/grpo_qwen/reddit_books_2B_single_group_s3407_p0c_cap384_ex/checkpoint-2000"
+  ],
+  "test_reddit_books_2B_union_group_s3407_p0c_cap384_ex_ms8000_step2000": [
+   30.77,
+   16.89,
+   "_selected/reddit_books_2B_union_group_s3407_p0c_cap384_ex_ms8000/checkpoint-2000"
+  ],
+  "test_reddit_books_2B_single_group_s3407_p0c_cap384_ex_ms8000_step3250": [
+   30.0,
+   16.43,
+   "selected/reddit_books_2B_single_group_s3407_p0c_cap384_ex_ms8000/checkpoint-3250"
+  ]
+ }
+}

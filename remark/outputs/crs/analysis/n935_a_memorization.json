@@ -1,0 +1,163 @@
+{
+ "books_2B": {
+  "probe": "remark/outputs/crs/test/memo_probe_books_2B",
+  "probe_R@20_row": 0.013836760501509773,
+  "share_requests_recalled": 0.06695652173913043,
+  "requests": 1150,
+  "rows_in_recalled_requests": 0.11700615821885363,
+  "vs_rankgrpo": {
+   "a": "test_books_union_group_p0d_step1500",
+   "b": "test_books_single_group_p0d_step2000",
+   "recalled": {
+    "requests": 77,
+    "remark_minus_baseline_row": 0.003145543984008923,
+    "ci95": [
+     -0.014272760093925297,
+     0.020194791246425987
+    ]
+   },
+   "not_recalled": {
+    "requests": 1073,
+    "remark_minus_baseline_row": 0.008889494955987003,
+    "ci95": [
+     0.0015111629250463738,
+     0.016111755853392716
+    ]
+   },
+   "all": {
+    "requests": 1150,
+    "remark_minus_baseline_row": 0.008217417319758398,
+    "ci95": [
+     0.0011914690879101797,
+     0.014986476305588916
+    ]
+   }
+  },
+  "vs_perresp_batch": {
+   "a": "test_books_union_group_p0d_step1500",
+   "b": "test_books_single_batch_p0d_step2000",
+   "recalled": {
+    "requests": 77,
+    "remark_minus_baseline_row": 0.012319790789834681,
+    "ci95": [
+     -0.0035686808473511284,
+     0.029649532236861346
+    ]
+   },
+   "not_recalled": {
+    "requests": 1073,
+    "remark_minus_baseline_row": 0.007565617798986898,
+    "ci95": [
+     0.0009559526731555288,
+     0.01458375484538713
+    ]
+   },
+   "all": {
+    "requests": 1150,
+    "remark_minus_baseline_row": 0.008121885316153833,
+    "ci95": [
+     0.0018645890722925557,
+     0.014637521852900003
+    ]
+   }
+  }
+ },
+ "books_4B": {
+  "probe": "remark/outputs/crs/test/memo_probe_books_4B",
+  "probe_R@20_row": 0.024212332748571496,
+  "share_requests_recalled": 0.12782608695652173,
+  "requests": 1150,
+  "rows_in_recalled_requests": 0.20685299226275067,
+  "vs_rankgrpo": {
+   "a": "test_reddit_books_4B_union_group_s3407_p0c_cap384_ex_step2000",
+   "b": "test_reddit_books_4B_single_group_s3407_p0c_cap384_ex_step2000",
+   "recalled": {
+    "requests": 147,
+    "remark_minus_baseline_row": 0.008188474699476044,
+    "ci95": [
+     -0.00372243091753188,
+     0.02225838140743777
+    ]
+   },
+   "not_recalled": {
+    "requests": 1003,
+    "remark_minus_baseline_row": 0.011641819520221726,
+    "ci95": [
+     0.0038533140781449515,
+     0.01979197594705511
+    ]
+   },
+   "all": {
+    "requests": 1150,
+    "remark_minus_baseline_row": 0.010927484810735412,
+    "ci95": [
+     0.00424210005335206,
+     0.017826528279191494
+    ]
+   }
+  },
+  "vs_perresp_batch": {
+   "a": "test_reddit_books_4B_union_group_s3407_p0c_cap384_ex_step2000",
+   "b": "test_reddit_books_4B_single_batch_s3407_p0c_cap384_ex_step2000",
+   "recalled": {
+    "requests": 147,
+    "remark_minus_baseline_row": 0.010356741223153438,
+    "ci95": [
+     -0.007177546292475683,
+     0.029526001389739674
+    ]
+   },
+   "not_recalled": {
+    "requests": 1003,
+    "remark_minus_baseline_row": 0.009709621613435498,
+    "ci95": [
+     0.0027077284501560604,
+     0.016657536021662117
+    ]
+   },
+   "all": {
+    "requests": 1150,
+    "remark_minus_baseline_row": 0.009843480241057558,
+    "ci95": [
+     0.003465381044456985,
+     0.016447005727345063
+    ]
+   }
+  }
+ },
+ "music_2B": {
+  "probe": "remark/outputs/crs/test/memo_probe_music_2B",
+  "probe_R@20_row": 0.0015572128955379442,
+  "share_requests_recalled": 0.019161056447436563,
+  "requests": 1931,
+  "rows_in_recalled_requests": 0.028251431447807212,
+  "vs_rankgrpo": {
+   "a": "test_music_2B_union_group_s3407_p0c_ex_step1250",
+   "b": "test_music_2B_single_group_s3407_p0c_ex_step2000",
+   "recalled": {
+    "requests": 37,
+    "remark_minus_baseline_row": -0.028857531975572066,
+    "ci95": [
+     -0.057145268941245074,
+     -0.003107326987118798
+    ]
+   },
+   "not_recalled": {
+    "requests": 1894,
+    "remark_minus_baseline_row": 0.011945380997201854,
+    "ci95": [
+     0.007373387280066373,
+     0.016157704112457254
+    ]
+   },
+   "all": {
+    "requests": 1931,
+    "remark_minus_baseline_row": 0.01079264029848069,
+    "ci95": [
+     0.006599996235463802,
+     0.015077917676375133
+    ]
+   }
+  }
+ }
+}

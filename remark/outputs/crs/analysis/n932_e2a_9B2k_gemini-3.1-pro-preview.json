@@ -1,0 +1,43 @@
+{
+ "judge": "gemini-3.1-pro-preview",
+ "model_versions": [
+  "gemini-3.1-pro-preview"
+ ],
+ "prompt_file": "remark/configs/judge_prompt.txt",
+ "prompt_sha256": "874df9208ad9322885da39a73dd5cdb624ac8089316d2ec46cf5e8c0ccba707b",
+ "pair": "9B2k",
+ "a_run": "test_9B_union_group_s3407_p0c_step2000",
+ "b_run": "test_9B_single_group_s3407_step2000",
+ "requests_sampled": 300,
+ "requests_scored_both_orders": 300,
+ "unparsed_answers": 0,
+ "remark_score": 0.5833333333333334,
+ "ci95": [
+  0.5391666666666667,
+  0.6308541666666666
+ ],
+ "order_consistency": 0.78,
+ "A_rate": 0.45666666666666667,
+ "remark_wins_both": 126,
+ "rankgrpo_wins_both": 76,
+ "tie_both": 32,
+ "vs_gpt": {
+  "gpt_cache": "n927_e7b_judge.jsonl",
+  "calls_both_parsed": 598,
+  "kappa_per_call": 0.5298719463669905,
+  "agreement_per_call": 0.7274247491638796,
+  "requests_both_judges": 299,
+  "kappa_per_request_winner": 0.5236871164533589,
+  "gpt_remark_score_same_requests": 0.56438127090301,
+  "gpt_ci95_same_requests": [
+   0.5150501672240803,
+   0.6145693979933109
+  ]
+ },
+ "api_calls": 600,
+ "usage": {
+  "prompt_tokens": 481746,
+  "completion_tokens": 30611,
+  "thoughts_tokens": 629160
+ }
+}

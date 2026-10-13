@@ -1,0 +1,15 @@
+{
+ "tag": "books_qwen2B",
+ "model": "/tmp/models/diag_books",
+ "data": "remark/data/crs/reddit_books/sft_dataset",
+ "n_contexts": 500,
+ "mean_rows_per_context": 5.454,
+ "zero_group_rate_S": 0.6284897264042002,
+ "zero_group_rate_C": 0.222,
+ "within_group_std_S": 0.007168005009623641,
+ "within_group_std_C": 0.009520736499894458,
+ "cross_row_noise_S": 0.15396710926806503,
+ "mean_abs_spearman_advS_advC": 0.9271208050978214,
+ "n_rho": 189,
+ "verdict": "INCONCLUSIVE"
+}

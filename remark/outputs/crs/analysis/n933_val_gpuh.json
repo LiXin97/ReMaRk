@@ -1,0 +1,160 @@
+{
+ "minutes_per_eval_1gpu": {
+  "2B": 4.0,
+  "4B": 5.0,
+  "9B": 7.0
+ },
+ "rule": "validation every 250 steps up to the stop step (plateau) or 2,000 (2k); val GPU-h = n_val x minutes / 60 on 1 GPU; train GPU-h = n932_e3_compute.gpuh (4 GPUs x summed step_time, unlogged steps at the mean)",
+ "runs": {
+  "plateau 2B s3407 2B_union_group_s3407_p0c_ms8000": {
+   "run": "2B_union_group_s3407_p0c_ms8000",
+   "stop": 5500,
+   "n_val": 22,
+   "train": 41.8,
+   "est": 0.27,
+   "val": 1.47,
+   "total": 43.3,
+   "best_step": 4000,
+   "train_to_best": 30.4,
+   "val_to_best": 1.07
+  },
+  "plateau 2B s3407 2B_single_group_s3407_p0c_ms8000": {
+   "run": "2B_single_group_s3407_p0c_ms8000",
+   "stop": 6750,
+   "n_val": 27,
+   "train": 55.3,
+   "est": 0.81,
+   "val": 1.8,
+   "total": 57.1,
+   "best_step": 5250,
+   "train_to_best": 42.8,
+   "val_to_best": 1.4
+  },
+  "plateau 2B s42 2B_union_group_s42_p0c_ms8000": {
+   "run": "2B_union_group_s42_p0c_ms8000",
+   "stop": 6000,
+   "n_val": 24,
+   "train": 46.2,
+   "est": 0.0,
+   "val": 1.6,
+   "total": 47.8,
+   "best_step": 4500,
+   "train_to_best": 34.8,
+   "val_to_best": 1.2
+  },
+  "plateau 2B s42 2B_single_group_s42_p0c_ms8000": {
+   "run": "2B_single_group_s42_p0c_ms8000",
+   "stop": 8000,
+   "n_val": 32,
+   "train": 58.7,
+   "est": 0.09,
+   "val": 2.13,
+   "total": 60.8,
+   "best_step": 7250,
+   "train_to_best": 53.2,
+   "val_to_best": 1.93
+  },
+  "plateau 4B s3407 4B_union_group_s3407_p0c_ms8000": {
+   "run": "4B_union_group_s3407_p0c_ms8000",
+   "stop": 4500,
+   "n_val": 18,
+   "train": 60.6,
+   "est": 0.0,
+   "val": 1.5,
+   "total": 62.1,
+   "best_step": 3000,
+   "train_to_best": 40.6,
+   "val_to_best": 1.0
+  },
+  "plateau 4B s3407 4B_single_group_s3407_p0c_ms8000": {
+   "run": "4B_single_group_s3407_p0c_ms8000",
+   "stop": 6750,
+   "n_val": 27,
+   "train": 87.6,
+   "est": 0.0,
+   "val": 2.25,
+   "total": 89.8,
+   "best_step": 5250,
+   "train_to_best": 66.1,
+   "val_to_best": 1.75
+  },
+  "plateau 9B s3407 9B_union_group_s3407_p0c_ms8000": {
+   "run": "9B_union_group_s3407_p0c_ms8000",
+   "stop": 4250,
+   "n_val": 17,
+   "train": 74.0,
+   "est": 0.0,
+   "val": 1.98,
+   "total": 76.0,
+   "best_step": 2750,
+   "train_to_best": 48.0,
+   "val_to_best": 1.28
+  },
+  "plateau 9B s3407 9B_single_group_s3407_p0c_ms8000": {
+   "run": "9B_single_group_s3407_p0c_ms8000",
+   "stop": 8000,
+   "n_val": 32,
+   "train": 129.3,
+   "est": 0.0,
+   "val": 3.73,
+   "total": 133.0,
+   "best_step": 7250,
+   "train_to_best": 117.2,
+   "val_to_best": 3.38
+  },
+  "2k 2B 2B_union_group_s3407_p0c": {
+   "run": "2B_union_group_s3407_p0c",
+   "stop": 2000,
+   "n_val": 8,
+   "train": 13.1,
+   "est": 0.0,
+   "val": 0.53,
+   "total": 13.6
+  },
+  "2k 2B 2B_single_group_s3407_p0c": {
+   "run": "2B_single_group_s3407_p0c",
+   "stop": 2000,
+   "n_val": 8,
+   "train": 12.9,
+   "est": 0.0,
+   "val": 0.53,
+   "total": 13.4
+  },
+  "2k 4B 4B_union_group_s3407_p0c": {
+   "run": "4B_union_group_s3407_p0c",
+   "stop": 2000,
+   "n_val": 8,
+   "train": 27.7,
+   "est": 0.0,
+   "val": 0.67,
+   "total": 28.4
+  },
+  "2k 4B 4B_single_group_s3407_p0c": {
+   "run": "4B_single_group_s3407_p0c",
+   "stop": 2000,
+   "n_val": 8,
+   "train": 26.0,
+   "est": 0.0,
+   "val": 0.67,
+   "total": 26.7
+  },
+  "2k 9B 9B_union_group_s3407_p0c": {
+   "run": "9B_union_group_s3407_p0c",
+   "stop": 2000,
+   "n_val": 6,
+   "train": 36.4,
+   "est": 0.0,
+   "val": 0.7,
+   "total": 37.1
+  },
+  "2k 9B 9B_single_group_s3407_p0c": {
+   "run": "9B_single_group_s3407_p0c",
+   "stop": 2000,
+   "n_val": 8,
+   "train": 32.8,
+   "est": 0.0,
+   "val": 0.93,
+   "total": 33.7
+  }
+ }
+}

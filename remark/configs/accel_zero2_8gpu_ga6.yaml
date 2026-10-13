@@ -1,0 +1,18 @@
+# DeepSpeed ZeRO-2, 8 processes, bf16 (SFT of Qwen3.5-27B / 35B-A3B; ZeRO-3 gathered parameters every micro-step:
+# 61 s/step at 27B in the smoke test). gradient_accumulation_steps must match the script.
+compute_environment: LOCAL_MACHINE
+debug: false
+deepspeed_config:
+  gradient_accumulation_steps: 6
+  zero3_init_flag: false
+  zero_stage: 2
+distributed_type: DEEPSPEED
+downcast_bf16: 'no'
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16
+num_machines: 1
+num_processes: 8
+rdzv_backend: static
+same_network: true
+use_cpu: false

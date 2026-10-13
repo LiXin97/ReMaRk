@@ -1,0 +1,766 @@
+{
+ "training": {
+  "runs": 122,
+  "gpu_hours": 3063.8,
+  "gpu_hours_excluding_discarded": 3063.8,
+  "node_hours_8gpu": 383.0
+ },
+ "evaluation": {
+  "runs": 1544,
+  "by_size": {
+   "2B": 1006,
+   "27B": 24,
+   "35BA3B": 22,
+   "4B": 264,
+   "9B": 135,
+   "llama3b": 53,
+   "llama8b": 40
+  },
+  "minutes_per_eval": {
+   "2B": 4.0,
+   "4B": 5.0,
+   "9B": 7.0,
+   "llama3b": 4.0,
+   "llama8b": 10.0,
+   "27B": 10.0,
+   "35BA3B": 10.0
+  },
+  "gpu_hours": 122.7
+ },
+ "total_gpu_hours": 3186.5,
+ "note": "lower bound: excludes staging, downloads, idle time and preempted segments whose logs were lost; API-only evaluations (GPT-5.6 zero-shot and the judge) use no GPU",
+ "by_run": {
+  "grpo_27B_single_group_s3407_p0c": {
+   "gpu_hours": 109.4,
+   "gpus": 8,
+   "segments": 3,
+   "discarded": false
+  },
+  "grpo_27B_union_group_s3407_p0c": {
+   "gpu_hours": 207.0,
+   "gpus": 8,
+   "segments": 5,
+   "discarded": false
+  },
+  "grpo_2B_consensus_batch_s3407_p0c_cap320": {
+   "gpu_hours": 14.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_consensus_group_s1234_p0c": {
+   "gpu_hours": 14.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_consensus_group_s3407_p0c": {
+   "gpu_hours": 13.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_consensus_group_s42_p0c": {
+   "gpu_hours": 14.9,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_2B_consensusrw_batch_s1234_p0c": {
+   "gpu_hours": 15.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_consensusrw_batch_s3407_p0c_cap320": {
+   "gpu_hours": 13.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_consensusrw_batch_s42_p0c": {
+   "gpu_hours": 16.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_meanm2rw_batch_s1234_p0c": {
+   "gpu_hours": 13.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_meanm2rw_batch_s3407_p0c": {
+   "gpu_hours": 13.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_meanm2rw_batch_s42_p0c": {
+   "gpu_hours": 13.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_meanm4rw_batch_s1234_p0c": {
+   "gpu_hours": 16.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_meanm4rw_batch_s3407_p0c": {
+   "gpu_hours": 13.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_meanm4rw_batch_s42_p0c": {
+   "gpu_hours": 13.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_batch_s1234_p0c": {
+   "gpu_hours": 15.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_batch_s3407_p0c": {
+   "gpu_hours": 13.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_batch_s42_p0c": {
+   "gpu_hours": 15.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s1234_p0c": {
+   "gpu_hours": 13.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c": {
+   "gpu_hours": 14.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c_G16": {
+   "gpu_hours": 11.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c_dyn": {
+   "gpu_hours": 7.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c_ms4000": {
+   "gpu_hours": 26.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c_ms4000_cos": {
+   "gpu_hours": 26.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c_ms4000_lr1e-6": {
+   "gpu_hours": 27.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s3407_p0c_ms8000": {
+   "gpu_hours": 5.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s42_p0c": {
+   "gpu_hours": 13.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s42_p0c_ms4000_cos": {
+   "gpu_hours": 26.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_single_group_s42_p0c_ms8000": {
+   "gpu_hours": 55.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_singlethr_batch_s3407_p0c": {
+   "gpu_hours": 14.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_batch_s1234_p0c": {
+   "gpu_hours": 14.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_batch_s3407_p0c": {
+   "gpu_hours": 14.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_batch_s3407_p0c_ms4000": {
+   "gpu_hours": 49.0,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_2B_union_batch_s42_p0c": {
+   "gpu_hours": 14.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s1234_p0c": {
+   "gpu_hours": 27.1,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c": {
+   "gpu_hours": 14.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c_G16": {
+   "gpu_hours": 7.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c_cap320_ms4000": {
+   "gpu_hours": 26.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c_ms1500": {
+   "gpu_hours": 10.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c_ms4000": {
+   "gpu_hours": 21.6,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c_ms4000_cos": {
+   "gpu_hours": 28.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s3407_p0c_shape106": {
+   "gpu_hours": 14.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s42_p0c": {
+   "gpu_hours": 25.1,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s42_p0c_ms4000_cos": {
+   "gpu_hours": 27.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_union_group_s42_p0c_ms8000": {
+   "gpu_hours": 50.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_2B_vote025_group_s3407_p0c": {
+   "gpu_hours": 14.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_35BA3B_single_group_s3407_p0c": {
+   "gpu_hours": 100.2,
+   "gpus": 8,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_35BA3B_union_group_s3407_p0c": {
+   "gpu_hours": 114.0,
+   "gpus": 8,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_35BA3B_union_group_s3407_p0c_seg0_aborted_n922": {
+   "gpu_hours": 14.2,
+   "gpus": 8,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_single_batch_s3407_p0c": {
+   "gpu_hours": 27.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s1234_p0c": {
+   "gpu_hours": 26.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s3407_p0c": {
+   "gpu_hours": 27.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s3407_p0c_G16": {
+   "gpu_hours": 18.2,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s3407_p0c_ms4000": {
+   "gpu_hours": 23.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s3407_p0c_ms4000_lr1e-6": {
+   "gpu_hours": 54.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s3407_p0c_ms8000": {
+   "gpu_hours": 95.3,
+   "gpus": 4,
+   "segments": 3,
+   "discarded": false
+  },
+  "grpo_4B_single_group_s42_p0c": {
+   "gpu_hours": 26.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_batch_s3407_p0c": {
+   "gpu_hours": 28.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_batch_s42_p0c": {
+   "gpu_hours": 27.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_group_s1234_p0c": {
+   "gpu_hours": 28.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_group_s3407_p0c": {
+   "gpu_hours": 29.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_group_s3407_p0c_ms1500": {
+   "gpu_hours": 21.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_group_s3407_p0c_ms4000": {
+   "gpu_hours": 25.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_group_s3407_p0c_ms8000": {
+   "gpu_hours": 64.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_4B_union_group_s42_p0c": {
+   "gpu_hours": 29.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_single_batch_s3407_p0c": {
+   "gpu_hours": 33.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_single_group_s1234_p0c": {
+   "gpu_hours": 11.6,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_9B_single_group_s3407_p0c": {
+   "gpu_hours": 34.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_single_group_s3407_p0c_ms8000": {
+   "gpu_hours": 136.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_single_group_s42_p0c": {
+   "gpu_hours": 36.1,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_9B_union_batch_s3407_p0c": {
+   "gpu_hours": 36.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_union_group_s1234_p0c": {
+   "gpu_hours": 11.6,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_9B_union_group_s3407_p0c": {
+   "gpu_hours": 34.2,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_9B_union_group_s3407_p0c_cap320": {
+   "gpu_hours": 26.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_union_group_s3407_p0c_ms1500": {
+   "gpu_hours": 26.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_union_group_s3407_p0c_ms8000": {
+   "gpu_hours": 78.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_9B_union_group_s42_p0c": {
+   "gpu_hours": 28.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama3b_single_batch_s3407_p0c": {
+   "gpu_hours": 7.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama3b_single_group_s3407_p0c": {
+   "gpu_hours": 14.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama3b_single_group_s42_p0c": {
+   "gpu_hours": 13.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama3b_union_batch_s3407_p0c": {
+   "gpu_hours": 19.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama3b_union_group_s3407_p0c": {
+   "gpu_hours": 16.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama3b_union_group_s42_p0c": {
+   "gpu_hours": 14.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama8b_single_batch_s3407_p0c": {
+   "gpu_hours": 27.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama8b_single_group_s3407_p0c": {
+   "gpu_hours": 27.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama8b_union_batch_s3407_p0c": {
+   "gpu_hours": 30.0,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama8b_union_group_s3407_p0c": {
+   "gpu_hours": 30.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama_cont15800_single_group_s3407": {
+   "gpu_hours": 12.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_llama_cont15800_union_group_s3407": {
+   "gpu_hours": 13.1,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_llama_union_group_s3407": {
+   "gpu_hours": 38.9,
+   "gpus": 4,
+   "segments": 2,
+   "discarded": false
+  },
+  "grpo_music_2B_single_batch_s3407_p0c_ex": {
+   "gpu_hours": 9.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_music_2B_single_group_s3407_p0c_ex_ms8000": {
+   "gpu_hours": 28.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_music_2B_union_batch_s3407_p0c_ex": {
+   "gpu_hours": 9.4,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_music_2B_union_group_s3407_p0c_ex_ms8000": {
+   "gpu_hours": 14.8,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_consensus_batch_s3407_p0c": {
+   "gpu_hours": 11.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_consensus_batch_s3407_p0c_cap384_ex": {
+   "gpu_hours": 11.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_consensusrw_batch_s3407_p0c": {
+   "gpu_hours": 11.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_consensusrw_batch_s3407_p0c_cap384_ex": {
+   "gpu_hours": 11.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_batch_s1234_p0c_cap384_ex": {
+   "gpu_hours": 5.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_batch_s3407_p0c": {
+   "gpu_hours": 11.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_batch_s3407_p0c_cap384_ex": {
+   "gpu_hours": 11.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_batch_s42_p0c_cap384_ex": {
+   "gpu_hours": 11.9,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_group_s3407_p0c": {
+   "gpu_hours": 11.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_group_s3407_p0c_cap384": {
+   "gpu_hours": 11.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_group_s3407_p0c_cap384_ex": {
+   "gpu_hours": 11.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_single_group_s3407_p0c_cap384_ex_ms8000": {
+   "gpu_hours": 28.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_union_batch_s3407_p0c": {
+   "gpu_hours": 11.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_union_batch_s3407_p0c_cap384_ex": {
+   "gpu_hours": 11.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_union_group_s1234_p0c_cap384_ex": {
+   "gpu_hours": 5.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_union_group_s3407_p0c_cap384_ex": {
+   "gpu_hours": 11.7,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_union_group_s3407_p0c_cap384_ex_ms8000": {
+   "gpu_hours": 20.6,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_2B_union_group_s42_p0c_cap384_ex": {
+   "gpu_hours": 13.5,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_4B_single_batch_s3407_p0c_cap384_ex": {
+   "gpu_hours": 22.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_4B_single_batch_s42_p0c_cap384_ex": {
+   "gpu_hours": 22.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_4B_single_group_s3407_p0c_cap384_ex": {
+   "gpu_hours": 5.3,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_4B_union_batch_s3407_p0c_cap384_ex": {
+   "gpu_hours": 7.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_4B_union_group_s3407_p0c_cap384_ex": {
+   "gpu_hours": 7.1,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "grpo_reddit_books_4B_union_group_s42_p0c_cap384_ex": {
+   "gpu_hours": 22.2,
+   "gpus": 4,
+   "segments": 1,
+   "discarded": false
+  },
+  "sft_extend_4B": {
+   "gpu_hours": 3.8,
+   "gpus": 8,
+   "segments": 1,
+   "discarded": false
+  },
+  "sft_multipos_2B": {
+   "gpu_hours": 0.0,
+   "gpus": 8,
+   "segments": 1,
+   "discarded": false
+  },
+  "sft_multipos_4B": {
+   "gpu_hours": 0.0,
+   "gpus": 8,
+   "segments": 1,
+   "discarded": false
+  },
+  "sft_reddit_books_2B": {
+   "gpu_hours": 0.0,
+   "gpus": 8,
+   "segments": 1,
+   "discarded": false
+  }
+ }
+}

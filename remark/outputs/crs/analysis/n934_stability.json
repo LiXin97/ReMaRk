@@ -1,0 +1,90 @@
+{
+ "llama3b_single_batch_s3407_p0c": {
+  "run": "llama3b_single_batch_s3407_p0c",
+  "ref_run": "llama3b_single_group_s3407_p0c",
+  "ref_max_kl": 0.4642,
+  "kl_limit": 2.321,
+  "last_step": 870,
+  "unstable": {
+   "step": 770,
+   "criterion": "ii",
+   "items": 20.24,
+   "exact": 0.8833
+  },
+  "val": {}
+ },
+ "llama3b_union_batch_s3407_p0c": {
+  "run": "llama3b_union_batch_s3407_p0c",
+  "ref_run": "llama3b_union_group_s3407_p0c",
+  "ref_max_kl": 0.7412,
+  "kl_limit": 3.706,
+  "last_step": 460,
+  "unstable": null,
+  "val": {}
+ },
+ "llama8b_single_batch_s3407_p0c": {
+  "run": "llama8b_single_batch_s3407_p0c",
+  "ref_run": "llama8b_single_group_s3407_p0c",
+  "ref_max_kl": 1.362,
+  "kl_limit": 6.8100000000000005,
+  "last_step": 450,
+  "unstable": {
+   "step": 110,
+   "criterion": "ii",
+   "items": 20.146,
+   "exact": 0.8537
+  },
+  "val": {}
+ },
+ "llama8b_union_batch_s3407_p0c": {
+  "run": "llama8b_union_batch_s3407_p0c",
+  "ref_run": "llama8b_union_group_s3407_p0c",
+  "ref_max_kl": 1.186,
+  "kl_limit": 5.93,
+  "last_step": 420,
+  "unstable": {
+   "step": 110,
+   "criterion": "ii",
+   "items": 20.724,
+   "exact": 0.2851
+  },
+  "val": {}
+ },
+ "music_2B_single_batch_s3407_p0c_ex": {
+  "run": "music_2B_single_batch_s3407_p0c_ex",
+  "ref_run": "music_2B_single_group_s3407_p0c_ex",
+  "ref_max_kl": null,
+  "kl_limit": null,
+  "last_step": 770,
+  "unstable": {
+   "step": 110,
+   "criterion": "ii",
+   "items": 19.972,
+   "exact": 0.8887
+  },
+  "val": {}
+ },
+ "music_2B_union_batch_s3407_p0c_ex": {
+  "run": "music_2B_union_batch_s3407_p0c_ex",
+  "ref_run": "music_2B_union_group_s3407_p0c_ex",
+  "ref_max_kl": null,
+  "kl_limit": null,
+  "last_step": 0,
+  "unstable": null,
+  "val": {}
+ },
+ "reddit_books_4B_union_batch_s3407_p0c_cap384_ex": {
+  "run": "reddit_books_4B_union_batch_s3407_p0c_cap384_ex",
+  "ref_run": "reddit_books_4B_union_group_s3407_p0c_cap384_ex",
+  "ref_max_kl": 0.4891,
+  "kl_limit": 2.4455,
+  "last_step": 590,
+  "unstable": {
+   "step": 480,
+   "criterion": "ii",
+   "items": 19.718,
+   "exact": 0.7172
+  },
+  "val": {}
+ }
+}

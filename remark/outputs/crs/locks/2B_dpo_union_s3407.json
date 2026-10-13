@@ -1,0 +1,12 @@
+{
+ "run": "2B_dpo_union_s3407",
+ "best_step": 659,
+ "val_R@20": {
+  "250": 0.1877558701692381,
+  "500": 0.1909933178979361,
+  "659": 0.1922694723955881,
+  "660": 0.19195481926120478
+ },
+ "locked_at_utc": "2026-10-02 04:44:21",
+ "rule": "best validation per-row R@20, ties to the earlier step; tested once ((b))"
+}

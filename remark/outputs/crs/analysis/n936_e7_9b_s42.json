@@ -1,0 +1,86 @@
+{
+ "node": "= 9B plateau pair, seed 42 (replicates s3407); x, plateau 1500, cap 8000; autotest6 lock+test once",
+ "remark": {
+  "run": "9B_union_group_s42_p0c_ms8000",
+  "stop": 4250,
+  "lock": 2750,
+  "val_best": 29.0,
+  "test_R20": 25.93,
+  "test_N20": 13.74
+ },
+ "rankgrpo": {
+  "run": "9B_single_group_s42_p0c_ms8000",
+  "stop": 8000,
+  "stop_reason": "cap (no plateau; best at last step)",
+  "lock": 8000,
+  "val_best": 29.09,
+  "test_R20": 25.88,
+  "test_N20": 13.66
+ },
+ "test_diff_remark_minus_rankgrpo": {
+  "row": {
+   "R20": [
+    0.05,
+    -0.38,
+    0.46
+   ],
+   "N20": [
+    0.08,
+    -0.12,
+    0.29
+   ]
+  },
+  "unit": {
+   "R20": [
+    0.2,
+    -0.62,
+    0.98
+   ],
+   "N20": [
+    0.12,
+    -0.31,
+    0.54
+   ]
+  }
+ },
+ "val_best_vs_best": {
+  "row": {
+   "R20": [
+    -0.08,
+    -0.58,
+    0.38
+   ]
+  },
+  "unit": {
+   "R20": [
+    0.65,
+    -0.29,
+    1.57
+   ]
+  }
+ },
+ "crossing": {
+  "remark_reaches_rankgrpo_best": null,
+  "rankgrpo_first_exceeds_remark_best_step": 7500,
+  "ratio_steps": 2.727272727272727
+ },
+ "gpu_h": {
+  "def": "4 GPUs x mean logged step_time x steps (same node x)",
+  "remark_sps": 15.37,
+  "rankgrpo_sps": 14.34,
+  "remark_2750": 47.0,
+  "remark_4250": 72.6,
+  "rankgrpo_7500": 119.5,
+  "rankgrpo_8000": 127.4,
+  "ratio_pass": 2.5425531914893615
+ },
+ "criteria": {
+  "a_test_ci_includes_0_or_above": true,
+  "b_remark_reaches_rankgrpo_best_earlier": false
+ },
+ "files": [
+  "analysis/test_9B_e7_s42_plateau_pair_{row,unit}.json",
+  "analysis/val_9B_e7_s42_plateau_pair_{row,unit}.json",
+  "train_logs/node-x/grpo_9B_*_s42_p0c_ms8000.log"
+ ]
+}

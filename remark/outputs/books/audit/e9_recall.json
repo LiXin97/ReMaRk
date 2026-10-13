@@ -1,0 +1,49 @@
+{
+ "judge": "gemini-2.5-pro",
+ "population_pairs": 186511,
+ "sampled": 100,
+ "judged_ok": 100,
+ "pairs_with_judged_books": 89,
+ "judged_books": 163,
+ "recall": 0.8773006134969326,
+ "recall_ci95": [
+  0.8180757098879816,
+  0.91915049748476
+ ],
+ "recall_macro": 0.8902354200107009,
+ "grounded_recall": 0.8404907975460123,
+ "grounded_recall_ci95": [
+  0.776540308736934,
+  0.8887613905994425
+ ],
+ "extracted_books": 152,
+ "precision_vs_judge": 0.9276315789473685,
+ "precision_ci95": [
+  0.8750669520192608,
+  0.9591133952051004
+ ],
+ "adjusted": {
+  "judged_specific_books": 159,
+  "recall": 0.9685534591194969,
+  "recall_ci95": [
+   0.9285047939596817,
+   0.9864948130203531
+  ],
+  "precision_vs_judge": 0.9868421052631579,
+  "precision_ci95": [
+   0.9532979828928706,
+   0.9963842585625559
+  ],
+  "rule": "non-specific judged items dropped; series words removed; fuzzy title ratio >= 0.85"
+ },
+ "manual": {
+  "pairs": 30,
+  "manual_items": 45,
+  "extraction_covered": 45,
+  "extraction_recall_vs_manual": 1.0,
+  "extraction_recall_vs_manual_ci95": [
+   0.9213457380593594,
+   1.0000000000000002
+  ]
+ }
+}

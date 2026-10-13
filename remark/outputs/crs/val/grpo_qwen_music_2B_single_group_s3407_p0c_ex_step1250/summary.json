@@ -1,0 +1,48 @@
+{
+ "model": "remark/outputs/crs/grpo_qwen_mirror/music_2B_single_group_s3407_p0c_ex/checkpoint-1250",
+ "data": "remark/data/crs/music/sft_dataset",
+ "split": "validation",
+ "n": 15060,
+ "unique_contexts": 1961,
+ "parse_empty": 0,
+ "in_catalog_rate": 0.9976790825237238,
+ "truncate_R@5": 0.05093967880085998,
+ "truncate_N@5": 0.03856153657354686,
+ "truncate_R@10": 0.08044992806478132,
+ "truncate_N@10": 0.04842777278432364,
+ "truncate_R@20": 0.12020518156526776,
+ "truncate_N@20": 0.05953564404407207,
+ "filter_R@5": 0.051403513696965795,
+ "filter_N@5": 0.03900280926293672,
+ "filter_R@10": 0.08125756478269001,
+ "filter_N@10": 0.04896857091876853,
+ "filter_R@20": 0.12020518156526776,
+ "filter_N@20": 0.05986082314192337,
+ "gt_pop_quantiles_50_80_90": [
+  60.0,
+  237.0,
+  398.0
+ ],
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 1070,
+   "recall": 0.003738317757009346
+  },
+  "tail(<=median)": {
+   "n": 13334,
+   "recall": 0.034423278836058196
+  },
+  "mid": {
+   "n": 7952,
+   "recall": 0.12034708249496982
+  },
+  "head(top20%)": {
+   "n": 5300,
+   "recall": 0.32754716981132076
+  },
+  "top10%": {
+   "n": 2645,
+   "recall": 0.43137996219281666
+  }
+ }
+}

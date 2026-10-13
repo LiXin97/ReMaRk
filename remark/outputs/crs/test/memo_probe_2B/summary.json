@@ -1,0 +1,78 @@
+{
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "split": "test",
+ "n": 10972,
+ "unique_contexts": 2050,
+ "rows_without_output": 0,
+ "parse_empty": 50,
+ "mean_parsed_items": 9.156853809697411,
+ "in_catalog_rate": 0.6742477779215479,
+ "model": "/tmp/models/Qwen3.5-2B-Base",
+ "probe": "3-shot base-model completion, greedy, max 400 tokens",
+ "shots": [
+  {
+   "train_index": 19399,
+   "items": [
+    "Constantine (2005)",
+    "End of Days (1999)",
+    "Indiana Jones and the Last Crusade (1989)",
+    "Indiana Jones and the Temple of Doom (1984)",
+    "Inferno (2016)",
+    "National Treasure (2004)",
+    "Raiders of the Lost Ark (1981)",
+    "The Passion of the Christ (2004)"
+   ]
+  },
+  {
+   "train_index": 8358,
+   "items": [
+    "Butch Cassidy and the Sundance Kid (1969)",
+    "Jeremiah Johnson (1972)",
+    "Unforgiven (1992)"
+   ]
+  },
+  {
+   "train_index": 40608,
+   "items": [
+    "Annihilation (2018)",
+    "Arrival (2016)",
+    "Ex Machina (2014)",
+    "The Expanse (2015)"
+   ]
+  }
+ ],
+ "truncate_R@5": 0.007540171899201045,
+ "truncate_N@5": 0.008605048040025392,
+ "truncate_R@10": 0.007688759488546929,
+ "truncate_N@10": 0.008069519007801208,
+ "truncate_R@20": 0.007688759488546929,
+ "truncate_N@20": 0.007928967505750506,
+ "filter_R@5": 0.0075992755128070286,
+ "filter_N@5": 0.00901548519587322,
+ "filter_R@10": 0.007688759488546929,
+ "filter_N@10": 0.008394519672745362,
+ "filter_R@20": 0.007688759488546929,
+ "filter_N@20": 0.008252421137351189,
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 1974,
+   "recall": 0.0
+  },
+  "tail(<=median)": {
+   "n": 12626,
+   "recall": 0.0037224774275304924
+  },
+  "mid": {
+   "n": 7530,
+   "recall": 0.009428950863213811
+  },
+  "head(top20%)": {
+   "n": 4983,
+   "recall": 0.02187437286775035
+  },
+  "top10%": {
+   "n": 2504,
+   "recall": 0.02196485623003195
+  }
+ }
+}

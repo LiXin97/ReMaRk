@@ -1,0 +1,63 @@
+{
+ "note": "Independent audit E2(c): KL to the reference policy when ReMaRk and Rank-GRPO are at the same validation R@20.",
+ "2B": {
+  "remark_run": "2B_union_group_s3407_p0c",
+  "rankgrpo_run": "2B_single_group_s3407_p0c",
+  "s_star": 1039.0,
+  "remark_kl_at_s_star": 0.34204999999999997,
+  "rankgrpo_kl_at_2000": 0.29432727272727277,
+  "remark_kl_at_2000": 0.3971090909090909,
+  "records": [
+   200,
+   200
+  ]
+ },
+ "4B": {
+  "remark_run": "4B_union_group_s3407_p0c",
+  "rankgrpo_run": "4B_single_group_s3407_p0c",
+  "s_star": 1019.3,
+  "remark_kl_at_s_star": 0.31020000000000003,
+  "rankgrpo_kl_at_2000": 0.2555454545454545,
+  "remark_kl_at_2000": 0.3618909090909091,
+  "records": [
+   200,
+   200
+  ]
+ },
+ "9B": {
+  "remark_run": "9B_union_group_s3407_p0c",
+  "rankgrpo_run": "9B_single_group_s3407_p0c",
+  "s_star": 848.6,
+  "remark_kl_at_s_star": 0.29342105263157897,
+  "rankgrpo_kl_at_2000": 0.27072727272727276,
+  "remark_kl_at_2000": 0.3323727272727273,
+  "records": [
+   174,
+   200
+  ]
+ },
+ "llama3b": {
+  "remark_run": "llama3b_union_group_s3407_p0c",
+  "rankgrpo_run": "llama3b_single_group_s3407_p0c",
+  "s_star": 935.6,
+  "remark_kl_at_s_star": 0.46606000000000003,
+  "rankgrpo_kl_at_2000": 0.3893181818181819,
+  "remark_kl_at_2000": 0.5648818181818182,
+  "records": [
+   175,
+   175
+  ]
+ },
+ "llama8b": {
+  "remark_run": "llama8b_union_group_s3407_p0c",
+  "rankgrpo_run": "llama8b_single_group_s3407_p0c",
+  "s_star": 625.1,
+  "remark_kl_at_s_star": 0.42116999999999993,
+  "rankgrpo_kl_at_2000": 0.46604545454545454,
+  "remark_kl_at_2000": 0.5373363636363636,
+  "records": [
+   200,
+   200
+  ]
+ }
+}

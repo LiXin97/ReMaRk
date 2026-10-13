@@ -1,0 +1,205 @@
+{
+  "_note": "Validation tables for the paper. Each arm at its best validated step (method-arm rule). Reddit union = ReMaRk (selected 2026-09-29 09:29). Books cap-320 set ( A); add the cap-384 set when validated.",
+  "datasets": {
+    "reddit": {
+      "popularity": "remark/outputs/crs/train_gt_popularity.json",
+      "arms": {
+        "sft": {
+          "run": "sft_qwen35_2B_step1500"
+        },
+        "single_batch": {
+          "run": "grpo_qwen_2B_single_batch_s3407_p0c_step1750"
+        },
+        "singlethr": {
+          "run": "grpo_qwen_2B_singlethr_batch_s3407_p0c_step1750"
+        },
+        "consensusrw": {
+          "run": "grpo_qwen_2B_consensusrw_batch_s3407_p0c_step2000"
+        },
+        "consensus": {
+          "run": "grpo_qwen_2B_consensus_batch_s3407_p0c_step2000"
+        },
+        "union": {
+          "run": "grpo_qwen_2B_union_batch_s3407_p0c_step1500"
+        },
+        "single_group": {
+          "run": "grpo_qwen_2B_single_group_s3407_p0c_step2000"
+        }
+      },
+      "pairs": [
+        [
+          "consensusrw",
+          "single_batch"
+        ],
+        [
+          "consensus",
+          "singlethr"
+        ],
+        [
+          "consensusrw",
+          "consensus"
+        ],
+        [
+          "singlethr",
+          "single_batch"
+        ],
+        [
+          "consensus",
+          "single_batch"
+        ],
+        [
+          "union",
+          "single_batch"
+        ],
+        [
+          "union",
+          "singlethr"
+        ],
+        [
+          "union",
+          "consensus"
+        ],
+        [
+          "union",
+          "consensusrw"
+        ],
+        [
+          "union",
+          "single_group"
+        ],
+        [
+          "single_group",
+          "single_batch"
+        ],
+        [
+          "consensusrw",
+          "single_group"
+        ]
+      ]
+    },
+    "books": {
+      "data": "remark/data/crs/reddit_books/sft_dataset",
+      "catalog": "remark/data/crs/reddit_books/catalog.pkl",
+      "popularity": "remark/outputs/crs/train_gt_popularity_reddit_books.json",
+      "arms": {
+        "sft": {
+          "run": "sft_reddit_books_2B_step1000"
+        },
+        "single_group": {
+          "run": "grpo_qwen_reddit_books_2B_single_group_s3407_p0c_step2000"
+        },
+        "union": {
+          "run": "grpo_qwen_reddit_books_2B_union_batch_s3407_p0c_step1250"
+        },
+        "consensus": {
+          "run": "grpo_qwen_reddit_books_2B_consensus_batch_s3407_p0c_step1500"
+        },
+        "single_group_t19": {
+          "run": "grpo_qwen_reddit_books_2B_single_group_s3407_p0c_step2000",
+          "trunc": 19
+        },
+        "union_t19": {
+          "run": "grpo_qwen_reddit_books_2B_union_batch_s3407_p0c_step1250",
+          "trunc": 19
+        },
+        "consensus_t19": {
+          "run": "grpo_qwen_reddit_books_2B_consensus_batch_s3407_p0c_step1500",
+          "trunc": 19
+        },
+        "sft_t19": {
+          "run": "sft_reddit_books_2B_step1000",
+          "trunc": 19
+        },
+        "consensusrw": {
+          "run": "grpo_qwen_reddit_books_2B_consensusrw_batch_s3407_p0c_step1250"
+        },
+        "consensusrw_t19": {
+          "run": "grpo_qwen_reddit_books_2B_consensusrw_batch_s3407_p0c_step1250",
+          "trunc": 19
+        }
+      },
+      "pairs": [
+        [
+          "union",
+          "single_group"
+        ],
+        [
+          "consensus",
+          "single_group"
+        ],
+        [
+          "union",
+          "consensus"
+        ],
+        [
+          "union_t19",
+          "single_group_t19"
+        ],
+        [
+          "consensus_t19",
+          "single_group_t19"
+        ],
+        [
+          "consensusrw",
+          "consensus"
+        ],
+        [
+          "consensusrw_t19",
+          "consensus_t19"
+        ],
+        [
+          "consensusrw",
+          "single_group"
+        ]
+      ]
+    },
+    "books_p0d": {
+      "data": "remark/data/crs/reddit_books/sft_dataset",
+      "catalog": "remark/data/crs/reddit_books/catalog.pkl",
+      "popularity": "remark/outputs/crs/train_gt_popularity_reddit_books.json",
+      "arms": {
+        "sft": {
+          "run": "sft_reddit_books_2B_step1000"
+        },
+        "single_group": {
+          "run": "grpo_qwen_reddit_books_2B_single_group_s3407_p0c_cap384_ex_step2000"
+        },
+        "union": {
+          "run": "grpo_qwen_reddit_books_2B_union_batch_s3407_p0c_cap384_ex_step2000"
+        },
+        "consensus": {
+          "run": "grpo_qwen_reddit_books_2B_consensus_batch_s3407_p0c_cap384_ex_step2000"
+        },
+        "consensusrw": {
+          "run": "grpo_qwen_reddit_books_2B_consensusrw_batch_s3407_p0c_cap384_ex_step1500"
+        }
+      },
+      "pairs": [
+        [
+          "union",
+          "single_group"
+        ],
+        [
+          "consensus",
+          "single_group"
+        ],
+        [
+          "consensusrw",
+          "single_group"
+        ],
+        [
+          "consensusrw",
+          "consensus"
+        ],
+        [
+          "union",
+          "consensus"
+        ],
+        [
+          "union",
+          "consensusrw"
+        ]
+      ]
+    }
+  }
+}

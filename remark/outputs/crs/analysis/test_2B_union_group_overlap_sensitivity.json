@@ -1,0 +1,433 @@
+{
+ "a": "remark/outputs/crs/test/test_2B_union_group_step2000",
+ "b": "remark/outputs/crs/test/test_2B_single_group_s3407_step2000",
+ "split": "test",
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "grpo_train": "data/raw/reddit_v2/processed_datasets/grpo/grpo_dataset/train",
+ "submission_key": "normalised opening post (crs_neighbor_prior.submission_key; first USER turn, whitespace-collapsed)",
+ "test": {
+  "rows": 10972,
+  "requests": 2050,
+  "submissions": 1535
+ },
+ "criteria": {
+  "submission": "same normalised opening post (primary; used for the exclusion)",
+  "full_prompt": "identical prompt (whole conversation)",
+  "loose_opening_post": "opening post equal after lower-casing, [a-z0-9] tokens only"
+ },
+ "overlap": {
+  "grpo_train": {
+   "train_rows": 383013,
+   "train_contexts": 72233,
+   "train_submissions": 48618,
+   "submission": {
+    "requests": 42,
+    "rows": 42,
+    "submissions": 41
+   },
+   "full_prompt": {
+    "requests": 32,
+    "rows": 32,
+    "submissions": 32
+   },
+   "loose_opening_post": {
+    "requests": 42,
+    "rows": 42,
+    "submissions": 41
+   },
+   "overlapping_rows_answer_in_train": {
+    "rows_with_identical_item_set_in_same_submission_train_rows": 0,
+    "test_gt_items_named_in_same_submission_train_rows": 11,
+    "test_gt_items": 83,
+    "train_rows_of_overlapping_submissions": 404
+   }
+  },
+  "sft_train": {
+   "train_rows": 95753,
+   "train_contexts": 21023,
+   "train_submissions": 12044,
+   "submission": {
+    "requests": 0,
+    "rows": 0,
+    "submissions": 0
+   },
+   "full_prompt": {
+    "requests": 0,
+    "rows": 0,
+    "submissions": 0
+   },
+   "loose_opening_post": {
+    "requests": 0,
+    "rows": 0,
+    "submissions": 0
+   }
+  }
+ },
+ "excluded_by": "grpo_train / submission",
+ "overlapping_opening_posts_first160": [
+  "USER: 20 Best Dark Comedy Movies Ever Made.",
+  "USER: Any NEW (as in 2022) horror movies worth watching?. Hi all, Love this Subreddit. I try to be as active and helpful as possible. Today I am in need of some",
+  "USER: Based on true story movies please.. As the title suggests, my hubby and I are trying to watch one a night. Any theme, we just love a good true story. Than",
+  "USER: Can someone recommend some scary supernatural horror movies ?. Hey everybody me and my gf love to watch scary horror movies together. We love films like t",
+  "USER: Dystopian/post apocalyptic movies recommendations?. Hey all, so as the title says I'm looking for some dystopian/post apocalyptic movies. I'm hoping to fi",
+  "USER: Just watched Heat for the first time this year and I need similar movies this instance. Honestly feels like my generation grew up with the most generic ac",
+  "USER: Looking for a good cerebral-visual movie to watch while high. Like the title says. Best movies I’ve seen that exemplify this are 2001 and Stalker but does",
+  "USER: Looking for feel good movies about Friendship. Curious what everyone's top recommendations for this sort of film would be. I want to watch something featu",
+  "USER: Looking for movies like City of Ember. Are there any more movies following the formula? * Community (last bit of humanity) trapped/locked/living in one lo",
+  "USER: MURDERVILLE REVIEW It took me a while to understand the show, but once I figured it out I really enjoyed it. This show isn't for anything but I found this",
+  "USER: Movies about Italian-American families. Big fan of Spike Lee and I'd like to see some movies about \"the other end of the spectrum\". I'd just like somethin",
+  "USER: Movies about proving someone wrong?. Any recommendations on movies that the protagonist must prove someone (their dad, coach, etc.) wrong? movies specific",
+  "USER: Movies about small towns, thriller/detective.. Hi, I just watched The Kid Detective it was great, also The Clovehitch Killer, Summer of 84, Super Dark Tim",
+  "USER: Movies like Howl (2015). Looking for a thriller movie where a bunch of friends/ even a band of strangers are locked in a location, while an evil entity is",
+  "USER: Movies like Mean Girls?. I love that movie. It's so easily quotable with likable or interesting characters. With a nice theme throughout the movie. Legall",
+  "USER: Movies like Rush Hour. Looking for a laugh out loud action-comedy / comedy movies, similar to rush hour movies where I literally can't stop laughing when",
+  "USER: Movies like eyes wide shut &amp; the ninth gate?. What are some similar movies to these? With themes of mysticism, secret societies and cultism? Or just m",
+  "USER: Movies like interstate 60. I just watched this hidden gem last night and was pleasantly surprised, despite its lacklustre production values I enjoyed thes",
+  "USER: Movies on rape/sexual assaults. Hello, I recently watched a Netflix series \"Unbelievable\" which revolves around investigation behind a serial rapist which",
+  "USER: Movies set in remote locations / motels / resort / isolated villages in hills or snow.. Looking for some movies set in locations mentioned above. Looking",
+  "USER: Movies similar to Waves and the Fallout?. I’m not sure what the genre or style of these movies would be called but I’ve recently been into movies like Wav",
+  "USER: Movies that are sadder than Grave of the Fireflies?. I've been wanting to watch sad movies to actually \"cry\" cry to. As I'm writing this I've just finishe",
+  "USER: Munich(2005) is an absolute masterpiece. I was browsing Netflix and I came across the movie, didn't even know Spielberg directed it until I was done with",
+  "USER: Name your best martial arts movie.. Preferably something which had little or no gun play. Also something recently made like the Ip Man movies. Have done t",
+  "USER: Please recommend me some movies with similar character dynamic like in Up in The Air. Basically I want a young girl and her mentor/an older friend just de",
+  "USER: Reccomandations for 1980s sleazy sexual thrillers?. I love the type. Think of DePalma's early 80s work, and titles like Fear City, Hardcore, Crimes of Pas",
+  "USER: Seeking very little-known, disturbing and messed up films and documentaries. Hey there. I'm a disturb-hound, and a horror hound. I've seen just about ever",
+  "USER: Suggest me some thought provoking movies. Hi everyone I'm in a mood to watch something very interesting clever and also entertaining so please suggest me",
+  "USER: Unusual movies to watch while stoned.. I know that questions like these are probably asked her quite often, but I still would love to know if there are an",
+  "USER: Vesper is a great little budget sci fi. This movie just came out and wow I'm totally blown away. Only a $5m budget but looks like it could have been $50m",
+  "USER: Wanting to find more movies with the plot like Killing Sarai, Divergent, 50 shades. How the tough guy or dangerous guy ends up falling in love and wanting",
+  "USER: What are some visually stunning movies to watch on an LG C2 OLED?. I have my first OLED coming on tuesday, a 77” LG C2. Curious what movies you would reco",
+  "USER: What are the scariest movies you’ve seen? Looking for recommendations!. I’m really fond of the Insidious franchise and the Conjuring+Anabelle franchise! S",
+  "USER: What is a human drama (preferably not romance) that rips your heart out or makes you cry?. A very human drama, could be about brotherhood, or nature, or f",
+  "USER: [REQUEST] Dark comedy movie in the likes of seven psychopaths, kiss kiss bang bang, guns, gambling and girls and Mr. Right.. Thought I would add another f",
+  "USER: [REQUEST] Suggestions for Rom(com or anything) movie/show that feels new or different. I feel most of the Romance movies are made on similar lines or conc",
+  "USER: [Request] Is there a list of historical tv series in chronological order?.",
+  "USER: good group watch movies?. the group really loves movies like Gone Girl, Zodiac, fincher films, Marriage Story, Bad Times at the El Royale, The Game, and t",
+  "USER: mid 20s lonely women in cities, feeling unsuccessful and lost, living chaotic messy lives?. i loved frances ha, i loved the book my year of rest and relax",
+  "USER: most underrated movies?. Hello, Following page, it is very awesome. Do you have some underrated movies. In my opinion one is: the king of comedy. Thx",
+  "USER: what is your favourite indian film of all time!?. I have a hard time picking one but I think bombay(tamil), virus(malayalam),thoovanathumbikal(mal),super"
+ ],
+ "bootstrap": {
+  "n_boot": 2000,
+  "seed": 42,
+  "metric": "per-row truncate (crs_eval.py protocol)",
+  "diff": "a - b"
+ },
+ "comparison": {
+  "all_test": {
+   "n_rows": 10972,
+   "n_requests": 2050,
+   "n_submissions": 1535,
+   "context": {
+    "R@5": {
+     "a": 0.10209674347018531,
+     "b": 0.09480249674292146,
+     "diff": 0.007294246727263845,
+     "ci_low": 0.003642205983077323,
+     "ci_high": 0.010974856770218254,
+     "p_le_0": 0.0
+    },
+    "R@10": {
+     "a": 0.15804164513690308,
+     "b": 0.14581301649857162,
+     "diff": 0.012228628638331462,
+     "ci_low": 0.00802032725210237,
+     "ci_high": 0.016314633558315677,
+     "p_le_0": 0.0
+    },
+    "R@20": {
+     "a": 0.22530413539703648,
+     "b": 0.20965215266709009,
+     "diff": 0.01565198272994643,
+     "ci_low": 0.01102082586712885,
+     "ci_high": 0.0205528823567408,
+     "p_le_0": 0.0
+    },
+    "N@5": {
+     "a": 0.07882766209258257,
+     "b": 0.07389024104076204,
+     "diff": 0.004937421051820538,
+     "ci_low": 0.0024769777435686667,
+     "ci_high": 0.007419490925010683,
+     "p_le_0": 0.0
+    },
+    "N@10": {
+     "a": 0.09730031814211494,
+     "b": 0.09058590528469193,
+     "diff": 0.006714412857423002,
+     "ci_low": 0.004351048355996319,
+     "ci_high": 0.009077287758639136,
+     "p_le_0": 0.0
+    },
+    "N@20": {
+     "a": 0.11624901806826886,
+     "b": 0.10867648519906238,
+     "diff": 0.007572532869206471,
+     "ci_low": 0.005345425039050341,
+     "ci_high": 0.009850550841037432,
+     "p_le_0": 0.0
+    }
+   },
+   "submission": {
+    "R@5": {
+     "a": 0.10209674347018531,
+     "b": 0.09480249674292146,
+     "diff": 0.007294246727263845,
+     "ci_low": 0.003512384062245109,
+     "ci_high": 0.011131583748732998,
+     "p_le_0": 0.0
+    },
+    "R@10": {
+     "a": 0.15804164513690308,
+     "b": 0.14581301649857162,
+     "diff": 0.012228628638331462,
+     "ci_low": 0.008255728913127043,
+     "ci_high": 0.01644232786024217,
+     "p_le_0": 0.0
+    },
+    "R@20": {
+     "a": 0.22530413539703648,
+     "b": 0.20965215266709009,
+     "diff": 0.01565198272994643,
+     "ci_low": 0.010890335010194714,
+     "ci_high": 0.020719923009186902,
+     "p_le_0": 0.0
+    },
+    "N@5": {
+     "a": 0.07882766209258257,
+     "b": 0.07389024104076204,
+     "diff": 0.004937421051820538,
+     "ci_low": 0.0024041949285902395,
+     "ci_high": 0.007433783660033805,
+     "p_le_0": 0.0
+    },
+    "N@10": {
+     "a": 0.09730031814211494,
+     "b": 0.09058590528469193,
+     "diff": 0.006714412857423002,
+     "ci_low": 0.004519364137852842,
+     "ci_high": 0.009053943242034592,
+     "p_le_0": 0.0
+    },
+    "N@20": {
+     "a": 0.11624901806826886,
+     "b": 0.10867648519906238,
+     "diff": 0.007572532869206471,
+     "ci_low": 0.005425197172431577,
+     "ci_high": 0.009831168645683534,
+     "p_le_0": 0.0
+    }
+   }
+  },
+  "excluding_grpo_overlap": {
+   "n_rows": 10930,
+   "n_requests": 2008,
+   "n_submissions": 1494,
+   "context": {
+    "R@5": {
+     "a": 0.10204195467456252,
+     "b": 0.0949511300463121,
+     "diff": 0.007090824628250412,
+     "ci_low": 0.0034351206877397253,
+     "ci_high": 0.010758126414100608,
+     "p_le_0": 0.0
+    },
+    "R@10": {
+     "a": 0.1581822268953257,
+     "b": 0.1460285965123029,
+     "diff": 0.012153630383022824,
+     "ci_low": 0.007963346938580819,
+     "ci_high": 0.016288449455219664,
+     "p_le_0": 0.0
+    },
+    "R@20": {
+     "a": 0.2255419833795233,
+     "b": 0.20996927112067948,
+     "diff": 0.015572712258843798,
+     "ci_low": 0.011009895485676997,
+     "ci_high": 0.02032679286665852,
+     "p_le_0": 0.0
+    },
+    "N@5": {
+     "a": 0.07878443889303802,
+     "b": 0.07397702800013613,
+     "diff": 0.004807410892901872,
+     "ci_low": 0.002275578370953041,
+     "ci_high": 0.007241000066202558,
+     "p_le_0": 0.0
+    },
+    "N@10": {
+     "a": 0.09734513484297629,
+     "b": 0.09069017346656653,
+     "diff": 0.006654961376409748,
+     "ci_low": 0.004385249910293387,
+     "ci_high": 0.009008860047542372,
+     "p_le_0": 0.0
+    },
+    "N@20": {
+     "a": 0.11631814586593567,
+     "b": 0.10880888650138855,
+     "diff": 0.007509259364547116,
+     "ci_low": 0.005354634385429254,
+     "ci_high": 0.009668510932046676,
+     "p_le_0": 0.0
+    }
+   },
+   "submission": {
+    "R@5": {
+     "a": 0.10204195467456252,
+     "b": 0.0949511300463121,
+     "diff": 0.007090824628250412,
+     "ci_low": 0.0034052140479735493,
+     "ci_high": 0.010819492302499147,
+     "p_le_0": 0.0
+    },
+    "R@10": {
+     "a": 0.1581822268953257,
+     "b": 0.1460285965123029,
+     "diff": 0.012153630383022824,
+     "ci_low": 0.007985358584099,
+     "ci_high": 0.016282557808835366,
+     "p_le_0": 0.0
+    },
+    "R@20": {
+     "a": 0.2255419833795233,
+     "b": 0.20996927112067948,
+     "diff": 0.015572712258843798,
+     "ci_low": 0.01085449910584535,
+     "ci_high": 0.02012183876163297,
+     "p_le_0": 0.0
+    },
+    "N@5": {
+     "a": 0.07878443889303802,
+     "b": 0.07397702800013613,
+     "diff": 0.004807410892901872,
+     "ci_low": 0.002207305266520532,
+     "ci_high": 0.0073133390489535655,
+     "p_le_0": 0.0
+    },
+    "N@10": {
+     "a": 0.09734513484297629,
+     "b": 0.09069017346656653,
+     "diff": 0.006654961376409748,
+     "ci_low": 0.004335882674060519,
+     "ci_high": 0.00896926428365451,
+     "p_le_0": 0.0
+    },
+    "N@20": {
+     "a": 0.11631814586593567,
+     "b": 0.10880888650138855,
+     "diff": 0.007509259364547116,
+     "ci_low": 0.005274785589087515,
+     "ci_high": 0.009786982272103832,
+     "p_le_0": 0.0
+    }
+   }
+  },
+  "grpo_overlap_only": {
+   "n_rows": 42,
+   "n_requests": 42,
+   "n_submissions": 41,
+   "context": {
+    "R@5": {
+     "a": 0.11635487528344671,
+     "b": 0.05612244897959184,
+     "diff": 0.060232426303854864,
+     "ci_low": -0.02863874716553288,
+     "ci_high": 0.1588718820861678,
+     "p_le_0": 0.1
+    },
+    "R@10": {
+     "a": 0.12145691609977324,
+     "b": 0.0897108843537415,
+     "diff": 0.031746031746031744,
+     "ci_low": -0.04767573696145124,
+     "ci_high": 0.12134353741496583,
+     "p_le_0": 0.2175
+    },
+    "R@20": {
+     "a": 0.16340702947845803,
+     "b": 0.12712585034013604,
+     "diff": 0.036281179138321996,
+     "ci_low": -0.037429138321995466,
+     "ci_high": 0.12475907029478435,
+     "p_le_0": 0.189
+    },
+    "N@5": {
+     "a": 0.09007598521215734,
+     "b": 0.05130496804174121,
+     "diff": 0.03877101717041613,
+     "ci_low": -0.0088928140874034,
+     "ci_high": 0.09368830894692773,
+     "p_le_0": 0.06
+    },
+    "N@10": {
+     "a": 0.08563730527509987,
+     "b": 0.06345135223970451,
+     "diff": 0.02218595303539537,
+     "ci_low": -0.017455396203839218,
+     "ci_high": 0.06509530456441888,
+     "p_le_0": 0.138
+    },
+    "N@20": {
+     "a": 0.09825933167545507,
+     "b": 0.07422062247465944,
+     "diff": 0.02403870920079564,
+     "ci_low": -0.009451681613408182,
+     "ci_high": 0.06540205975800338,
+     "p_le_0": 0.084
+    }
+   },
+   "submission": {
+    "R@5": {
+     "a": 0.11635487528344671,
+     "b": 0.05612244897959184,
+     "diff": 0.060232426303854864,
+     "ci_low": -0.02873132948831707,
+     "ci_high": 0.15590632086167794,
+     "p_le_0": 0.102
+    },
+    "R@10": {
+     "a": 0.12145691609977324,
+     "b": 0.0897108843537415,
+     "diff": 0.031746031746031744,
+     "ci_low": -0.04878048780487805,
+     "ci_high": 0.11906146179401986,
+     "p_le_0": 0.227
+    },
+    "R@20": {
+     "a": 0.16340702947845803,
+     "b": 0.12712585034013604,
+     "diff": 0.036281179138321996,
+     "ci_low": -0.03912981859410431,
+     "ci_high": 0.12137049941927988,
+     "p_le_0": 0.204
+    },
+    "N@5": {
+     "a": 0.09007598521215734,
+     "b": 0.05130496804174121,
+     "diff": 0.03877101717041613,
+     "ci_low": -0.010800982195386033,
+     "ci_high": 0.0926872585856535,
+     "p_le_0": 0.06
+    },
+    "N@10": {
+     "a": 0.08563730527509987,
+     "b": 0.06345135223970451,
+     "diff": 0.02218595303539537,
+     "ci_low": -0.019012194507216047,
+     "ci_high": 0.06312548282251212,
+     "p_le_0": 0.149
+    },
+    "N@20": {
+     "a": 0.09825933167545507,
+     "b": 0.07422062247465944,
+     "diff": 0.02403870920079564,
+     "ci_low": -0.010646555595089383,
+     "ci_high": 0.06300971963797791,
+     "p_le_0": 0.1075
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "definition": "Group-position = (request x, position k), k = 1..20; 72,233 requests x 20 positions.\n  S(x, l, k) = number of x's responders whose per-responder 0/1 reward is 1 at position k of list l (the sum reward).\n  multi(x, k) = some list l of the 8 has S(x, l, k) >= 2 (it hits an item named by >= 2 responders); any(x, k) = some\n  list has S >= 1 (a hit at all).\n  Cross-check: the same with the union match (hits_for against the request's union items, union seen set) and the item's\n  responder count c_i (rows naming the item): multi_c(x, k) = some l whose matched union item has c_i >= 2.\n  Reported: share of group-positions with multi (request-weighted, primary), overall and by n_x bucket (1, 2-4, 5-9,\n  >= 10), and among group-positions with any hit; the same weighted by n_x (row-weighted, secondary); the share of hit\n  list-positions (S >= 1) whose item has S >= 2.",
+ "n_requests": 72233,
+ "positions": 20,
+ "max_S": 47,
+ "request_weighted": {
+  "all": {
+   "group_positions": 1444660,
+   "share_multi": 0.05805172151232816,
+   "share_any_hit": 0.24537538244292775,
+   "share_multi_among_any_hit": 0.23658331546698863
+  },
+  "1": {
+   "requests": 29602,
+   "group_positions": 592040,
+   "share_multi": 0.0,
+   "share_any_hit": 0.05786095534085535,
+   "share_multi_among_any_hit": 0.0
+  },
+  "2-4": {
+   "requests": 17213,
+   "group_positions": 344260,
+   "share_multi": 0.016786730959158776,
+   "share_any_hit": 0.19973276012316274,
+   "share_multi_among_any_hit": 0.08404595695171611
+  },
+  "5-9": {
+   "requests": 14952,
+   "group_positions": 299040,
+   "share_multi": 0.07722378277153558,
+   "share_any_hit": 0.4024779293739968,
+   "share_multi_among_any_hit": 0.19187085088528294
+  },
+  ">=10": {
+   "requests": 10466,
+   "group_positions": 209320,
+   "share_multi": 0.26272214790751003,
+   "share_any_hit": 0.6263663290655456,
+   "share_multi_among_any_hit": 0.4194384910495687
+  }
+ },
+ "row_weighted (weights n_x)": {
+  "all": {
+   "group_positions": 1444660,
+   "share_multi": 0.22372412946819037,
+   "share_any_hit": 0.5113459595366214,
+   "share_multi_among_any_hit": 0.4375200884953267
+  },
+  "1": {
+   "requests": 29602,
+   "group_positions": 592040,
+   "share_multi": 0.0,
+   "share_any_hit": 0.05786095534085535,
+   "share_multi_among_any_hit": 0.0
+  },
+  "2-4": {
+   "requests": 17213,
+   "group_positions": 344260,
+   "share_multi": 0.019363009378878197,
+   "share_any_hit": 0.21524728907696378,
+   "share_multi_among_any_hit": 0.08995704179091782
+  },
+  "5-9": {
+   "requests": 14952,
+   "group_positions": 299040,
+   "share_multi": 0.08226316319339576,
+   "share_any_hit": 0.4138991241316823,
+   "share_multi_among_any_hit": 0.19875172088362206
+  },
+  ">=10": {
+   "requests": 10466,
+   "group_positions": 209320,
+   "share_multi": 0.3736253708619613,
+   "share_any_hit": 0.695106086039975,
+   "share_multi_among_any_hit": 0.5375084154283672
+  }
+ },
+ "by_position_request_weighted": {
+  "share_multi": [
+   0.0743,
+   0.0862,
+   0.091,
+   0.0886,
+   0.0857,
+   0.0807,
+   0.0744,
+   0.0691,
+   0.063,
+   0.0591,
+   0.0546,
+   0.049,
+   0.0466,
+   0.0419,
+   0.0384,
+   0.0359,
+   0.0344,
+   0.0316,
+   0.0295,
+   0.0269
+  ],
+  "share_multi_among_any_hit": [
+   0.2718,
+   0.2764,
+   0.2757,
+   0.2704,
+   0.2634,
+   0.2558,
+   0.2463,
+   0.2417,
+   0.2324,
+   0.2281,
+   0.2226,
+   0.2143,
+   0.2152,
+   0.2057,
+   0.2025,
+   0.2003,
+   0.1988,
+   0.189,
+   0.1912,
+   0.1825
+  ]
+ },
+ "hit_level": {
+  "hit_list_positions": 871523,
+  "share_of_hits_with_S_ge_2": 0.22620516039163624
+ },
+ "cross_check_union_match_item_counts": {
+  "share_multi_c": 0.05801641908822837,
+  "share_any_union_hit": 0.2453172372738222,
+  "disagreement_multi_vs_multi_c": 3.530242409978819e-05,
+  "disagreement_any_vs_any_union": 5.952957789376047e-05
+ }
+}

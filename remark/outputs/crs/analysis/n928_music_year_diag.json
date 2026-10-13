@@ -1,0 +1,87 @@
+{
+ "note": "how much of the GPT-5.6 zero-shot gap on music is the year convention.",
+ "runs": {
+  "sft": {
+   "run": "test_music_sft_step1500",
+   "lines": 308527,
+   "exact_in_catalog": 0.9972838681865769,
+   "year_only_miss_share": 0.0008427139277923813,
+   "R@20": 0.09306286499001869,
+   "name_only_R@20": 0.09306286499001869
+  },
+  "rankgrpo": {
+   "run": "test_music_2B_single_group_s3407_p0c_ex_step2000",
+   "lines": 317851,
+   "exact_in_catalog": 0.9973981519642852,
+   "year_only_miss_share": 0.000239105744515512,
+   "R@20": 0.13402772672601235,
+   "name_only_R@20": 0.13402772672601235
+  },
+  "remark": {
+   "run": "test_music_2B_union_group_s3407_p0c_ex_step1250",
+   "lines": 317624,
+   "exact_in_catalog": 0.9966154950507519,
+   "year_only_miss_share": 0.000720978263607284,
+   "R@20": 0.14482036702449302,
+   "name_only_R@20": 0.14490426140147242
+  },
+  "gpt56": {
+   "run": "test_zeroshot_gpt56_music",
+   "lines": 316900,
+   "exact_in_catalog": 0.4859324708109814,
+   "year_only_miss_share": 0.4261060271378984,
+   "R@20": 0.07402959352155991,
+   "name_only_R@20": 0.14120380348140796
+  },
+  "gpt56_yearconv": {
+   "run": "test_zeroshot_gpt56_music_yearconv",
+   "lines": 316480,
+   "exact_in_catalog": 0.8102692113245703,
+   "year_only_miss_share": 0.11420310920121335,
+   "R@20": 0.12130539535369105,
+   "name_only_R@20": 0.14239218274538007
+  },
+  "knn": {
+   "run": "test_knn_prior_k200_music",
+   "lines": 317860,
+   "exact_in_catalog": 1.0,
+   "year_only_miss_share": 0.0,
+   "R@20": 0.09172310390819939,
+   "name_only_R@20": 0.09172310390819939
+  },
+  "popularity": {
+   "run": "popularity_train_top20_music",
+   "lines": 317860,
+   "exact_in_catalog": 1.0,
+   "year_only_miss_share": 0.0,
+   "R@20": 0.07967522556969639,
+   "name_only_R@20": 0.07967522556969639
+  }
+ },
+ "name_only_pairs": {
+  "remark - gpt56": {
+   "row": [
+    0.003700457920064433,
+    -0.0036742805178322457,
+    0.011027254360091722
+   ],
+   "req": [
+    -0.0016345075577457598,
+    -0.010697305610950551,
+    0.008246077206057243
+   ]
+  },
+  "rankgrpo - gpt56": {
+   "row": [
+    -0.007176076755395639,
+    -0.01462576260692239,
+    0.0004770663248477464
+   ],
+   "req": [
+    -0.014481231494812338,
+    -0.023948450018756003,
+    -0.005232998296647678
+   ]
+  }
+ }
+}

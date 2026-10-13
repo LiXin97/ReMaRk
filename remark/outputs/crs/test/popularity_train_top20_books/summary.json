@@ -1,0 +1,57 @@
+{
+ "model": "popularity_train_top20_books",
+ "data": "remark/data/crs/reddit_books/sft_dataset",
+ "split": "test",
+ "n": 6333,
+ "unique_contexts": 1150,
+ "parse_empty": 0,
+ "in_catalog_rate": 1.0,
+ "truncate_R@5": 0.020016736513657405,
+ "truncate_N@5": 0.014186332345454085,
+ "truncate_R@10": 0.03658421310955655,
+ "truncate_N@10": 0.019997611374881156,
+ "truncate_R@20": 0.057686713123709814,
+ "truncate_N@20": 0.026043969504666763,
+ "filter_R@5": 0.020016736513657405,
+ "filter_N@5": 0.014186332345454085,
+ "filter_R@10": 0.03658421310955655,
+ "filter_N@10": 0.019997611374881156,
+ "filter_R@20": 0.057686713123709814,
+ "filter_N@20": 0.026043969504666763,
+ "gt_pop_quantiles_50_80_90": [
+  46.0,
+  243.0,
+  447.0
+ ],
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 1092,
+   "recall": 0.0
+  },
+  "tail(<=median)": {
+   "n": 6052,
+   "recall": 0.0
+  },
+  "mid": {
+   "n": 3586,
+   "recall": 0.0
+  },
+  "head(top20%)": {
+   "n": 2407,
+   "recall": 0.2858329871208974
+  },
+  "top10%": {
+   "n": 1190,
+   "recall": 0.5781512605042017
+  }
+ },
+ "request_truncate_R@5": 0.01764605740602791,
+ "request_truncate_N@5": 0.012492920350535787,
+ "request_truncate_R@10": 0.03457203898938761,
+ "request_truncate_N@10": 0.018597232661716673,
+ "request_truncate_R@20": 0.05318686831773143,
+ "request_truncate_N@20": 0.02390812102908681,
+ "rows_with_seen_exclusion": 604,
+ "contexts_with_row_varying_lists": 0,
+ "definition": "top-20 (title, year) by training-GT frequency (sft_dataset/train, every row's items; ties by title then year), minus the row's seen_titles (exact title), truncated to 20"
+}

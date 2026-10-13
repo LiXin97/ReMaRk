@@ -1,0 +1,15 @@
+{
+ "tag": "music_qwen2B",
+ "model": "remark/outputs/crs/sft/qwen35_music_2B/checkpoint-1500",
+ "data": "remark/data/crs/music/sft_dataset",
+ "n_contexts": 500,
+ "mean_rows_per_context": 9.19,
+ "zero_group_rate_S": 0.8007722021786262,
+ "zero_group_rate_C": 0.384,
+ "within_group_std_S": 0.0005351024759547842,
+ "within_group_std_C": 0.0007165759326898649,
+ "cross_row_noise_S": 0.09979930211597175,
+ "mean_abs_spearman_advS_advC": 0.9538265428713913,
+ "n_rho": 40,
+ "verdict": "INCONCLUSIVE"
+}

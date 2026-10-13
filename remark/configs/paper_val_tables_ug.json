@@ -1,0 +1,54 @@
+{
+ "_note": "Validation numbers for the final ReMaRk configuration (union + group scaling), 2B Reddit-v2, best validated step (2,000); companion to paper_val_tables.json (2026-10-01 reframe). Row 8 (, best validated step 2,000) added 2026-10-02. Row 9 (consensus_group, s3407, best validated step 2,000) added 2026-10-09.",
+ "datasets": {
+  "reddit": {
+   "popularity": "remark/outputs/crs/train_gt_popularity.json",
+   "arms": {
+    "union_group": {
+     "run": "grpo_qwen_2B_union_group_s3407_p0c_step2000"
+    },
+    "union": {
+     "run": "grpo_qwen_2B_union_batch_s3407_p0c_step1500"
+    },
+    "single_group": {
+     "run": "grpo_qwen_2B_single_group_s3407_p0c_step2000"
+    },
+    "singlethr_group": {
+     "run": "grpo_qwen_2B_singlethr_group_s3407_p0c_step2000"
+    },
+    "consensus_group": {
+     "run": "grpo_qwen_2B_consensus_group_s3407_p0c_step2000"
+    },
+    "consensus": {
+     "run": "grpo_qwen_2B_consensus_batch_s3407_p0c_step2000"
+    }
+   },
+   "pairs": [
+    [
+     "union_group",
+     "single_group"
+    ],
+    [
+     "union_group",
+     "union"
+    ],
+    [
+     "union_group",
+     "singlethr_group"
+    ],
+    [
+     "singlethr_group",
+     "single_group"
+    ],
+    [
+     "union_group",
+     "consensus_group"
+    ],
+    [
+     "consensus_group",
+     "consensus"
+    ]
+   ]
+  }
+ }
+}

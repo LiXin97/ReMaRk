@@ -1,0 +1,39 @@
+# Calibrated so that zero-signal GRPO groups are common (single 0.39, consensus 0.20 at Reddit-like n).
+# Synthetic world for remark/scripts/sim_consensus_theory.py (checks the theoretical claims on consensus rewards).
+seed: 42
+world:
+  n_items: 600            # M
+  n_clusters: 12          # "genres"
+  threads_per_cluster: 40 # 480 threads
+  zipf_s: 0.8             # global popularity logit = -zipf_s * log(rank)
+  sigma_cluster: 1.5      # cluster deviation of item logits
+  sigma_thread: 2.0       # thread deviation from its cluster (idiosyncratic requests)
+  items_per_responder_lam: 1.5   # items per responder = 1 + Poisson(lam), capped
+  items_per_responder_max: 8
+  n_mc_true_p: 4000       # responders per eval thread used to estimate p_i(x) = P(i in S | x)
+  n_hist_file: remark/outputs/theory/reddit_responder_stats.json   # Reddit-v2 train responders-per-thread histogram
+policy:
+  beta_cluster: 0.4       # policy logits = beta * cluster logits + noise (knows the genre, not the thread)
+  sigma_noise: 1.5
+prior:
+  k_neighbors: 10
+  neighbor_error: 0.2     # probability a retrieved neighbour comes from a random cluster
+  global_mix: 0.05        # mu = (1 - global_mix) * mean of neighbours' c/n + global_mix * global frequency
+  alpha_grid: [0.0, 0.25, 0.5, 1, 1.5, 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128, 256]
+estimator:
+  list_len: 20            # K
+  group_size: 8           # G
+  batch_threads: 48       # prompts per step (Rank-GRPO: 48 prompts x 8 generations = 384)
+  eps: 1.0e-4             # Rank-GRPO: adv / (std + 1e-4)
+  n_ref_lists: 2000       # Monte Carlo lists per eval thread for the reference gradients
+exp_a:                    # reward choice, no std normalization
+  n_list: [1, 2, 4, 8, 16, 64]
+  data_draws: 5
+  reps: 30
+exp_b:                    # normalization, Reddit-like responders per thread
+  reps: 250
+exp_d:                    # prior informativeness: smaller sigma_thread = threads closer to their cluster = better kNN prior
+  sigma_thread: [0.5, 1.0]
+  n_list: [1, 2, 4]
+  data_draws: 3
+  n_ref_lists: 1000

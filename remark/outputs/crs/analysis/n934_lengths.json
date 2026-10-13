@@ -1,0 +1,153 @@
+{
+ "llama3b_single_batch_s3407_p0c": {
+  "locked_step": 2000,
+  "test": {
+   "rows": 10972,
+   "share_20": 0.9904301859278163,
+   "share_lt20": 0.009569814072183741,
+   "mean_items_capped20": 19.990430185927817
+  },
+  "val": {
+   "rows": 9421,
+   "share_20": 0.9831228107419595,
+   "share_lt20": 0.016877189258040548,
+   "mean_items_capped20": 19.98312281074196
+  },
+  "train_log": {
+   "note": "log covers steps <= 870 only (node lost)"
+  }
+ },
+ "llama3b_union_batch_s3407_p0c": {
+  "locked_step": 2000,
+  "test": {
+   "rows": 10972,
+   "share_20": 1.0,
+   "share_lt20": 0.0,
+   "mean_items_capped20": 20.0
+  },
+  "val": {
+   "rows": 9421,
+   "share_20": 1.0,
+   "share_lt20": 0.0,
+   "mean_items_capped20": 20.0
+  },
+  "train_log": {
+   "steps": [
+    1960,
+    2000
+   ],
+   "mean_items": 43.726,
+   "exact_share": 0.00015623999999999998
+  }
+ },
+ "llama8b_single_batch_s3407_p0c": {
+  "locked_step": 2000,
+  "test": {
+   "rows": 10972,
+   "share_20": 0.9700145825738243,
+   "share_lt20": 0.02998541742617572,
+   "mean_items_capped20": 19.96153846153846
+  },
+  "val": {
+   "rows": 9421,
+   "share_20": 0.9883239571170789,
+   "share_lt20": 0.011676042882921133,
+   "mean_items_capped20": 19.985564165162934
+  },
+  "train_log": {
+   "steps": [
+    1960,
+    2000
+   ],
+   "mean_items": 21.676,
+   "exact_share": 0.09604399999999999
+  }
+ },
+ "llama8b_union_batch_s3407_p0c": {
+  "locked_step": 2000,
+  "test": {
+   "rows": 10972,
+   "share_20": 0.9276339773970106,
+   "share_lt20": 0.07236602260298942,
+   "mean_items_capped20": 19.91806416332483
+  },
+  "val": {
+   "rows": 9421,
+   "share_20": 0.9173123872200404,
+   "share_lt20": 0.08268761277995966,
+   "mean_items_capped20": 19.914552595265896
+  },
+  "train_log": {
+   "steps": [
+    1960,
+    2000
+   ],
+   "mean_items": 20.47,
+   "exact_share": 0.41242
+  }
+ },
+ "music_2B_single_batch_s3407_p0c_ex": {
+  "locked_step": 2000,
+  "test": {
+   "rows": 15893,
+   "share_20": 0.99930787138992,
+   "share_lt20": 0.0006921286100799094,
+   "mean_items_capped20": 19.99930787138992
+  },
+  "val": {
+   "rows": 15060,
+   "share_20": 0.997543160690571,
+   "share_lt20": 0.002456839309428951,
+   "mean_items_capped20": 19.997543160690572
+  },
+  "train_log": {
+   "steps": [
+    1960,
+    2000
+   ],
+   "mean_items": 20.002000000000002,
+   "exact_share": 0.9958
+  }
+ },
+ "music_2B_union_batch_s3407_p0c_ex": {
+  "locked_step": 1000,
+  "test": {
+   "rows": 15893,
+   "share_20": 0.9905618825898194,
+   "share_lt20": 0.009438117410180583,
+   "mean_items_capped20": 19.99056188258982
+  },
+  "val": {
+   "rows": 15060,
+   "share_20": 0.9885126162018593,
+   "share_lt20": 0.01148738379814077,
+   "mean_items_capped20": 19.98851261620186
+  },
+  "train_log": {
+   "steps": [
+    960,
+    1000
+   ],
+   "mean_items": 20.004,
+   "exact_share": 0.9656600000000001
+  }
+ },
+ "reddit_books_4B_union_batch_s3407_p0c_cap384_ex": {
+  "locked_step": 1500,
+  "test": {
+   "rows": 6333,
+   "share_20": 0.9682614874467077,
+   "share_lt20": 0.03173851255329228,
+   "mean_items_capped20": 19.968261487446707
+  },
+  "val": {
+   "rows": 6259,
+   "share_20": 0.9765138200990574,
+   "share_lt20": 0.023486179900942643,
+   "mean_items_capped20": 19.976513820099058
+  },
+  "train_log": {
+   "note": "log covers steps <= 590 only (node lost)"
+  }
+ }
+}

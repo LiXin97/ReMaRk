@@ -1,0 +1,25 @@
+{
+ "judge": "gpt-5.6-sol",
+ "prompt_file": "remark/configs/judge_prompt.txt",
+ "prompt_sha256": "874df9208ad9322885da39a73dd5cdb624ac8089316d2ec46cf5e8c0ccba707b",
+ "a_run": "test_4B_union_group_s3407_p0c_ms8000_step3000",
+ "b_run": "test_4B_single_group_s3407_p0c_ms8000_step5250",
+ "requests_sampled": 300,
+ "requests_scored_both_orders": 298,
+ "unparsed_answers": 2,
+ "remark_score": 0.540268456375839,
+ "ci95": [
+  0.48907298657718123,
+  0.5948196308724831
+ ],
+ "order_consistency": 0.8657718120805369,
+ "A_rate": 0.4899665551839465,
+ "remark_wins_both": 141,
+ "rankgrpo_wins_both": 117,
+ "tie_both": 0,
+ "api_calls": 600,
+ "usage": {
+  "prompt_tokens": 392422,
+  "completion_tokens": 138292
+ }
+}

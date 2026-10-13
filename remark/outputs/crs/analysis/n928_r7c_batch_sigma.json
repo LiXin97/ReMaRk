@@ -1,0 +1,1444 @@
+{
+ "definition": "Lists are parsed with crs_eval's parser (n927_e10b_sample.parse: Rank-GRPO process_rec_raw, first 20 items); the reward\n  of row (x, r) at position k of list l is the weight of the row's ground-truth item matched at k by crs_eval.hits_for\n  (truncate: catalogue items only, the row's own seen titles skipped, exact title + |year diff| <= 2); weight 1 for 0/1\n  datasets. Deviations from training: P0c gives rank positions to non-blank lines (malformed lines are zero-reward\n  positions) while this parser numbers parsed items only (malformed lines are rare in SFT samples); the trainers match with\n  Rank-GRPO's matchers (title normalisation) instead of hits_for's exact title.\n  Population grid (per reward definition x sampling): per-position mean and standard deviation (ddof 0) over all\n  (row, list) pairs, weights: row sampling = every (request, responder) row once (requests in proportion to n_x), request\n  sampling = every request once. Reward definitions: per-responder 0/1 (one responder per row; under request sampling the\n  responder is drawn uniformly, i.e. weight 1/n_x per row), mean over responders (count / n), bounded sum = union 0/1,\n  sum (responder count; reference), mean over m = 2 / 4 responders (dose-response datasets, row sampling).\n  Batch simulation per arm (the trainer's own scale): 2,000 batches of 48 distinct rows of the arm's training set\n  (uniform; numpy default_rng(42)); 8 lists per row. Batch scale: per-position std over the 384 lists (ddof 1, as\n  torch.std) and shaping_scale = 1 / (mean of the per-position stds > 1e-6 + 1e-4). Group scale: per (row, position) std\n  over its 8 lists (ddof 1) and shaping_scale = 1 / (mean of the (row, position) stds > 1e-6 + 1e-4)\n  (lib/rank_grpo_trl.py _rank_advantages). The simulated shaping_scale is compared with the first logged record (steps\n  1-10). Filtering of prompts > 2,048 tokens (<= 0.2% of rows) is ignored here.",
+ "cache_checks": {
+  "consensus_items_equal_union": true,
+  "consensusrw_rows_equal_consensus_of_request": true,
+  "consensusrw_rows": 383013,
+  "consensusrw_request_counts_equal_n": true,
+  "union_item_counts_equal_consensus_w_times_n": true,
+  "parse": {
+   "lists": 577864,
+   "mean_items": 19.984755928730635,
+   "share_lists_with_20_items": 0.9864639430731106
+  }
+ },
+ "n_requests": 72233,
+ "n_rows": 383013,
+ "population_grid": {
+  "per_responder (0/1, one responder per row)": {
+   "row_sampling": {
+    "mean_reward": [
+     0.052954,
+     0.046528,
+     0.038659,
+     0.032695,
+     0.028582,
+     0.025059,
+     0.022021,
+     0.019298,
+     0.016988,
+     0.015322,
+     0.013691,
+     0.011995,
+     0.0109,
+     0.009865,
+     0.008654,
+     0.007938,
+     0.007509,
+     0.00696,
+     0.006191,
+     0.005825
+    ],
+    "std": [
+     0.223943,
+     0.210625,
+     0.192781,
+     0.177836,
+     0.166629,
+     0.156305,
+     0.146751,
+     0.137571,
+     0.129225,
+     0.122829,
+     0.116204,
+     0.108864,
+     0.103831,
+     0.098831,
+     0.092624,
+     0.088743,
+     0.086326,
+     0.083135,
+     0.078441,
+     0.0761
+    ],
+    "std_mean_over_positions": 0.12987979624031626
+   },
+   "request_sampling": {
+    "mean_reward": [
+     0.058264,
+     0.046249,
+     0.036903,
+     0.030081,
+     0.025867,
+     0.022493,
+     0.019675,
+     0.016918,
+     0.01505,
+     0.013481,
+     0.012067,
+     0.010419,
+     0.009486,
+     0.008501,
+     0.007454,
+     0.006831,
+     0.006461,
+     0.006122,
+     0.005514,
+     0.005155
+    ],
+    "std": [
+     0.234242,
+     0.210025,
+     0.188523,
+     0.170811,
+     0.158737,
+     0.14828,
+     0.138882,
+     0.128964,
+     0.121754,
+     0.115322,
+     0.109184,
+     0.101538,
+     0.096933,
+     0.09181,
+     0.086015,
+     0.082367,
+     0.08012,
+     0.078005,
+     0.074052,
+     0.071611
+    ],
+    "std_mean_over_positions": 0.12435879247685344
+   }
+  },
+  "mean over responders (count / n)": {
+   "row_sampling": {
+    "mean_reward": [
+     0.052896,
+     0.046512,
+     0.038647,
+     0.032683,
+     0.028568,
+     0.025049,
+     0.022013,
+     0.01929,
+     0.016982,
+     0.015316,
+     0.013687,
+     0.011992,
+     0.010895,
+     0.009862,
+     0.00865,
+     0.007936,
+     0.007506,
+     0.006957,
+     0.006188,
+     0.005824
+    ],
+    "std": [
+     0.112503,
+     0.099632,
+     0.089078,
+     0.080635,
+     0.075212,
+     0.070093,
+     0.06561,
+     0.061137,
+     0.057544,
+     0.054697,
+     0.051554,
+     0.047965,
+     0.045743,
+     0.04346,
+     0.040447,
+     0.039009,
+     0.03781,
+     0.036693,
+     0.034736,
+     0.033709
+    ],
+    "std_mean_over_positions": 0.05886326910736276
+   },
+   "request_sampling": {
+    "mean_reward": [
+     0.058219,
+     0.046235,
+     0.036891,
+     0.03007,
+     0.025857,
+     0.022481,
+     0.019668,
+     0.016914,
+     0.015046,
+     0.013476,
+     0.012064,
+     0.010416,
+     0.009483,
+     0.008499,
+     0.007452,
+     0.006829,
+     0.006458,
+     0.006118,
+     0.005511,
+     0.005154
+    ],
+    "std": [
+     0.177837,
+     0.153314,
+     0.134561,
+     0.11964,
+     0.110607,
+     0.103404,
+     0.096344,
+     0.089273,
+     0.085088,
+     0.080066,
+     0.075933,
+     0.07062,
+     0.06709,
+     0.063501,
+     0.059443,
+     0.056572,
+     0.055197,
+     0.054471,
+     0.051924,
+     0.050071
+    ],
+    "std_mean_over_positions": 0.08774783755523279
+   }
+  },
+  "bounded sum = union (0/1)": {
+   "row_sampling": {
+    "mean_reward": [
+     0.397103,
+     0.379464,
+     0.341822,
+     0.304087,
+     0.274557,
+     0.249517,
+     0.223051,
+     0.201632,
+     0.181159,
+     0.164328,
+     0.150245,
+     0.135383,
+     0.124456,
+     0.11417,
+     0.102668,
+     0.09435,
+     0.091632,
+     0.083965,
+     0.07701,
+     0.071128
+    ],
+    "std": [
+     0.489298,
+     0.485254,
+     0.47432,
+     0.46002,
+     0.446291,
+     0.432734,
+     0.416292,
+     0.401219,
+     0.38515,
+     0.370573,
+     0.357311,
+     0.342133,
+     0.330101,
+     0.318017,
+     0.303525,
+     0.292315,
+     0.288506,
+     0.277336,
+     0.266607,
+     0.257039
+    ],
+    "std_mean_over_positions": 0.36970194680996604
+   },
+   "request_sampling": {
+    "mean_reward": [
+     0.189956,
+     0.169952,
+     0.145873,
+     0.125393,
+     0.11105,
+     0.098426,
+     0.087465,
+     0.076913,
+     0.068421,
+     0.062004,
+     0.055923,
+     0.049159,
+     0.045163,
+     0.040779,
+     0.036182,
+     0.033255,
+     0.031428,
+     0.029298,
+     0.026321,
+     0.024687
+    ],
+    "std": [
+     0.392266,
+     0.37559,
+     0.352979,
+     0.331164,
+     0.314194,
+     0.29789,
+     0.282516,
+     0.266453,
+     0.252467,
+     0.241163,
+     0.229773,
+     0.216199,
+     0.207661,
+     0.197779,
+     0.186742,
+     0.179302,
+     0.174471,
+     0.168639,
+     0.160088,
+     0.155171
+    ],
+    "std_mean_over_positions": 0.24912544380692814
+   }
+  },
+  "sum (responder count; reference)": {
+   "row_sampling": {
+    "mean_reward": [
+     0.950475,
+     0.889905,
+     0.736235,
+     0.654531,
+     0.572331,
+     0.508412,
+     0.44595,
+     0.405736,
+     0.353281,
+     0.323289,
+     0.278832,
+     0.249634,
+     0.222122,
+     0.20667,
+     0.183261,
+     0.159377,
+     0.160857,
+     0.148725,
+     0.12835,
+     0.127379
+    ],
+    "std": [
+     2.240522,
+     2.231852,
+     1.829773,
+     1.831309,
+     1.70627,
+     1.583567,
+     1.540229,
+     1.408782,
+     1.296849,
+     1.339213,
+     1.061631,
+     0.933922,
+     0.866339,
+     0.893897,
+     0.863349,
+     0.672342,
+     0.726146,
+     0.732688,
+     0.607015,
+     0.656742
+    ],
+    "std_mean_over_positions": 1.2511219286507707
+   },
+   "request_sampling": {
+    "mean_reward": [
+     0.280789,
+     0.246712,
+     0.204988,
+     0.173363,
+     0.151556,
+     0.132876,
+     0.116764,
+     0.102329,
+     0.090077,
+     0.081242,
+     0.072595,
+     0.063605,
+     0.057796,
+     0.052308,
+     0.045888,
+     0.042093,
+     0.039814,
+     0.036905,
+     0.03283,
+     0.030888
+    ],
+    "std": [
+     0.796095,
+     0.737105,
+     0.645803,
+     0.593766,
+     0.556891,
+     0.510364,
+     0.477914,
+     0.447524,
+     0.415147,
+     0.402068,
+     0.363648,
+     0.336413,
+     0.316056,
+     0.304921,
+     0.282583,
+     0.264024,
+     0.259525,
+     0.252447,
+     0.228745,
+     0.226813
+    ],
+    "std_mean_over_positions": 0.4208927099587748
+   }
+  },
+  "per_responder, fixed draw (redditthr)": {
+   "request_sampling": {
+    "mean_reward": [
+     0.058041,
+     0.046514,
+     0.036979,
+     0.030137,
+     0.025708,
+     0.022331,
+     0.019716,
+     0.01671,
+     0.01505,
+     0.013526,
+     0.011965,
+     0.010445,
+     0.00948,
+     0.008666,
+     0.0075,
+     0.006796,
+     0.006479,
+     0.005979,
+     0.005574,
+     0.005297
+    ],
+    "std": [
+     0.233822,
+     0.210596,
+     0.188711,
+     0.170964,
+     0.158264,
+     0.147756,
+     0.139022,
+     0.128182,
+     0.121753,
+     0.115511,
+     0.108727,
+     0.101667,
+     0.096901,
+     0.092689,
+     0.086277,
+     0.082156,
+     0.080231,
+     0.077092,
+     0.074451,
+     0.072588
+    ],
+    "std_mean_over_positions": 0.12436800164807209
+   }
+  },
+  "mean over m=2 responders (dose-response rows)": {
+   "row_sampling": {
+    "mean_reward": [
+     0.05305,
+     0.046485,
+     0.038637,
+     0.032709,
+     0.028721,
+     0.025067,
+     0.022106,
+     0.019372,
+     0.017049,
+     0.015391,
+     0.013713,
+     0.012072,
+     0.010948,
+     0.009858,
+     0.008712,
+     0.007955,
+     0.007537,
+     0.00701,
+     0.006207,
+     0.00585
+    ],
+    "std": [
+     0.169214,
+     0.156946,
+     0.142772,
+     0.131386,
+     0.123357,
+     0.115466,
+     0.108478,
+     0.101724,
+     0.095632,
+     0.09087,
+     0.085762,
+     0.080576,
+     0.0767,
+     0.072832,
+     0.06842,
+     0.065432,
+     0.063715,
+     0.061527,
+     0.057943,
+     0.05627
+    ],
+    "std_mean_over_positions": 0.0962510978760595
+   }
+  },
+  "mean over m=4 responders (dose-response rows)": {
+   "row_sampling": {
+    "mean_reward": [
+     0.05301,
+     0.046486,
+     0.038708,
+     0.032659,
+     0.028572,
+     0.025076,
+     0.022067,
+     0.019359,
+     0.016991,
+     0.0153,
+     0.013681,
+     0.012019,
+     0.010886,
+     0.00986,
+     0.008643,
+     0.007947,
+     0.007514,
+     0.006967,
+     0.006202,
+     0.00581
+    ],
+    "std": [
+     0.135808,
+     0.123838,
+     0.112018,
+     0.102321,
+     0.095777,
+     0.089715,
+     0.08409,
+     0.078752,
+     0.074028,
+     0.070258,
+     0.066389,
+     0.062215,
+     0.059175,
+     0.056347,
+     0.052576,
+     0.0506,
+     0.049094,
+     0.047496,
+     0.044888,
+     0.043493
+    ],
+    "std_mean_over_positions": 0.07494382881678369
+   }
+  }
+ },
+ "consistency": {
+  "share_positions_union_ne_min1_sum": 2.6736394722633698e-05,
+  "max_abs_mean_minus_sum_over_n": 0.5,
+  "share_positions_mean_ne_sum_over_n": 4.118616144975288e-05,
+  "max_sum_per_position": 47
+ },
+ "arms": {
+  "single_group (1, Rank-GRPO)": {
+   "reward_dataset": "single",
+   "sampling": "rows",
+   "scale": "group",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 2.5347419721934448,
+     "p10": 2.4575075033481495,
+     "p50": 2.5364625359649757,
+     "p90": 2.6115025907059923,
+     "min": 2.3297096813994846,
+     "max": 2.716006435403893
+    },
+    "group_std_nonzero_per_position_mean": [
+     0.426355,
+     0.423181,
+     0.42284,
+     0.417762,
+     0.411651,
+     0.404585,
+     0.399723,
+     0.395342,
+     0.389807,
+     0.38637,
+     0.381517,
+     0.380389,
+     0.377144,
+     0.375336,
+     0.371232,
+     0.37051,
+     0.368517,
+     0.367775,
+     0.367137,
+     0.366184
+    ],
+    "group_std_nonzero_mean": 0.39522451466500774,
+    "share_zero_std_groups_per_position": [
+     0.9497,
+     0.9074,
+     0.8825,
+     0.8759,
+     0.877,
+     0.8826,
+     0.8902,
+     0.897,
+     0.9067,
+     0.9119,
+     0.9171,
+     0.9255,
+     0.932,
+     0.9373,
+     0.9422,
+     0.9466,
+     0.9497,
+     0.9523,
+     0.9563,
+     0.9576
+    ],
+    "share_zero_std_groups_mean": 0.9198854166666668
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 2.486,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 2.471235,
+      "p10": 2.4438,
+      "p50": 2.469,
+      "p90": 2.505,
+      "min": 2.411,
+      "max": 2.549
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.4045941402661054,
+     "first_200_steps_mean": 2.50995,
+     "last_200_steps_mean": 2.4594
+    },
+    "s42": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s42_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 2.549,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 2.4757,
+      "p10": 2.4458,
+      "p50": 2.472,
+      "p90": 2.5061,
+      "min": 2.405,
+      "max": 2.549
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.4038664323635952,
+     "first_200_steps_mean": 2.5166499999999994,
+     "last_200_steps_mean": 2.4578499999999996
+    },
+    "s1234": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s1234_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 2.523,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 2.474035,
+      "p10": 2.445,
+      "p50": 2.471,
+      "p90": 2.5090999999999997,
+      "min": 2.417,
+      "max": 2.569
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.40414469449964374,
+     "first_200_steps_mean": 2.52155,
+     "last_200_steps_mean": 2.44915
+    }
+   },
+   "simulated_over_logged_first_record": 1.0196065857576204
+  },
+  "single_batch (2)": {
+   "reward_dataset": "single",
+   "sampling": "rows",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 7.994792897785765,
+     "p10": 6.75232723234157,
+     "p50": 7.897465463590288,
+     "p90": 9.407053060297688,
+     "min": 5.0934755704097965,
+     "max": 12.41352833423498
+    },
+    "batch_std_per_position_mean": [
+     0.210727,
+     0.199564,
+     0.185049,
+     0.1721,
+     0.161488,
+     0.150746,
+     0.14067,
+     0.13268,
+     0.122687,
+     0.116664,
+     0.110105,
+     0.103609,
+     0.097217,
+     0.091073,
+     0.085634,
+     0.081234,
+     0.077939,
+     0.075055,
+     0.07097,
+     0.069108
+    ],
+    "batch_std_mean": 0.12271586526682286
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_batch_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 7.654,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 6.6879,
+      "p10": 6.2114,
+      "p50": 6.6205,
+      "p90": 7.2010000000000005,
+      "min": 5.849,
+      "max": 8.204
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.15001595782207502,
+     "first_200_steps_mean": 7.4452,
+     "last_200_steps_mean": 6.4373499999999995
+    },
+    "s42": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_batch_s42_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 7.776,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 6.75059,
+      "p10": 6.3016000000000005,
+      "p50": 6.6975,
+      "p90": 7.2618,
+      "min": 5.983,
+      "max": 8.243
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.14850255906339854,
+     "first_200_steps_mean": 7.3765,
+     "last_200_steps_mean": 6.55775
+    },
+    "s1234": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_single_batch_s1234_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 7.869,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 6.780495000000001,
+      "p10": 6.3059,
+      "p50": 6.6985,
+      "p90": 7.4084,
+      "min": 5.995,
+      "max": 8.437
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.14804509313209452,
+     "first_200_steps_mean": 7.723750000000001,
+     "last_200_steps_mean": 6.46875
+    }
+   },
+   "simulated_over_logged_first_record": 1.0445248102672806
+  },
+  "singlethr_batch (3)": {
+   "reward_dataset": "singlethr",
+   "sampling": "requests",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 8.242231329386655,
+     "p10": 6.9810069039183995,
+     "p50": 8.152512753532783,
+     "p90": 9.625442062251157,
+     "min": 5.4676554894090765,
+     "max": 13.750047650948977
+    },
+    "batch_std_per_position_mean": [
+     0.223356,
+     0.203494,
+     0.181317,
+     0.164204,
+     0.152093,
+     0.142585,
+     0.133583,
+     0.122696,
+     0.116909,
+     0.109152,
+     0.102556,
+     0.094873,
+     0.089715,
+     0.086035,
+     0.0793,
+     0.073836,
+     0.072372,
+     0.068484,
+     0.064815,
+     0.06305
+    ],
+    "batch_std_mean": 0.11722115641125974
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_singlethr_batch_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 7.752,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 6.793824999999999,
+      "p10": 6.2067,
+      "p50": 6.6579999999999995,
+      "p90": 7.5399,
+      "min": 5.828,
+      "max": 9.084
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.14795173526379787,
+     "first_200_steps_mean": 7.772799999999999,
+     "last_200_steps_mean": 6.3961
+    }
+   },
+   "simulated_over_logged_first_record": 1.063239335576194
+  },
+  "consensusrw_batch (4)": {
+   "reward_dataset": "consensus",
+   "sampling": "rows_n",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 18.46968532378382,
+     "p10": 14.775259238915073,
+     "p50": 18.40230147143528,
+     "p90": 22.20439106572389,
+     "min": 9.26504918305866,
+     "max": 31.263981000698447
+    },
+    "batch_std_per_position_mean": [
+     0.104589,
+     0.093803,
+     0.084298,
+     0.07661,
+     0.071955,
+     0.066961,
+     0.062883,
+     0.057957,
+     0.054656,
+     0.051998,
+     0.04888,
+     0.045317,
+     0.043557,
+     0.040418,
+     0.038155,
+     0.036137,
+     0.034654,
+     0.033671,
+     0.032079,
+     0.031175
+    ],
+    "batch_std_mean": 0.055487622000212664
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_consensusrw_batch_s3407_p0c_cap320.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 17.7,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 14.8882,
+      "p10": 13.816,
+      "p50": 14.75,
+      "p90": 16.041,
+      "min": 12.64,
+      "max": 18.56
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.06733557538745204,
+     "first_200_steps_mean": 16.444999999999997,
+     "last_200_steps_mean": 14.642500000000002
+    },
+    "s42": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_consensusrw_batch_s42_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 18.09,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 14.9727,
+      "p10": 13.907,
+      "p50": 14.864999999999998,
+      "p90": 16.221999999999998,
+      "min": 13.12,
+      "max": 19.24
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.0669500202068108,
+     "first_200_steps_mean": 16.3155,
+     "last_200_steps_mean": 14.641499999999999
+    },
+    "s1234": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_consensusrw_batch_s1234_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 17.86,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 15.023200000000001,
+      "p10": 13.899000000000001,
+      "p50": 14.879999999999999,
+      "p90": 16.206999999999997,
+      "min": 12.7,
+      "max": 19.94
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.06675481173707955,
+     "first_200_steps_mean": 16.9245,
+     "last_200_steps_mean": 14.589500000000001
+    }
+   },
+   "simulated_over_logged_first_record": 1.043485046541459
+  },
+  "consensus_batch (5)": {
+   "reward_dataset": "consensus",
+   "sampling": "requests",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 12.568348400017513,
+     "p10": 9.942560610628728,
+     "p50": 12.386018112605651,
+     "p90": 15.385615641696797,
+     "min": 6.790655806561388,
+     "max": 21.141508774118897
+    },
+    "batch_std_per_position_mean": [
+     0.168077,
+     0.145483,
+     0.126273,
+     0.11291,
+     0.104405,
+     0.09763,
+     0.091422,
+     0.084438,
+     0.080019,
+     0.074765,
+     0.070982,
+     0.065437,
+     0.062254,
+     0.057949,
+     0.054397,
+     0.051452,
+     0.050288,
+     0.049238,
+     0.045754,
+     0.04433
+    ],
+    "batch_std_mean": 0.08187517392523161
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_consensus_batch_s3407_p0c_cap320.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 12.18,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 9.561960000000001,
+      "p10": 8.7163,
+      "p50": 9.3945,
+      "p90": 10.54,
+      "min": 8.18,
+      "max": 14.09
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.10522851614671622,
+     "first_200_steps_mean": 11.093700000000002,
+     "last_200_steps_mean": 9.055150000000001
+    }
+   },
+   "simulated_over_logged_first_record": 1.0318841050917498
+  },
+  "union_batch (6)": {
+   "reward_dataset": "union",
+   "sampling": "requests",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 4.121912472260842,
+     "p10": 3.590072045641908,
+     "p50": 4.068186243374007,
+     "p90": 4.707316369390412,
+     "min": 3.0217273030799032,
+     "max": 6.687476922531679
+    },
+    "batch_std_per_position_mean": [
+     0.38695,
+     0.370609,
+     0.347689,
+     0.326396,
+     0.309857,
+     0.294,
+     0.279317,
+     0.262054,
+     0.249142,
+     0.237548,
+     0.226152,
+     0.213384,
+     0.204058,
+     0.194931,
+     0.182685,
+     0.176004,
+     0.171259,
+     0.165181,
+     0.156157,
+     0.151767
+    ],
+    "batch_std_mean": 0.24525696462502475
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_batch_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 4.156,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 3.3362149999999997,
+      "p10": 3.132,
+      "p50": 3.301,
+      "p90": 3.577,
+      "min": 3.006,
+      "max": 4.156
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.3006001012651703,
+     "first_200_steps_mean": 3.7244499999999996,
+     "last_200_steps_mean": 3.1861000000000006
+    },
+    "s42": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_batch_s42_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 3.983,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 3.3368399999999996,
+      "p10": 3.143,
+      "p50": 3.303,
+      "p90": 3.5564,
+      "min": 2.994,
+      "max": 4.289
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.30059288649453164,
+     "first_200_steps_mean": 3.7801,
+     "last_200_steps_mean": 3.1698500000000003
+    },
+    "s1234": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_batch_s1234_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 4.226,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 3.33906,
+      "p10": 3.1559,
+      "p50": 3.2960000000000003,
+      "p90": 3.5524999999999998,
+      "min": 3.036,
+      "max": 4.226
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.3003328090346747,
+     "first_200_steps_mean": 3.7383999999999995,
+     "last_200_steps_mean": 3.1652500000000003
+    }
+   },
+   "simulated_over_logged_first_record": 0.9917979962129072
+  },
+  "union_group (7, ReMaRk)": {
+   "reward_dataset": "union",
+   "sampling": "requests",
+   "scale": "group",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 2.3980740257594295,
+     "p10": 2.3432936638743005,
+     "p50": 2.396727410520131,
+     "p90": 2.4540931805077517,
+     "min": 2.278213630140203,
+     "max": 2.5538071476704074
+    },
+    "group_std_nonzero_per_position_mean": [
+     0.433349,
+     0.434758,
+     0.437439,
+     0.438154,
+     0.43687,
+     0.432628,
+     0.429963,
+     0.424079,
+     0.420271,
+     0.416578,
+     0.412612,
+     0.408351,
+     0.405315,
+     0.401855,
+     0.397149,
+     0.394698,
+     0.392251,
+     0.390057,
+     0.387026,
+     0.385169
+    ],
+    "group_std_nonzero_mean": 0.41756824554327454,
+    "share_zero_std_groups_per_position": [
+     0.8522,
+     0.7623,
+     0.707,
+     0.6906,
+     0.6837,
+     0.6912,
+     0.6995,
+     0.7175,
+     0.7299,
+     0.7421,
+     0.7566,
+     0.7724,
+     0.7847,
+     0.7969,
+     0.8122,
+     0.821,
+     0.8271,
+     0.8341,
+     0.8473,
+     0.8538
+    ],
+    "share_zero_std_groups_mean": 0.7691052083333334
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_union_group_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 2.407,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 2.3291899999999996,
+      "p10": 2.306,
+      "p50": 2.3255,
+      "p90": 2.356,
+      "min": 2.292,
+      "max": 2.407
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.4292676938611041,
+     "first_200_steps_mean": 2.36775,
+     "last_200_steps_mean": 2.3138499999999995
+    }
+   },
+   "simulated_over_logged_first_record": 0.9962916600579267
+  },
+  "meanm2rw_batch (dose m=2)": {
+   "reward_dataset": "meanm2",
+   "sampling": "rows",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 10.859975408051739,
+     "p10": 9.316055180806257,
+     "p50": 10.741612815180504,
+     "p90": 12.544690510213181,
+     "min": 7.010943750201223,
+     "max": 16.28771125989935
+    },
+    "batch_std_per_position_mean": [
+     0.162463,
+     0.150935,
+     0.138575,
+     0.128063,
+     0.120828,
+     0.113131,
+     0.105678,
+     0.099236,
+     0.092679,
+     0.087883,
+     0.082947,
+     0.077703,
+     0.07396,
+     0.069424,
+     0.065553,
+     0.062199,
+     0.060122,
+     0.058308,
+     0.054913,
+     0.053668
+    ],
+    "batch_std_mean": 0.09291347098566317
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_meanm2rw_batch_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 10.19,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 8.844745,
+      "p10": 8.2807,
+      "p50": 8.74,
+      "p90": 9.5387,
+      "min": 7.899,
+      "max": 11.29
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.1133369365720959,
+     "first_200_steps_mean": 9.87875,
+     "last_200_steps_mean": 8.605049999999999
+    },
+    "s42": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_meanm2rw_batch_s42_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 10.73,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 8.87794,
+      "p10": 8.3416,
+      "p50": 8.806000000000001,
+      "p90": 9.4484,
+      "min": 7.911,
+      "max": 10.9
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.11286226146718144,
+     "first_200_steps_mean": 9.8126,
+     "last_200_steps_mean": 8.552900000000001
+    },
+    "s1234": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_meanm2rw_batch_s1234_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 10.59,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 8.909600000000001,
+      "p10": 8.3453,
+      "p50": 8.764,
+      "p90": 9.603299999999999,
+      "min": 7.985,
+      "max": 11.27
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.11256566123302537,
+     "first_200_steps_mean": 10.147750000000002,
+     "last_200_steps_mean": 8.54975
+    }
+   },
+   "simulated_over_logged_first_record": 1.0657483226743611
+  },
+  "meanm4rw_batch (dose m=4)": {
+   "reward_dataset": "meanm4",
+   "sampling": "rows",
+   "scale": "batch",
+   "training_start_simulation": {
+    "shaping_scale": {
+     "n": 2000,
+     "mean": 13.970869712579134,
+     "p10": 11.872052935263797,
+     "p50": 13.967200052637459,
+     "p90": 16.09753029542101,
+     "min": 8.43327041504725,
+     "max": 19.524189209635086
+    },
+    "batch_std_per_position_mean": [
+     0.12983,
+     0.119658,
+     0.108907,
+     0.09962,
+     0.093479,
+     0.087632,
+     0.082077,
+     0.076474,
+     0.0719,
+     0.068307,
+     0.064399,
+     0.060465,
+     0.057705,
+     0.054022,
+     0.050744,
+     0.048214,
+     0.046674,
+     0.045158,
+     0.042805,
+     0.041707
+    ],
+    "batch_std_mean": 0.07248891675669462
+   },
+   "logs": {
+    "s3407": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_meanm4rw_batch_s3407_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 13.33,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 11.294335,
+      "p10": 10.599,
+      "p50": 11.18,
+      "p90": 12.032,
+      "min": 9.843,
+      "max": 14.24
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.08873097394222441,
+     "first_200_steps_mean": 12.591500000000002,
+     "last_200_steps_mean": 10.960450000000002
+    },
+    "s42": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_meanm4rw_batch_s42_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 13.45,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 11.339400000000001,
+      "p10": 10.659,
+      "p50": 11.205,
+      "p90": 12.203,
+      "min": 10.09,
+      "max": 14.04
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.08835286348561028,
+     "first_200_steps_mean": 12.4955,
+     "last_200_steps_mean": 10.988
+    },
+    "s1234": {
+     "file": "remark/outputs/crs/train_logs/node/grpo_2B_meanm4rw_batch_s1234_p0c.log",
+     "resumed_from": null,
+     "n_records": 200,
+     "steps_covered": [
+      1,
+      2000
+     ],
+     "first_record_steps_1_10": 13.45,
+     "shaping_scale_over_training": {
+      "n": 200,
+      "mean": 11.377600000000003,
+      "p10": 10.639000000000001,
+      "p50": 11.22,
+      "p90": 12.301,
+      "min": 10.25,
+      "max": 14.67
+     },
+     "implied_mean_sigma_over_training (mean of 1/scale - 1e-4)": 0.08812032191105768,
+     "first_200_steps_mean": 12.887,
+     "last_200_steps_mean": 10.9235
+    }
+   },
+   "simulated_over_logged_first_record": 1.048077247755374
+  }
+ }
+}

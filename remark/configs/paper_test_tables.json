@@ -1,0 +1,128 @@
+{
+ "_note": "Test-set version of Table 3 (Reddit-v2, Qwen3.5-2B, seed 3407; validation-selected checkpoints, each evaluated once). Rows 4/5 are the identical-config reruns. union_group (row 7, the final ReMaRk configuration: bounded sum, group scaling, request sampling) added 2026-10-01 for the reframe. singlethr_group (row 8: per-responder reward, group scaling, request sampling) added 2026-10-02. Pairs 3-1, 4-1, 5-1 (singlethr / consensusrw / consensus minus single_group) added 2026-10-03 for the compact main-text ablation table (column 'Delta vs row 1'). consensus_group (row 9: mean reward, group scaling, request sampling; s3407, locked @2,000) added 2026-10-09 (appendix ablation tables).",
+ "datasets": {
+  "reddit_test": {
+   "split": "test",
+   "val_dir": "remark/outputs/crs/test",
+   "popularity": "remark/outputs/crs/train_gt_popularity.json",
+   "arms": {
+    "sft": {
+     "run": "test_2B_sft_step1500"
+    },
+    "single_group": {
+     "run": "test_2B_single_group_s3407_step2000"
+    },
+    "single_batch": {
+     "run": "test_2B_single_batch_s3407_step1750"
+    },
+    "singlethr": {
+     "run": "test_2B_singlethr_s3407_step1750"
+    },
+    "consensusrw": {
+     "run": "test_2B_consensusrw_rerun_step2000"
+    },
+    "consensus": {
+     "run": "test_2B_consensus_rerun_step2000"
+    },
+    "union": {
+     "run": "test_2B_union_s3407_step1500"
+    },
+    "union_group": {
+     "run": "test_2B_union_group_step2000"
+    },
+    "singlethr_group": {
+     "run": "test_2B_singlethr_group_s3407_p0c_step2000"
+    },
+    "consensus_group": {
+     "run": "test_2B_consensus_group_s3407_p0c_step2000"
+    }
+   },
+   "pairs": [
+    [
+     "union",
+     "single_group"
+    ],
+    [
+     "consensusrw",
+     "single_batch"
+    ],
+    [
+     "consensus",
+     "singlethr"
+    ],
+    [
+     "union",
+     "singlethr"
+    ],
+    [
+     "consensusrw",
+     "consensus"
+    ],
+    [
+     "singlethr",
+     "single_batch"
+    ],
+    [
+     "union",
+     "consensus"
+    ],
+    [
+     "union",
+     "consensusrw"
+    ],
+    [
+     "single_batch",
+     "single_group"
+    ],
+    [
+     "union_group",
+     "single_group"
+    ],
+    [
+     "union_group",
+     "union"
+    ],
+    [
+     "union_group",
+     "consensus"
+    ],
+    [
+     "union_group",
+     "consensusrw"
+    ],
+    [
+     "union_group",
+     "singlethr_group"
+    ],
+    [
+     "singlethr_group",
+     "single_group"
+    ],
+    [
+     "singlethr_group",
+     "singlethr"
+    ],
+    [
+     "singlethr",
+     "single_group"
+    ],
+    [
+     "consensusrw",
+     "single_group"
+    ],
+    [
+     "consensus",
+     "single_group"
+    ],
+    [
+     "union_group",
+     "consensus_group"
+    ],
+    [
+     "consensus_group",
+     "consensus"
+    ]
+   ]
+  }
+ }
+}

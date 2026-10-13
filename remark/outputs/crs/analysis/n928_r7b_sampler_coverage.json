@@ -1,0 +1,361 @@
+{
+ "definition": "Filter (crs_train_grpo_qwen.py): keep a row iff len(tok(tok.apply_chat_template(prompt, tokenize=False,\n  add_generation_prompt=True))[\"input_ids\"]) <= 2048; datasets.filter keeps the row order. Every prompt is one user\n  message, so the decision is computed once per request (prompt text) and broadcast to its rows.\n  Sampler (TRL 1.14 GRPOTrainer._get_train_sampler -> trl.trainer.utils.RepeatSampler): one torch.Generator seeded with\n  args.seed (3407) at construction; each pass over the dataloader (one per epoch) calls torch.randperm(N, generator)\n  with the generator state carried over, cuts the permutation into chunks of generation_batch_size / num_generations\n  = (16 x 4 x 6) / 8 = 48 prompts and drops the incomplete last chunk; each chunk is repeated num_generations (8) times\n  per index and repeat_count = steps_per_generation (6) times, i.e. one chunk = one optimizer step. Steps per epoch =\n  N // 48; step s uses chunk s mod (N // 48) of epoch s // (N // 48). Accelerate shards the batches across the 4\n  processes and broadcasts rank 0's generator state (identical on every rank), so the global sequence is the sampler's.\n  Assumptions: CPU torch.randperm is the same algorithm in the controller's torch (this replay) and the node's torch\n  2.10 (the CPU path for n < 2^32 / 20 is the long-standing Fisher-Yates loop); one __iter__ per epoch; no resume in\n  these runs (none of their logs has a '[resume]' line; consensus / consensusrw were rerun from scratch with the same\n  seed, which replays the same sequence).\n  Request = distinct prompt text (rows sharing a prompt); n_x = rows of the request in grpo_dataset/train.\n  For comparison, the expectation under uniform shuffling without replacement: a request with n_x rows among N\n  filtered rows is seen with probability 1 - C(N - n_x, D) / C(N, D), D = 96,000 draws (if D <= N).",
+ "tokenizer": "remark/outputs/crs/sft/qwen35_2B/checkpoint-1500",
+ "chat_template_equals_base": true,
+ "seed": 3407,
+ "steps": 2000,
+ "prompts_per_step": 48,
+ "lists_per_step": 384,
+ "n_requests": 72233,
+ "requests_over_2048_tokens": 108,
+ "prompt_tokens": {
+  "max": 7520,
+  "p99": 1251.039999999979,
+  "mean": 228.7608295377459
+ },
+ "arms": {
+  "single_group": {
+   "table_row": 1,
+   "dataset": "data/raw/reddit_v2/processed_datasets/grpo/grpo_dataset/train",
+   "rows": 383013,
+   "rows_after_filter": 382829,
+   "steps_per_epoch": 7975,
+   "epochs_touched": 1,
+   "draws": 96000,
+   "distinct_rows_seen": 96000,
+   "share_rows_seen": 0.25064423400772295,
+   "distinct_requests_seen": 39671,
+   "share_requests_seen": 0.5492088103775282,
+   "share_n1_requests_seen": 0.25008445375312477,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.25008445375312477
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.549700807529193
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.8397538790797218
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9793617427861647
+    }
+   },
+   "share_filtered_requests_seen": 0.5500311958405546,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 39662.36801102961,
+    "share_requests_seen": 0.5490893083636235,
+    "share_n1_requests_seen": 0.25000229300601723,
+    "rows_seen": 96000.0,
+    "note": "expectation, not the replay"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_single_group_s3407_p0c.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     7975
+    ],
+    "replay_steps_per_epoch": 7975,
+    "replay_consistent": true
+   }
+  },
+  "single_batch": {
+   "table_row": 2,
+   "dataset": "data/raw/reddit_v2/processed_datasets/grpo/grpo_dataset/train",
+   "rows": 383013,
+   "rows_after_filter": 382829,
+   "steps_per_epoch": 7975,
+   "epochs_touched": 1,
+   "draws": 96000,
+   "distinct_rows_seen": 96000,
+   "share_rows_seen": 0.25064423400772295,
+   "distinct_requests_seen": 39671,
+   "share_requests_seen": 0.5492088103775282,
+   "share_n1_requests_seen": 0.25008445375312477,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.25008445375312477
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.549700807529193
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.8397538790797218
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9793617427861647
+    }
+   },
+   "share_filtered_requests_seen": 0.5500311958405546,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 39662.36801102961,
+    "share_requests_seen": 0.5490893083636235,
+    "share_n1_requests_seen": 0.25000229300601723,
+    "rows_seen": 96000.0,
+    "note": "expectation, not the replay"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_single_batch_s3407_p0c.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     7975
+    ],
+    "replay_steps_per_epoch": 7975,
+    "replay_consistent": true
+   }
+  },
+  "singlethr": {
+   "table_row": 3,
+   "dataset": "remark/data/crs/redditthr/grpo/train",
+   "rows": 72233,
+   "rows_after_filter": 72125,
+   "steps_per_epoch": 1502,
+   "epochs_touched": 2,
+   "draws": 96000,
+   "distinct_rows_seen": 72111,
+   "share_rows_seen": 0.998311021278363,
+   "distinct_requests_seen": 72111,
+   "share_requests_seen": 0.998311021278363,
+   "share_n1_requests_seen": 0.9967569758800081,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.9967569758800081
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.9991866612444082
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.9994649545211343
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9996178100515957
+    }
+   },
+   "share_filtered_requests_seen": 0.9998058925476603,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 72125.0,
+    "share_requests_seen": 0.9985048385087149,
+    "share_n1_requests_seen": 0.9969596648875076,
+    "rows_seen": 72125.0,
+    "note": "D > N: the first epoch draws every filtered row except the dropped tail chunk (< 48 rows)"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_singlethr_batch_s3407_p0c.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     1502
+    ],
+    "replay_steps_per_epoch": 1502,
+    "replay_consistent": true
+   }
+  },
+  "consensusrw": {
+   "table_row": 4,
+   "dataset": "remark/data/crs/grpo_consensus_rw/train",
+   "rows": 383013,
+   "rows_after_filter": 382829,
+   "steps_per_epoch": 7975,
+   "epochs_touched": 1,
+   "draws": 96000,
+   "distinct_rows_seen": 96000,
+   "share_rows_seen": 0.25064423400772295,
+   "distinct_requests_seen": 39671,
+   "share_requests_seen": 0.5492088103775282,
+   "share_n1_requests_seen": 0.25008445375312477,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.25008445375312477
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.549700807529193
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.8397538790797218
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9793617427861647
+    }
+   },
+   "share_filtered_requests_seen": 0.5500311958405546,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 39662.36801102961,
+    "share_requests_seen": 0.5490893083636235,
+    "share_n1_requests_seen": 0.25000229300601723,
+    "rows_seen": 96000.0,
+    "note": "expectation, not the replay"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_consensusrw_batch_s3407_p0c_cap320.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     7975
+    ],
+    "replay_steps_per_epoch": 7975,
+    "replay_consistent": true
+   }
+  },
+  "consensus": {
+   "table_row": 5,
+   "dataset": "remark/data/crs/grpo_consensus/train",
+   "rows": 72233,
+   "rows_after_filter": 72125,
+   "steps_per_epoch": 1502,
+   "epochs_touched": 2,
+   "draws": 96000,
+   "distinct_rows_seen": 72111,
+   "share_rows_seen": 0.998311021278363,
+   "distinct_requests_seen": 72111,
+   "share_requests_seen": 0.998311021278363,
+   "share_n1_requests_seen": 0.9967569758800081,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.9967569758800081
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.9991866612444082
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.9994649545211343
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9996178100515957
+    }
+   },
+   "share_filtered_requests_seen": 0.9998058925476603,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 72125.0,
+    "share_requests_seen": 0.9985048385087149,
+    "share_n1_requests_seen": 0.9969596648875076,
+    "rows_seen": 72125.0,
+    "note": "D > N: the first epoch draws every filtered row except the dropped tail chunk (< 48 rows)"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_consensus_batch_s3407_p0c_cap320.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     1502
+    ],
+    "replay_steps_per_epoch": 1502,
+    "replay_consistent": true
+   }
+  },
+  "union": {
+   "table_row": 6,
+   "dataset": "remark/data/crs/grpo_union/train",
+   "rows": 72233,
+   "rows_after_filter": 72125,
+   "steps_per_epoch": 1502,
+   "epochs_touched": 2,
+   "draws": 96000,
+   "distinct_rows_seen": 72111,
+   "share_rows_seen": 0.998311021278363,
+   "distinct_requests_seen": 72111,
+   "share_requests_seen": 0.998311021278363,
+   "share_n1_requests_seen": 0.9967569758800081,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.9967569758800081
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.9991866612444082
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.9994649545211343
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9996178100515957
+    }
+   },
+   "share_filtered_requests_seen": 0.9998058925476603,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 72125.0,
+    "share_requests_seen": 0.9985048385087149,
+    "share_n1_requests_seen": 0.9969596648875076,
+    "rows_seen": 72125.0,
+    "note": "D > N: the first epoch draws every filtered row except the dropped tail chunk (< 48 rows)"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_union_batch_s3407_p0c.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     1502
+    ],
+    "replay_steps_per_epoch": 1502,
+    "replay_consistent": true
+   }
+  },
+  "union_group": {
+   "table_row": 7,
+   "dataset": "remark/data/crs/grpo_union/train",
+   "rows": 72233,
+   "rows_after_filter": 72125,
+   "steps_per_epoch": 1502,
+   "epochs_touched": 2,
+   "draws": 96000,
+   "distinct_rows_seen": 72111,
+   "share_rows_seen": 0.998311021278363,
+   "distinct_requests_seen": 72111,
+   "share_requests_seen": 0.998311021278363,
+   "share_n1_requests_seen": 0.9967569758800081,
+   "share_requests_seen_by_n": {
+    "1": {
+     "requests": 29602,
+     "share_seen": 0.9967569758800081
+    },
+    "2-4": {
+     "requests": 17213,
+     "share_seen": 0.9991866612444082
+    },
+    "5-9": {
+     "requests": 14952,
+     "share_seen": 0.9994649545211343
+    },
+    ">=10": {
+     "requests": 10466,
+     "share_seen": 0.9996178100515957
+    }
+   },
+   "share_filtered_requests_seen": 0.9998058925476603,
+   "expectation_uniform_without_replacement": {
+    "requests_seen": 72125.0,
+    "share_requests_seen": 0.9985048385087149,
+    "share_n1_requests_seen": 0.9969596648875076,
+    "rows_seen": 72125.0,
+    "note": "D > N: the first epoch draws every filtered row except the dropped tail chunk (< 48 rows)"
+   },
+   "epoch_check": {
+    "log": "remark/outputs/crs/train_logs/node/grpo_2B_union_group_s3407_p0c.log",
+    "records": 200,
+    "steps_per_epoch_consistent_with_log": [
+     1502
+    ],
+    "replay_steps_per_epoch": 1502,
+    "replay_consistent": true
+   }
+  }
+ }
+}

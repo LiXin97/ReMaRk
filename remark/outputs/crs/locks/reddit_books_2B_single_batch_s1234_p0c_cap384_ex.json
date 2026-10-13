@@ -1,0 +1,11 @@
+{
+ "run": "reddit_books_2B_single_batch_s1234_p0c_cap384_ex",
+ "best_step": 2000,
+ "val_R@20": {
+  "1500": 0.3023573021957639,
+  "1750": 0.3034272635866526,
+  "2000": 0.30554303736873156
+ },
+ "locked_at_utc": "2026-10-02 06:37:32",
+ "rule": "best validation per-row R@20, ties to the earlier step; tested once"
+}

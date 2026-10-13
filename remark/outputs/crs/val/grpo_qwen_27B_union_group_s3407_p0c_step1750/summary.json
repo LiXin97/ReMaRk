@@ -1,0 +1,48 @@
+{
+ "model": "remark/outputs/crs/grpo_qwen_mirror/27B_union_group_s3407_p0c/checkpoint-1750",
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "split": "validation",
+ "n": 9421,
+ "unique_contexts": 1752,
+ "parse_empty": 0,
+ "in_catalog_rate": 0.9985188488429502,
+ "truncate_R@5": 0.1419930390832232,
+ "truncate_N@5": 0.11098284682919343,
+ "truncate_R@10": 0.21389503094088888,
+ "truncate_N@10": 0.1351437218916369,
+ "truncate_R@20": 0.2952891971586526,
+ "truncate_N@20": 0.15867635015614215,
+ "filter_R@5": 0.14208631876465697,
+ "filter_N@5": 0.1113706518038211,
+ "filter_R@10": 0.21419550179650249,
+ "filter_N@10": 0.13562493573002082,
+ "filter_R@20": 0.2952891971586526,
+ "filter_N@20": 0.15907094125778123,
+ "gt_pop_quantiles_50_80_90": [
+  63.0,
+  199.0,
+  300.0
+ ],
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 706,
+   "recall": 0.031161473087818695
+  },
+  "tail(<=median)": {
+   "n": 10646,
+   "recall": 0.14860041330077023
+  },
+  "mid": {
+   "n": 6342,
+   "recall": 0.3098391674550615
+  },
+  "head(top20%)": {
+   "n": 4229,
+   "recall": 0.4809647670844171
+  },
+  "top10%": {
+   "n": 2110,
+   "recall": 0.5450236966824644
+  }
+ }
+}

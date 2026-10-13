@@ -1,0 +1,153 @@
+{
+ "note": "sample-efficiency framing : per-step compute of ReMaRk vs Rank-GRPO from existing logs.",
+ "pairs": {
+  "2B": {
+   "rankgrpo": {
+    "intervals": 197,
+    "s_per_step_mean": 5.651756345177665,
+    "s_per_step_median": 5.599,
+    "completion_len_mean": 207.44974619289334,
+    "completion_tok_per_step": 79660.70253807104,
+    "total_tok_per_step": 157010.15228426395,
+    "prompt_tok_per_step": 77349.44974619291,
+    "segments": 1
+   },
+   "remark": {
+    "intervals": 197,
+    "s_per_step_mean": 5.887147208121828,
+    "s_per_step_median": 5.832,
+    "completion_len_mean": 207.34822335025385,
+    "completion_tok_per_step": 79621.71776649747,
+    "total_tok_per_step": 165992.89340101523,
+    "prompt_tok_per_step": 86371.17563451776,
+    "segments": 1
+   }
+  },
+  "4B": {
+   "rankgrpo": {
+    "intervals": 197,
+    "s_per_step_mean": 11.504609137055837,
+    "s_per_step_median": 11.29,
+    "completion_len_mean": 207.3142131979696,
+    "completion_tok_per_step": 79608.65786802032,
+    "total_tok_per_step": 156212.69035532995,
+    "prompt_tok_per_step": 76604.03248730963,
+    "segments": 1
+   },
+   "remark": {
+    "intervals": 197,
+    "s_per_step_mean": 12.23777157360406,
+    "s_per_step_median": 12.08,
+    "completion_len_mean": 207.18121827411167,
+    "completion_tok_per_step": 79557.58781725889,
+    "total_tok_per_step": 165202.03045685278,
+    "prompt_tok_per_step": 85644.4426395939,
+    "segments": 1
+   }
+  },
+  "9B": {
+   "rankgrpo": {
+    "intervals": 197,
+    "s_per_step_mean": 14.608223350253809,
+    "s_per_step_median": 14.39,
+    "completion_len_mean": 207.83350253807106,
+    "completion_tok_per_step": 79808.06497461928,
+    "total_tok_per_step": 156408.12182741117,
+    "prompt_tok_per_step": 76600.0568527919,
+    "segments": 1
+   },
+   "remark": {
+    "intervals": 168,
+    "s_per_step_mean": 16.17672619047619,
+    "s_per_step_median": 16.13,
+    "completion_len_mean": 207.87559523809523,
+    "completion_tok_per_step": 79824.22857142857,
+    "total_tok_per_step": 165539.88095238095,
+    "prompt_tok_per_step": 85715.65238095238,
+    "segments": 2
+   }
+  },
+  "27B": {
+   "rankgrpo": {
+    "intervals": 141,
+    "s_per_step_mean": 30.846879432624114,
+    "s_per_step_median": 30.35,
+    "completion_len_mean": 208.0921985815603,
+    "completion_tok_per_step": 79907.40425531915,
+    "total_tok_per_step": 156160.9929078014,
+    "prompt_tok_per_step": 76253.58865248226,
+    "segments": 3
+   },
+   "remark": {
+    "intervals": 139,
+    "s_per_step_mean": 33.80640287769784,
+    "s_per_step_median": 33.61,
+    "completion_len_mean": 208.03741007194245,
+    "completion_tok_per_step": 79886.3654676259,
+    "total_tok_per_step": 165820.14388489208,
+    "prompt_tok_per_step": 85933.77841726618,
+    "segments": 3
+   }
+  },
+  "35BA3B": {
+   "rankgrpo": {
+    "intervals": 110,
+    "s_per_step_mean": 36.25218181818181,
+    "s_per_step_median": 35.84,
+    "completion_len_mean": 210.26090909090905,
+    "completion_tok_per_step": 80740.18909090907,
+    "total_tok_per_step": 157154.54545454544,
+    "prompt_tok_per_step": 76414.35636363637,
+    "segments": 2
+   },
+   "remark": {
+    "intervals": 119,
+    "s_per_step_mean": 38.603109243697475,
+    "s_per_step_median": 38.51,
+    "completion_len_mean": 209.81428571428572,
+    "completion_tok_per_step": 80568.68571428572,
+    "total_tok_per_step": 166063.02521008404,
+    "prompt_tok_per_step": 85494.33949579833,
+    "segments": 2
+   }
+  }
+ },
+ "plateau_2B": {
+  "remark": {
+   "run": "2B_union_group_s3407_p0c_ms8000",
+   "best_step": 4000,
+   "stop_step": 5500,
+   "mean_s_per_step": 6.847756287738913,
+   "to_best": {
+    "steps": 4000,
+    "steps_logged": 4000,
+    "steps_estimated": 0,
+    "gpu_hours": 30.434472389950713
+   },
+   "to_stop": {
+    "steps": 5500,
+    "steps_logged": 4000,
+    "steps_estimated": 1500,
+    "gpu_hours": 41.84739953618224
+   }
+  },
+  "rankgrpo": {
+   "run": "2B_single_group_s3407_p0c_ms8000",
+   "best_step": 5250,
+   "stop_step": 6750,
+   "mean_s_per_step": 7.364042126982068,
+   "to_best": {
+    "steps": 5250,
+    "steps_logged": 750,
+    "steps_estimated": 4500,
+    "gpu_hours": 42.84594973085091
+   },
+   "to_stop": {
+    "steps": 6750,
+    "steps_logged": 1250,
+    "steps_estimated": 5500,
+    "gpu_hours": 55.2888409830532
+   }
+  }
+ }
+}

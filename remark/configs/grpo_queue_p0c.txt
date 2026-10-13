@@ -1,0 +1,13 @@
+# GRPO job queue (example) for node/runner7h.sh; claims are dirs grpo_qwen/.claim_<run>_p0c.
+# <dataset> <size> <reward> <adv_norm> [extra args to crs_train_grpo_qwen.py]
+reddit 2B consensusrw batch
+reddit 2B single group
+reddit 2B union batch
+reddit 2B consensus batch
+reddit 2B single batch
+reddit 2B singlethr batch
+# method-independent baselines at larger sizes; the 4B/9B method arm is added after the 2B P0 decision
+reddit 4B single group
+reddit 4B single batch
+reddit 9B single group
+reddit 9B single batch

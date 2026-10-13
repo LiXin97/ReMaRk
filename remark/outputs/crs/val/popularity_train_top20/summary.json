@@ -1,0 +1,57 @@
+{
+ "model": "popularity_train_top20",
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "split": "validation",
+ "n": 9421,
+ "unique_contexts": 1752,
+ "parse_empty": 0,
+ "in_catalog_rate": 1.0,
+ "truncate_R@5": 0.008653185242858663,
+ "truncate_N@5": 0.0068603622100122325,
+ "truncate_R@10": 0.01743307721861514,
+ "truncate_N@10": 0.010016816138000864,
+ "truncate_R@20": 0.032410596910792934,
+ "truncate_N@20": 0.014364883428255619,
+ "filter_R@5": 0.008653185242858663,
+ "filter_N@5": 0.0068603622100122325,
+ "filter_R@10": 0.01743307721861514,
+ "filter_N@10": 0.010016816138000864,
+ "filter_R@20": 0.032410596910792934,
+ "filter_N@20": 0.014364883428255619,
+ "gt_pop_quantiles_50_80_90": [
+  63.0,
+  199.0,
+  300.0
+ ],
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 706,
+   "recall": 0.0
+  },
+  "tail(<=median)": {
+   "n": 10646,
+   "recall": 0.00018786398647379298
+  },
+  "mid": {
+   "n": 6342,
+   "recall": 0.0
+  },
+  "head(top20%)": {
+   "n": 4229,
+   "recall": 0.1735634901868054
+  },
+  "top10%": {
+   "n": 2110,
+   "recall": 0.34786729857819904
+  }
+ },
+ "request_truncate_R@5": 0.006615760426473678,
+ "request_truncate_N@5": 0.004988087275211586,
+ "request_truncate_R@10": 0.013563999651352963,
+ "request_truncate_N@10": 0.007519429935261535,
+ "request_truncate_R@20": 0.02822996971118962,
+ "request_truncate_N@20": 0.011611781948128104,
+ "rows_with_seen_exclusion": 1273,
+ "contexts_with_row_varying_lists": 2,
+ "definition": "top-20 (title, year) by training-GT frequency (sft_dataset/train, every row's items; ties by title then year), minus the row's seen_titles (exact title), truncated to 20"
+}

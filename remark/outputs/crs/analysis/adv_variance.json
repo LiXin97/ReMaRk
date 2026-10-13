@@ -1,0 +1,163 @@
+{
+ "note": "Share of the per-responder advantage variance that comes from which responder was drawn.",
+ "datasets": {
+  "reddit": {
+   "requests": 500,
+   "mean_responders": 8.34,
+   "centred": {
+    "row_weighted": [
+     0.8379,
+     0.8129,
+     0.8595
+    ],
+    "request_weighted": [
+     0.713,
+     0.6737,
+     0.7531
+    ],
+    "by_responders": {
+     "2-4": {
+      "requests": 216,
+      "row_weighted": 0.6089
+     },
+     "5-19": {
+      "requests": 243,
+      "row_weighted": 0.8653
+     },
+     "20-inf": {
+      "requests": 41,
+      "row_weighted": 0.9565
+     }
+    },
+    "zero_total_requests": 95
+   },
+   "group_scaled": {
+    "row_weighted": [
+     0.852,
+     0.8357,
+     0.867
+    ],
+    "request_weighted": [
+     0.7412,
+     0.7142,
+     0.7666
+    ],
+    "by_responders": {
+     "2-4": {
+      "requests": 216,
+      "row_weighted": 0.6076
+     },
+     "5-19": {
+      "requests": 243,
+      "row_weighted": 0.8658
+     },
+     "20-inf": {
+      "requests": 41,
+      "row_weighted": 0.9459
+     }
+    },
+    "zero_total_requests": 95
+   }
+  },
+  "books": {
+   "requests": 500,
+   "mean_responders": 5.45,
+   "centred": {
+    "row_weighted": [
+     0.6075,
+     0.5485,
+     0.6657
+    ],
+    "request_weighted": [
+     0.5472,
+     0.4956,
+     0.6008
+    ],
+    "by_responders": {
+     "2-4": {
+      "requests": 281,
+      "row_weighted": 0.552
+     },
+     "5-19": {
+      "requests": 211,
+      "row_weighted": 0.8437
+     }
+    },
+    "zero_total_requests": 365
+   },
+   "group_scaled": {
+    "row_weighted": [
+     0.6575,
+     0.6113,
+     0.7021
+    ],
+    "request_weighted": [
+     0.5794,
+     0.5321,
+     0.627
+    ],
+    "by_responders": {
+     "2-4": {
+      "requests": 281,
+      "row_weighted": 0.5746
+     },
+     "5-19": {
+      "requests": 211,
+      "row_weighted": 0.8418
+     }
+    },
+    "zero_total_requests": 365
+   }
+  },
+  "music": {
+   "requests": 500,
+   "mean_responders": 9.19,
+   "centred": {
+    "row_weighted": [
+     0.949,
+     0.6769,
+     0.9842
+    ],
+    "request_weighted": [
+     0.7876,
+     0.5914,
+     0.9308
+    ],
+    "by_responders": {
+     "2-4": {
+      "requests": 158,
+      "row_weighted": 0.6165
+     },
+     "5-19": {
+      "requests": 337,
+      "row_weighted": 0.9039
+     }
+    },
+    "zero_total_requests": 480
+   },
+   "group_scaled": {
+    "row_weighted": [
+     0.7931,
+     0.6004,
+     0.9139
+    ],
+    "request_weighted": [
+     0.6102,
+     0.423,
+     0.8089
+    ],
+    "by_responders": {
+     "2-4": {
+      "requests": 158,
+      "row_weighted": 0.536
+     },
+     "5-19": {
+      "requests": 337,
+      "row_weighted": 0.8797
+     }
+    },
+    "zero_total_requests": 480
+   }
+  }
+ }
+}

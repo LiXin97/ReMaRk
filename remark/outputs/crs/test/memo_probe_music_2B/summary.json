@@ -1,0 +1,81 @@
+{
+ "data": "remark/data/crs/music/sft_dataset",
+ "split": "test",
+ "n": 15893,
+ "unique_contexts": 1931,
+ "rows_without_output": 0,
+ "parse_empty": 100,
+ "mean_parsed_items": 15.75177751211225,
+ "in_catalog_rate": 0.1622374102731053,
+ "model": "/tmp/models/Qwen3.5-2B-Base",
+ "dataset": "music",
+ "probe": "3-shot base-model completion, greedy, max 400 tokens",
+ "shots": [
+  {
+   "train_index": 16765,
+   "items": [
+    "Dire Straits (1977)",
+    "Eric Johnson (1954)",
+    "Funkadelic (1968)",
+    "Lynyrd Skynyrd (1964)"
+   ]
+  },
+  {
+   "train_index": 2891,
+   "items": [
+    "Avenged Sevenfold (1999)",
+    "Car Seat Headrest (2010)",
+    "In Flames (1990)",
+    "KAMIJO (1975)",
+    "Kamelot (1991)",
+    "Opeth (1990)",
+    "Sarah Jarosz (1991)",
+    "Seether (1999)",
+    "the Microphones (1996)"
+   ]
+  },
+  {
+   "train_index": 607,
+   "items": [
+    "Avril Lavigne (1984)",
+    "Busted (2001)",
+    "Liz Phair (1967)",
+    "Wheatus (1995)"
+   ]
+  }
+ ],
+ "truncate_R@5": 0.000992650253331056,
+ "truncate_N@5": 0.0009014912136065288,
+ "truncate_R@10": 0.00154148269985431,
+ "truncate_N@10": 0.0010989489962904787,
+ "truncate_R@20": 0.0015572128955379442,
+ "truncate_N@20": 0.0011027381633666388,
+ "filter_R@5": 0.001237768921654909,
+ "filter_N@5": 0.0013061689270512157,
+ "filter_R@10": 0.0015572128955379442,
+ "filter_N@10": 0.0013807052702882018,
+ "filter_R@20": 0.0015572128955379442,
+ "filter_N@20": 0.0013734077776445242,
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 984,
+   "recall": 0.0
+  },
+  "tail(<=median)": {
+   "n": 13673,
+   "recall": 0.0001462736780516346
+  },
+  "mid": {
+   "n": 8200,
+   "recall": 0.0017073170731707317
+  },
+  "head(top20%)": {
+   "n": 5384,
+   "recall": 0.004457652303120356
+  },
+  "top10%": {
+   "n": 2706,
+   "recall": 0.0003695491500369549
+  }
+ }
+}

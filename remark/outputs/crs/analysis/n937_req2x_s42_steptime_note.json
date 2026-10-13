@@ -1,0 +1,19 @@
+{
+ "run": "2B_single_group_s42_p0c_req2x",
+ "note": "node logs of seg 0-500 (node-p, killed 10-08/09 outage) and seg 500-~1440 (node-x, killed 10-09 06:51 UTC) are lost",
+ "tqdm_reading_seg500": {
+  "read_at_utc": "2026-10-09 06:30",
+  "line": "905/1500 [3:17:31<2:04:43, 12.58s/it]",
+  "mean_s_per_step": 13.095,
+  "source": "tqdm progress line of the training log (segment from step 500)"
+ },
+ "trainer_state_seg500_to1250": {
+  "file": "train_logs/node-x/trainer_state_2B_single_group_s42_p0c_req2x_seg500.json",
+  "mean_step_time_logged_every_10": 11.846
+ },
+ "crosscheck_s3407_req2x_tqdm": {
+  "line": "2000/2000 [7:24:21<00:00, 13.33s/it]",
+  "mean_s_per_step": 13.331
+ },
+ "gpu_h_rule": "main GPU-h on the 4-GPU basis: measured 4-GPU mean s/step of the 0-1250 part x steps, extrapolated to 2000; 8-GPU segment measured value only in a note; state 2 resumes with fresh optimizer"
+}

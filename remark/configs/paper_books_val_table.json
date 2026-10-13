@@ -1,0 +1,63 @@
+{
+ "_note": "Reddit-Books validation table of the paper (tab:books): P0d runs (384-token cap, end bonus needs 20 parser-valid items), each arm at its best validated step (  / Books P0d validation complete). union_group (final ReMaRk configuration, best step 1,500) added 2026-10-01.",
+ "datasets": {
+  "books_p0d": {
+   "data": "remark/data/crs/reddit_books/sft_dataset",
+   "catalog": "remark/data/crs/reddit_books/catalog.pkl",
+   "popularity": "remark/outputs/crs/train_gt_popularity_reddit_books.json",
+   "arms": {
+    "sft": {
+     "run": "sft_reddit_books_2B_step1000"
+    },
+    "single_group": {
+     "run": "grpo_qwen_reddit_books_2B_single_group_s3407_p0c_cap384_ex_step2000"
+    },
+    "single_batch": {
+     "run": "grpo_qwen_reddit_books_2B_single_batch_s3407_p0c_cap384_ex_step2000"
+    },
+    "consensusrw": {
+     "run": "grpo_qwen_reddit_books_2B_consensusrw_batch_s3407_p0c_cap384_ex_step1500"
+    },
+    "consensus": {
+     "run": "grpo_qwen_reddit_books_2B_consensus_batch_s3407_p0c_cap384_ex_step2000"
+    },
+    "union": {
+     "run": "grpo_qwen_reddit_books_2B_union_batch_s3407_p0c_cap384_ex_step2000"
+    },
+    "union_group": {
+     "run": "grpo_qwen_reddit_books_2B_union_group_s3407_p0c_cap384_ex_step1500"
+    }
+   },
+   "pairs": [
+    [
+     "union",
+     "single_batch"
+    ],
+    [
+     "union",
+     "single_group"
+    ],
+    [
+     "consensus",
+     "consensusrw"
+    ],
+    [
+     "union",
+     "consensus"
+    ],
+    [
+     "union_group",
+     "single_batch"
+    ],
+    [
+     "union_group",
+     "single_group"
+    ],
+    [
+     "union_group",
+     "union"
+    ]
+   ]
+  }
+ }
+}

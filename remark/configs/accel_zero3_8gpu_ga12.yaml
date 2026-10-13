@@ -1,0 +1,19 @@
+# DeepSpeed ZeRO-3 without CPU offload, 8 processes, bf16 (Qwen3.5-27B / 35B-A3B GRPO on one 8-GPU node).
+# gradient_accumulation_steps must match the script.
+compute_environment: LOCAL_MACHINE
+debug: false
+deepspeed_config:
+  gradient_accumulation_steps: 12
+  zero3_init_flag: false
+  zero3_save_16bit_model: true
+  zero_stage: 3
+distributed_type: DEEPSPEED
+downcast_bf16: 'no'
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16
+num_machines: 1
+num_processes: 8
+rdzv_backend: static
+same_network: true
+use_cpu: false

@@ -1,0 +1,54 @@
+{
+ "reddit_v2": {
+  "train_requests": 72233,
+  "train_rows": 383013,
+  "responders_mean": 5.3025,
+  "responders_median": 2,
+  "single_responder_share": 0.4098,
+  "items_per_responder": 2.4167,
+  "union_items_named_once_multi": 0.8799,
+  "union_size_mean": 11.03,
+  "catalog_items": 7404,
+  "sources": [
+   "remark/data/crs/grpo_consensus/train",
+   "data/raw/reddit_v2/processed_datasets/grpo/grpo_dataset/train",
+   "remark/third_party/Rank-GRPO/reddit_catalog/gt_catalog.pkl"
+  ]
+ },
+ "reddit_books": {
+  "train_requests": 32539,
+  "train_rows": 149679,
+  "responders_mean": 4.6,
+  "responders_median": 3,
+  "single_responder_share": 0.1814,
+  "items_per_responder": 1.9011,
+  "union_items_named_once_multi": 0.952,
+  "union_size_mean": 8.26,
+  "catalog_items": 74474,
+  "sources": [
+   "remark/data/crs/reddit_books/grpo_consensus/train",
+   "remark/data/crs/reddit_books/grpo/train",
+   "remark/data/crs/reddit_books/catalog.pkl",
+   "remark/data/crs/reddit_books/stats.json"
+  ]
+ },
+ "music": {
+  "train_requests": 19159,
+  "train_rows": 142396,
+  "responders_mean": 7.4323,
+  "responders_median": 5,
+  "single_responder_share": 0.1827,
+  "items_per_responder": 1.8161,
+  "union_items_named_once_multi": 0.9592,
+  "union_size_mean": 12.9,
+  "catalog_items": 38881,
+  "val_requests": 1966,
+  "test_requests": 1951,
+  "sources": [
+   "remark/data/crs/music/grpo_consensus/train",
+   "remark/data/crs/music/grpo/train",
+   "remark/data/crs/music/catalog.pkl",
+   "remark/data/crs/music/stats.json"
+  ]
+ }
+}

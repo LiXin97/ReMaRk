@@ -1,0 +1,56 @@
+{
+ "data": "remark/data/crs/music/sft_dataset",
+ "split": "test",
+ "n": 15893,
+ "unique_contexts": 1931,
+ "rows_without_output": 0,
+ "parse_empty": 69,
+ "mean_parsed_items": 19.913169319826338,
+ "in_catalog_rate": 0.8102692113245703,
+ "model": "gpt-5.6-sol (API, zero-shot, default sampling, max_tokens 2048), system: year convention stated",
+ "system_message": "Write each recommendation as \"Artist Name (start_year)\", where start_year is the birth year of a solo artist or the formation year of a group.",
+ "api_calls": 1970,
+ "api_missing": 0,
+ "empty_first_answers": 39,
+ "retried_4096": 39,
+ "still_empty": 6,
+ "usage": {
+  "prompt_tokens": 361397,
+  "completion_tokens": 1359926,
+  "total_tokens": 1721323
+ },
+ "truncate_R@5": 0.05478418504521985,
+ "truncate_N@5": 0.04268773215706087,
+ "truncate_R@10": 0.08337769688491696,
+ "truncate_N@10": 0.05215935795433165,
+ "truncate_R@20": 0.12130539535369105,
+ "truncate_N@20": 0.06267584751217521,
+ "filter_R@5": 0.061611509905992644,
+ "filter_N@5": 0.0479383644100231,
+ "filter_R@10": 0.09304091474800823,
+ "filter_N@10": 0.05828997039769895,
+ "filter_R@20": 0.12130539535369105,
+ "filter_N@20": 0.0662187454845011,
+ "item_recall@20_by_pop": {
+  "unseen(0)": {
+   "n": 984,
+   "recall": 0.021341463414634148
+  },
+  "tail(<=median)": {
+   "n": 13673,
+   "recall": 0.07247860747458496
+  },
+  "mid": {
+   "n": 8200,
+   "recall": 0.14817073170731707
+  },
+  "head(top20%)": {
+   "n": 5384,
+   "recall": 0.19855126300148587
+  },
+  "top10%": {
+   "n": 2706,
+   "recall": 0.20953436807095344
+  }
+ }
+}

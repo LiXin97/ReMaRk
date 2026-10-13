@@ -1,0 +1,10 @@
+{
+ "run": "9B_single_group_s42_p0c",
+ "best_step": 2000,
+ "val_R@20": {
+  "1750": 0.2712693081875894,
+  "2000": 0.2767492811038663
+ },
+ "locked_at_utc": "2026-10-01 08:43:09",
+ "rule": "best validation per-row R@20, ties to the earlier step; tested once"
+}

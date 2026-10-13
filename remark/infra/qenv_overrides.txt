@@ -1,0 +1,8 @@
+transformers==5.3.0
+torch==2.10.0
+torchvision==0.25.0
+torchaudio==2.10.0
+nvidia-cutlass-dsl==4.4.2
+flashinfer-python==0.6.3
+quack-kernels==0.3.6
+nvidia-nccl-cu12==2.27.5

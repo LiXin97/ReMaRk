@@ -1,0 +1,15 @@
+{
+ "model": "bge-kNN prior k=200 (training split only; same-submission neighbours excluded)",
+ "data": "data/raw/reddit_v2/processed_datasets/sft_dataset",
+ "split": "test",
+ "n": 10972,
+ "unique_contexts": 2050,
+ "same_submission_neighbours_excluded": 66,
+ "in_catalog_rate": 1.0,
+ "truncate_R@5": 0.06315117957049439,
+ "truncate_N@5": 0.04858661227386308,
+ "truncate_R@10": 0.10276793341927168,
+ "truncate_N@10": 0.06158088268308104,
+ "truncate_R@20": 0.1593723466294493,
+ "truncate_N@20": 0.07762441890965585
+}

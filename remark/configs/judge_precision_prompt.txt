@@ -1,0 +1,13 @@
+You are an expert film curator. A user posted the request below on a movie recommendation forum. A recommender system answered with the numbered list of movies below.
+
+For each movie, decide on its own whether it fits the request: would it be a reasonable recommendation for this user, given what they asked for (genre, tone, themes, era, constraints) and anything they said they have already seen or dislike? Judge every movie independently; do not compare the list with other possible answers and do not prefer a movie because it is famous. If a line is not a real movie, answer no.
+
+Request:
+<<<
+{request}
+>>>
+
+List:
+{items}
+
+Answer with exactly one line per movie, in list order, in the form "<number>: yes" or "<number>: no", and nothing else.

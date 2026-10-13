@@ -1,0 +1,91 @@
+{
+ "2B_single_group_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.5574705,
+  "frac_reward_zero_std_mean": 0.727186,
+  "complete": true
+ },
+ "4B_single_group_s3407_p0c": {
+  "logs": 59,
+  "rank_zero_std_mean": 0.5609169491525423,
+  "first10": 0.57459,
+  "last10": 0.5521,
+  "frac_reward_zero_std_mean": 0.7247610169491525
+ },
+ "2B_union_batch_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.3017715,
+  "frac_reward_zero_std_mean": 0.46391750000000004,
+  "complete": true
+ },
+ "4B_single_batch_s3407_p0c": {
+  "logs": 187,
+  "rank_zero_std_mean": 0.5522791443850267,
+  "first10": 0.56541,
+  "last10": 0.5475,
+  "frac_reward_zero_std_mean": 0.7557144385026738
+ },
+ "reddit_books_2B_single_group_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.618976,
+  "first10": 0.91062,
+  "last10": 0.55146,
+  "frac_reward_zero_std_mean": 0.7676535
+ },
+ "9B_single_group_s3407_p0c": {
+  "logs": 41,
+  "rank_zero_std_mean": 0.5561560975609756,
+  "first10": 0.57313,
+  "last10": 0.55272,
+  "frac_reward_zero_std_mean": 0.7184463414634146
+ },
+ "reddit_books_2B_consensus_batch_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.2534565,
+  "first10": 0.69189,
+  "last10": 0.20855,
+  "frac_reward_zero_std_mean": 0.4543505
+ },
+ "reddit_books_2B_consensusrw_batch_s3407_p0c": {
+  "logs": 143,
+  "rank_zero_std_mean": 0.19428034965034963,
+  "first10": 0.7691800000000001,
+  "last10": 0.10124300000000001,
+  "frac_reward_zero_std_mean": 0.34474825174825174
+ },
+ "reddit_books_2B_union_batch_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.2500835,
+  "first10": 0.6929299999999999,
+  "last10": 0.21168,
+  "frac_reward_zero_std_mean": 0.46291350000000003
+ },
+ "2B_single_batch_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.558392,
+  "first10": 0.59813,
+  "last10": 0.53792,
+  "frac_reward_zero_std_mean": 0.729736
+ },
+ "2B_single_group_s1234_p0c": {
+  "logs": 79,
+  "rank_zero_std_mean": 0.5770683544303798,
+  "first10": 0.59834,
+  "last10": 0.57252,
+  "frac_reward_zero_std_mean": 0.7164924050632913
+ },
+ "2B_single_group_s42_p0c": {
+  "logs": 88,
+  "rank_zero_std_mean": 0.5647784090909092,
+  "first10": 0.57314,
+  "last10": 0.55667,
+  "frac_reward_zero_std_mean": 0.712219318181818
+ },
+ "2B_singlethr_batch_s3407_p0c": {
+  "logs": 200,
+  "rank_zero_std_mean": 0.5424675000000001,
+  "first10": 0.60022,
+  "last10": 0.5158400000000001,
+  "frac_reward_zero_std_mean": 0.7258199999999999
+ }
+}

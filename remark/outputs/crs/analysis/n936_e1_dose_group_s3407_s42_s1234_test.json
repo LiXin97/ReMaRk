@@ -1,0 +1,186 @@
+{
+ "note": "E1 readout (internal check, not pre-registered): the dose-response of Fig 4b under per-group advantage scaling.\n\nSame algorithm as crs_dose_response.py (validation per-row R@20 at each run's best step and at step 2,000, OLS slope on\nthe removed responder noise x = 1 - rho(m), paired bootstrap over validation contexts, 2,000 resamples, seed 42), with\ngroup scaling in every arm: m = 1 is Rank-GRPO (2B_single_group_<seed>_p0c), m = 2 / 4 / all are\n2B_{meanm2rw,meanm4rw,consensusrw}_group_<seed>_p0c (requests sampled proportionally to n, as in the batch arms).\nSeeds given on the command line (s3407 first; s42 / s1234 when they land). Also the test R@20 of each arm's locked\ncheckpoint minus Rank-GRPO's main test (per row and per request, crs_compare bootstrap).",
+ "units": "points (x100)",
+ "pairs": {
+  "2/s3407": {
+   "test": "test_2B_meanm2rw_group_s3407_p0c_step2000",
+   "base": "test_2B_single_group_s3407_step2000",
+   "row": {
+    "a": 21.2935298381362,
+    "b": 20.96521526670901,
+    "diff": 0.3283145714271916,
+    "ci_low": -0.06684655085238678,
+    "ci_high": 0.7303834780444093,
+    "p_le_0": 0.0515
+   },
+   "unit": {
+    "a": 21.012224129778765,
+    "b": 20.94287131126309,
+    "diff": 0.06935281851567868,
+    "ci_low": -0.5744390519258255,
+    "ci_high": 0.7470751467194592,
+    "p_le_0": 0.4205
+   }
+  },
+  "4/s3407": {
+   "test": "test_2B_meanm4rw_group_s3407_p0c_step2000",
+   "base": "test_2B_single_group_s3407_step2000",
+   "row": {
+    "a": 21.254396865567493,
+    "b": 20.96521526670901,
+    "diff": 0.2891815988584846,
+    "ci_low": -0.11600835222033039,
+    "ci_high": 0.7034417766899765,
+    "p_le_0": 0.082
+   },
+   "unit": {
+    "a": 20.64528214065642,
+    "b": 20.94287131126309,
+    "diff": -0.2975891706066689,
+    "ci_low": -1.0314283538068052,
+    "ci_high": 0.4822224555813216,
+    "p_le_0": 0.7685
+   }
+  },
+  "all/s3407": {
+   "test": "test_2B_consensusrw_group_s3407_p0c_step1750",
+   "base": "test_2B_single_group_s3407_step2000",
+   "row": {
+    "a": 20.740426544306008,
+    "b": 20.96521526670901,
+    "diff": -0.22478872240300224,
+    "ci_low": -0.7443267502917406,
+    "ci_high": 0.31128071683938774,
+    "p_le_0": 0.795
+   },
+   "unit": {
+    "a": 19.138644223594344,
+    "b": 20.94287131126309,
+    "diff": -1.8042270876687423,
+    "ci_low": -2.648695410855535,
+    "ci_high": -0.8768001048036966,
+    "p_le_0": 1.0
+   }
+  },
+  "2/s42": {
+   "test": "test_2B_meanm2rw_group_s42_p0c_step2000",
+   "base": "test_2B_single_group_s42_step2000",
+   "row": {
+    "a": 21.58915962449229,
+    "b": 21.066444283053894,
+    "diff": 0.5227153414383979,
+    "ci_low": 0.10196641611787396,
+    "ci_high": 0.9252197308345943,
+    "p_le_0": 0.0065
+   },
+   "unit": {
+    "a": 21.20716938394121,
+    "b": 21.632536413112973,
+    "diff": -0.42536702917176544,
+    "ci_low": -1.0675717421986608,
+    "ci_high": 0.202888570769249,
+    "p_le_0": 0.909
+   }
+  },
+  "4/s42": {
+   "test": "test_2B_meanm4rw_group_s42_p0c_step1750",
+   "base": "test_2B_single_group_s42_step2000",
+   "row": {
+    "a": 21.69325350660133,
+    "b": 21.066444283053894,
+    "diff": 0.6268092235474355,
+    "ci_low": 0.18115791326499606,
+    "ci_high": 1.0874490209250391,
+    "p_le_0": 0.006
+   },
+   "unit": {
+    "a": 21.025991158473126,
+    "b": 21.632536413112973,
+    "diff": -0.6065452546398502,
+    "ci_low": -1.4087944362968847,
+    "ci_high": 0.21891738077284068,
+    "p_le_0": 0.9275
+   }
+  },
+  "all/s42": {
+   "test": "test_2B_consensusrw_group_s42_p0c_step1500",
+   "base": "test_2B_single_group_s42_step2000",
+   "row": {
+    "a": 21.0310762064999,
+    "b": 21.066444283053894,
+    "diff": -0.03536807655399596,
+    "ci_low": -0.5667303699213982,
+    "ci_high": 0.4467135213888393,
+    "p_le_0": 0.5625
+   },
+   "unit": {
+    "a": 19.317984215024826,
+    "b": 21.632536413112973,
+    "diff": -2.31455219808815,
+    "ci_low": -3.1795440609979906,
+    "ci_high": -1.4872373074760792,
+    "p_le_0": 1.0
+   }
+  },
+  "2/s1234": {
+   "test": "test_2B_meanm2rw_group_s1234_p0c_step2000",
+   "base": "test_2B_single_group_s1234_step2000",
+   "row": {
+    "a": 21.350638632562905,
+    "b": 21.010421696327064,
+    "diff": 0.3402169362358399,
+    "ci_low": -0.1076318370395904,
+    "ci_high": 0.7683689207631351,
+    "p_le_0": 0.0715
+   },
+   "unit": {
+    "a": 20.80148782882558,
+    "b": 21.528635544499934,
+    "diff": -0.7271477156743528,
+    "ci_low": -1.512443673426508,
+    "ci_high": 0.04958277761092874,
+    "p_le_0": 0.965
+   }
+  },
+  "4/s1234": {
+   "test": "test_2B_meanm4rw_group_s1234_p0c_step2000",
+   "base": "test_2B_single_group_s1234_step2000",
+   "row": {
+    "a": 21.691716946865174,
+    "b": 21.010421696327064,
+    "diff": 0.6812952505381108,
+    "ci_low": 0.2488656885283469,
+    "ci_high": 1.1111341834251829,
+    "p_le_0": 0.0005
+   },
+   "unit": {
+    "a": 20.862615144154816,
+    "b": 21.528635544499934,
+    "diff": -0.6660204003451197,
+    "ci_low": -1.4546201683774063,
+    "ci_high": 0.11970041517232809,
+    "p_le_0": 0.941
+   }
+  },
+  "all/s1234": {
+   "test": "test_2B_consensusrw_group_s1234_p0c_step1750",
+   "base": "test_2B_single_group_s1234_step2000",
+   "row": {
+    "a": 20.888215869817717,
+    "b": 21.010421696327064,
+    "diff": -0.12220582650934886,
+    "ci_low": -0.6102580600643619,
+    "ci_high": 0.38398944147902037,
+    "p_le_0": 0.672
+   },
+   "unit": {
+    "a": 19.078389387889562,
+    "b": 21.528635544499934,
+    "diff": -2.450246156610369,
+    "ci_low": -3.3850442652076964,
+    "ci_high": -1.5218484120508213,
+    "p_le_0": 1.0
+   }
+  }
+ }
+}

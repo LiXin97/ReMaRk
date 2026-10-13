@@ -1,0 +1,10 @@
+{
+ "threads": 72233,
+ "rows": 383013,
+ "draws_2000_steps": 96000,
+ "row_fraction_drawn": 0.25064423400772295,
+ "prop_sampling_expected_share_of_requests_drawn": 0.5494319320635205,
+ "prop_sampling_share_of_n1_requests_drawn": 0.2506442340077229,
+ "prop_sampling_mean_draws_per_request_n_ge_20": 9.99323334236932,
+ "uniform_sampling_epochs": 1.329032436697908
+}

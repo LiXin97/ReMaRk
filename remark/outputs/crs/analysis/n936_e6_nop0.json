@@ -1,0 +1,172 @@
+{
+ "note": "E6 readout (internal check, not pre-registered): ReMaRk without P0/P0c.\n\nE6 = ReMaRk 2B union group s3407 trained without --p0/--p0c (runner7k \"--nop0\", run 2B_union_group_s3407; Table 2 protocol\notherwise: 2,000 steps, validation every 250, best-validation lock, tested once). Pairing:\n- validation (no-P0 on both sides): E6 vs the 09-28 no-P0 Rank-GRPO run 2B_single_group_s3407 (pre-P0 trainer; only its\n  validation summaries survive: no checkpoint, never tested), and the same gap under P0c (main-table runs).\n- clean pair : 2B_single_group_s3407_lr1e-6 = Rank-GRPO with the current trainer and --nop0 (\"--lr 1e-6\" is the\n  default lr, only a new name); E6 test minus its locked test, its test minus Rank-GRPO main (P0c), validation gap.\n- test: E6 minus ReMaRk main (P0c, test_2B_union_group_step2000) and minus Rank-GRPO main (P0c,\n  test_2B_single_group_s3407_step2000), per row and per request (crs_compare paired bootstrap over contexts, 2,000\n  resamples, seed 42). Both main-table tests come from the _p0c checkpoints (summary.json \"model\").\nOutput: outputs/crs/analysis/n936_e6_nop0.json",
+ "units": "points (x100)",
+ "model_of_main_tests": {
+  "test_2B_union_group_step2000": "/tmp/work_local/grpo_qwen/2B_union_group_s3407_p0c/checkpoint-2000",
+  "test_2B_single_group_s3407_step2000": "remark/outputs/crs/grpo_qwen_selected/2B_single_group_s3407_p0c/checkpoint-2000"
+ },
+ "e6": {
+  "run": "2B_union_group_s3407",
+  "lock_step": 1750,
+  "test": "test_2B_union_group_s3407_step1750",
+  "test_R@20": 22.27492394936548
+ },
+ "val": {
+  "remark_nop0": {
+   "run": "2B_union_group_s3407",
+   "best_val": 25.301954445296865,
+   "best_step": 1750,
+   "curve": {
+    "250": 21.32029972174161,
+    "500": 22.741658824157827,
+    "750": 23.84450221805672,
+    "1000": 24.570470417352983,
+    "1250": 24.79763867629516,
+    "1500": 25.115472141570265,
+    "1750": 25.301954445296865,
+    "2000": 23.528234554462713
+   }
+  },
+  "rankgrpo_nop0": {
+   "run": "2B_single_group_s3407",
+   "best_val": 24.092533937247968,
+   "best_step": 2000,
+   "curve": {
+    "250": 20.288414518033964,
+    "500": 21.67543218317895,
+    "750": 22.347872698452562,
+    "1000": 22.73428883401561,
+    "1250": 23.17863542689634,
+    "1500": 23.511786736475916,
+    "1750": 23.443377960286288,
+    "2000": 24.092533937247968
+   }
+  },
+  "rankgrpo_nop0_clean": {
+   "run": "2B_single_group_s3407_lr1e-6",
+   "best_val": 24.071123238905898,
+   "best_step": 2000,
+   "curve": {
+    "250": 20.357303790318674,
+    "500": 21.345307637273415,
+    "750": 22.12662625699305,
+    "1000": 22.88846515867856,
+    "1250": 23.159365664077303,
+    "1500": 23.531533096589158,
+    "1750": 23.774534003307878,
+    "2000": 24.071123238905898
+   }
+  },
+  "remark_p0c": {
+   "run": "2B_union_group_s3407_p0c",
+   "best_val": 25.566896611461942,
+   "best_step": 2000,
+   "curve": {
+    "250": 21.184489405568467,
+    "500": 22.724040581252552,
+    "750": 23.57149182938579,
+    "1000": 24.119365242622028,
+    "1250": 24.580065484831195,
+    "1500": 25.0406468201145,
+    "1750": 25.433380136808033,
+    "2000": 25.566896611461942
+   }
+  },
+  "rankgrpo_p0c": {
+   "run": "2B_single_group_s3407_p0c",
+   "best_val": 24.191278951071197,
+   "best_step": 2000,
+   "curve": {
+    "250": 20.161327061193095,
+    "500": 21.559093157122067,
+    "750": 21.878606087802012,
+    "1000": 22.647205999659917,
+    "1250": 23.01175620506835,
+    "1500": 23.507035962234248,
+    "1750": 23.691297115205654,
+    "2000": 24.191278951071197
+   }
+  }
+ },
+ "val_gap_union_minus_single": {
+  "nop0": 1.209420508048897,
+  "p0c": 1.3756176603907448
+ },
+ "test_e6_minus_remark_p0c": {
+  "row": {
+   "a": 22.27492394936548,
+   "b": 22.53041353970365,
+   "diff": -0.25548959033817004,
+   "ci_low": -0.6181735724667481,
+   "ci_high": 0.13105330102362697,
+   "p_le_0": 0.9035
+  },
+  "unit": {
+   "a": 23.286806971667673,
+   "b": 23.23532680535656,
+   "diff": 0.051480166311113115,
+   "ci_low": -0.5979672219615022,
+   "ci_high": 0.7167415472322994,
+   "p_le_0": 0.441
+  }
+ },
+ "test_e6_minus_rankgrpo_p0c": {
+  "row": {
+   "a": 22.27492394936548,
+   "b": 20.96521526670901,
+   "diff": 1.309708682656473,
+   "ci_low": 0.8776820984550944,
+   "ci_high": 1.7590808243515186,
+   "p_le_0": 0.0
+  },
+  "unit": {
+   "a": 23.286806971667673,
+   "b": 20.94287131126309,
+   "diff": 2.3439356604045845,
+   "ci_low": 1.5034519444926908,
+   "ci_high": 3.178253610530917,
+   "p_le_0": 0.0
+  }
+ },
+ "clean_nop0": {
+  "rankgrpo_nop0_test": "test_2B_single_group_s3407_lr1e-6_step2000",
+  "rankgrpo_nop0_test_R@20": 20.827016042336368,
+  "val_gap_union_minus_single": 1.2308312063909668,
+  "test_e6_minus_rankgrpo_nop0": {
+   "row": {
+    "a": 22.27492394936548,
+    "b": 20.827016042336368,
+    "diff": 1.4479079070291139,
+    "ci_low": 1.0055260590752475,
+    "ci_high": 1.88333250996741,
+    "p_le_0": 0.0
+   },
+   "unit": {
+    "a": 23.286806971667673,
+    "b": 21.084225559992554,
+    "diff": 2.2025814116751197,
+    "ci_low": 1.3918697443061463,
+    "ci_high": 3.0098606650642177,
+    "p_le_0": 0.0
+   }
+  },
+  "test_rankgrpo_nop0_minus_rankgrpo_p0c": {
+   "row": {
+    "a": 20.827016042336368,
+    "b": 20.96521526670901,
+    "diff": -0.13819922437264084,
+    "ci_low": -0.5497500960695848,
+    "ci_high": 0.27444597247848784,
+    "p_le_0": 0.749
+   },
+   "unit": {
+    "a": 21.084225559992554,
+    "b": 20.94287131126309,
+    "diff": 0.14135424872946495,
+    "ci_low": -0.5194685259782177,
+    "ci_high": 0.7923656346023631,
+    "p_le_0": 0.341
+   }
+  }
+ }
+}

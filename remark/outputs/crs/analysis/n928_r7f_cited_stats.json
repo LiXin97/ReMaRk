@@ -1,0 +1,246 @@
+{
+ "definition": "max_sum_reward (\"up to 47 per position\"): for each Reddit-v2 training request (rows of data/raw/reddit_v2/\n    processed_datasets/grpo/grpo_dataset/train sharing a prompt), c_i = number of its responders (rows) whose ground\n    truth contains item i = (title, int(year)); the sum reward of a position is c_i of the matched item; statistic =\n    max over requests and items of c_i. Cross-check: max of groundtruth_weights x n_responders in\n    remark/data/crs/grpo_consensus/train.\n  union_vs_sum (\"89% / 76% / 24%\"): pooled over training requests, with U_x the union items of request x:\n    share of union items with c_i = 1 (sum_x #{i in U_x: c_i = 1} / sum_x |U_x|); share of the sum's mass on those\n    items (sum_x #{c_i = 1} / sum_x sum_i c_i); the complement (mass on items named by >= 2 responders, counted once\n    by the bounded sum); also the union's share of the sum's mass (sum_x |U_x| / sum_x sum_i c_i) and the per-request\n    mean of the first share.\n  responders (\"17.2 / 5.35\"): Reddit-v2 test split (sft_dataset/test), context = rows sharing a prompt, n = rows per\n    context; row-weighted mean n = sum n^2 / sum n; per-request mean n = rows / contexts.\n  submissions (\"48,618\"): distinct crs_neighbor_prior.submission_key over\n    the 72,233 training contexts (prompts of remark/data/crs/grpo_union/train); also contexts in multi-path\n    submissions and the largest number of paths.\n  books_popularity (\"Books popularity R@20\", two decimals in points): crs_popularity_baseline's definition applied to\n    Reddit-Books: popularity = occurrences of (title, year) in the Books training ground truth\n    (remark/outputs/crs/train_gt_popularity_reddit_books.json, asserted equal to a recount of sft_dataset/train);\n    ranking by count, ties by title then year; per row drop titles in seen_titles; top 20; crs_eval.hits_for truncate\n    with remark/data/crs/reddit_books/catalog.pkl; per-row mean R@20 (and per request). Computed in memory only.\n    Variant: popularity counted on the per-responder GRPO rows (remark/data/crs/reddit_books/grpo/train).\n  extraction_precision (\"0.997\"): remark/outputs/books/audit/judge.json, extraction verdicts of the GPT-5.6 judge on\n    200 comments: correct / all judged items; the go/no-go file remark/outputs/books/go_nogo.json records the value\n    and its CI.",
+ "stats": {
+  "up_to_47_per_position": {
+   "cited": 47,
+   "recomputed": 47,
+   "cross_check_consensus_w_times_n": 47,
+   "matches": true,
+   "requests": 72233,
+   "max_n_x": 400,
+   "cited_in": [
+    {
+     "line": 848
+    },
+    {
+     "line": 2565
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 358
+    }
+   ]
+  },
+  "89_76_24_percent": {
+   "cited": {
+    "union_items_named_by_one": 0.89,
+    "sum_mass_on_those": 0.76,
+    "sum_mass_on_items_named_by_ge2": 0.24
+   },
+   "recomputed": {
+    "union_items_named_by_one": 0.8881822906336537,
+    "sum_mass_on_those": 0.7645399849586363,
+    "sum_mass_on_items_named_by_ge2": 0.2354600150413637,
+    "union_share_of_sum_mass": 0.8607917462677536,
+    "per_request_mean_share_named_by_one": 0.9482604402203431,
+    "per_request_mean_share_named_by_one_requests_n_ge_2": 0.9123336627908337,
+    "union_items": 796618,
+    "sum_mass": 925448,
+    "requests_with_empty_union": 0
+   },
+   "n9_correction_block": "88.8% of union items, 76.5% of the summed mass, union keeps 86.1% (per-request mean 91.2%)",
+   "matches": true,
+   "cited_in": [
+    {
+     "line": 118
+    },
+    {
+     "line": 601
+    },
+    {
+     "line": 602
+    },
+    {
+     "line": 604
+    },
+    {
+     "line": 849
+    },
+    {
+     "line": 2565
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 360
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 702
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 834
+    }
+   ]
+  },
+  "17.2_5.35_responders": {
+   "cited": {
+    "row_weighted_mean_n": 17.2,
+    "per_request_mean_n": 5.35
+   },
+   "recomputed": {
+    "row_weighted_mean_n": 17.193036820998906,
+    "per_request_mean_n": 5.35219512195122,
+    "rows": 10972,
+    "requests": 2050
+   },
+   "matches": true,
+   "cited_in": [
+    {
+     "line": 338
+    },
+    {
+     "line": 354
+    },
+    {
+     "line": 2566
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 298
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 299
+    }
+   ]
+  },
+  "48618_submissions": {
+   "cited": 48618,
+   "recomputed": 48618,
+   "matches": true,
+   "contexts": 72233,
+   "contexts_in_multi_path_submissions": 35003,
+   "max_paths_per_submission": 160,
+   "sft_train_contexts_equal_grpo_contexts": false,
+   "sft_train_contexts": 21023,
+   "sft_train_contexts_subset_of_grpo_contexts": true,
+   "cited_in": [
+    {
+     "line": 302
+    },
+    {
+     "line": 2566
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 283
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 289
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 1392
+    }
+   ]
+  },
+  "books_popularity_R@20": {
+   "cited": {
+    "test": 0.058,
+    "validation": 0.07,
+    "paper_table": "5.8 (test, one decimal)"
+   },
+   "recomputed": {
+    "validation": {
+     "rows": 6259,
+     "requests": 1254,
+     "per_row_R@20": 0.07015215908527186,
+     "per_request_R@20": 0.06102340885576672,
+     "per_row_R@20_points_2dp": 7.02
+    },
+    "test": {
+     "rows": 6333,
+     "requests": 1150,
+     "per_row_R@20": 0.057686713123709814,
+     "per_request_R@20": 0.05318686831773143,
+     "per_row_R@20_points_2dp": 5.77
+    }
+   },
+   "variant_popularity_from_grpo_rows": {
+    "validation": {
+     "rows": 6259,
+     "requests": 1254,
+     "per_row_R@20": 0.06955853371931867,
+     "per_request_R@20": 0.060207027895817285,
+     "per_row_R@20_points_2dp": 6.96
+    },
+    "test": {
+     "rows": 6333,
+     "requests": 1150,
+     "per_row_R@20": 0.05839088552376094,
+     "per_request_R@20": 0.053455967939000634,
+     "per_row_R@20_points_2dp": 5.84
+    }
+   },
+   "popularity_file_equals_sft_train_recount": true,
+   "note": "both popularity sources round to the cited 0.058 / 0.070; the source used for the cited value is not recorded, so the two-decimal value is 5.77 under the crs_eval / crs_popularity_baseline popularity (primary) and 5.84 under the per-responder GRPO-row popularity",
+   "matches_variant": true,
+   "matches": true,
+   "two_decimals_points_test": 5.77,
+   "cited_in": [
+    {
+     "line": 620
+    },
+    {
+     "line": 702
+    },
+    {
+     "line": 1140
+    },
+    {
+     "line": 1537
+    },
+    {
+     "line": 1538
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 1265
+    }
+   ]
+  },
+  "extraction_precision_0.997": {
+   "cited": 0.997,
+   "recomputed": 0.9974293059125964,
+   "verdicts": {
+    "correct": 388,
+    "not_a_book": 1
+   },
+   "comments": 200,
+   "go_nogo_json": {
+    "value": 0.9974,
+    "ci95": [
+     0.9856,
+     0.9995
+    ],
+    "n_items": 389,
+    "n_comments": 200,
+    "pass": true
+   },
+   "matches": true,
+   "source": "remark/outputs/books/audit/judge.json (verdicts); remark/outputs/books/go_nogo.json",
+   "cited_in": [
+    {
+     "line": 613
+    },
+    {
+     "line": 2567
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 287
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 685
+    },
+    {
+     "file": "remark/paper/tex/main.tex",
+     "line": 1254
+    }
+   ]
+  }
+ }
+}

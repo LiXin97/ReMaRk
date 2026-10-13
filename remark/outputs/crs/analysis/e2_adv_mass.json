@@ -1,0 +1,113 @@
+{
+ "note": "Independent audit E2(b): share of the squared advantage that single-responder requests carry, per arm and scaling.",
+ "n_requests": 72233,
+ "share_requests_n1": 0.4098126894909529,
+ "rankgrpo_row_group": {
+  "groups_from_n1": [
+   0.0773,
+   0.0759,
+   0.0788
+  ],
+  "groups_with_signal": [
+   0.4071,
+   0.4039,
+   0.4099
+  ],
+  "sq_adv_share_n1": [
+   0.0522,
+   0.0507,
+   0.0537
+  ],
+  "sq_adv_share_by_nx": {
+   "1-1": 0.0522,
+   "2-4": 0.1276,
+   "5-19": 0.5838,
+   "20-inf": 0.2364
+  },
+  "mean_sq_adv_per_group_n1_vs_rest": [
+   7.614,
+   11.587
+  ]
+ },
+ "rankgrpo_row_batch": {
+  "groups_from_n1": [
+   0.0773,
+   0.0759,
+   0.0788
+  ],
+  "groups_with_signal": [
+   0.4071,
+   0.4039,
+   0.4099
+  ],
+  "sq_adv_share_n1": [
+   0.051,
+   0.0495,
+   0.0526
+  ],
+  "sq_adv_share_by_nx": {
+   "1-1": 0.051,
+   "2-4": 0.1237,
+   "5-19": 0.5846,
+   "20-inf": 0.2407
+  },
+  "mean_sq_adv_per_group_n1_vs_rest": [
+   76.852,
+   119.727
+  ]
+ },
+ "remark_request_group": {
+  "groups_from_n1": [
+   0.4098,
+   0.4062,
+   0.4137
+  ],
+  "groups_with_signal": [
+   0.6429,
+   0.6396,
+   0.6461
+  ],
+  "sq_adv_share_n1": [
+   0.0963,
+   0.0939,
+   0.0988
+  ],
+  "sq_adv_share_by_nx": {
+   "1-1": 0.0963,
+   "2-4": 0.1963,
+   "5-19": 0.6018,
+   "20-inf": 0.1056
+  },
+  "mean_sq_adv_per_group_n1_vs_rest": [
+   7.614,
+   49.634
+  ]
+ },
+ "remark_request_batch": {
+  "groups_from_n1": [
+   0.4098,
+   0.4062,
+   0.4137
+  ],
+  "groups_with_signal": [
+   0.6429,
+   0.6396,
+   0.6461
+  ],
+  "sq_adv_share_n1": [
+   0.0788,
+   0.0767,
+   0.0811
+  ],
+  "sq_adv_share_by_nx": {
+   "1-1": 0.0788,
+   "2-4": 0.1705,
+   "5-19": 0.6171,
+   "20-inf": 0.1336
+  },
+  "mean_sq_adv_per_group_n1_vs_rest": [
+   19.712,
+   160.008
+  ]
+ }
+}

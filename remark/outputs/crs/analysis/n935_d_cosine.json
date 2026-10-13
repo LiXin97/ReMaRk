@@ -1,0 +1,346 @@
+{
+ "note": "readout (internal check, not pre-registered): cosine learning-rate schedule, 2B Reddit-v2, 4,000 steps.\n\nRuns 2B_{single,union}_group_s{3407,42}_p0c_ms4000_cos (Rank-GRPO / ReMaRk, --lr_scheduler cosine, peak 1e-6), locked on\nthe best validation per-row R@20 and tested once.\n(i) Steps for ReMaRk's validation curve to reach Rank-GRPO's best validation score and its step-2000 score, both from the\n    cosine runs of the same seed (first crossing, linear interpolation between validated steps; step 0 = the SFT start,\n    sft_qwen35_2B_step1500 validation R@20).\n(ii) Test ReMaRk - Rank-GRPO per seed (crs_compare paired bootstrap over contexts, 2,000 resamples, seed 42; per row and\n    per request), and over the two seeds the difference of the arms' mean test scores with a Welch 95% CI.\n(iii) Each cosine arm against the constant-lr runs of the same arm and seed: test paired differences (cosine - constant)\n    and the best validation score within 4,000 steps. s3407: the main 2,000-step runs and the 4,000-step constant runs\n    (2B_single_group_s3407_p0c_ms4000_lr1e-6, 2B_union_group_s3407_p0c_ms4000); s42: the main runs (test) and the first\n    4,000 steps of the 8,000-step runs 2B_*_group_s42_p0c_ms8000 (validation only).\nOutput: outputs/crs/analysis/n935_d_cosine.json",
+ "sft_val_R@20": 0.170939547124075,
+ "units": "test/diff values in points (x100)",
+ "per_seed": {
+  "3407": {
+   "runs": {
+    "single": "2B_single_group_s3407_p0c_ms4000_cos",
+    "union": "2B_union_group_s3407_p0c_ms4000_cos"
+   },
+   "locks": {
+    "single": 3000,
+    "union": 2750
+   },
+   "tests": {
+    "single": "test_2B_single_group_s3407_p0c_ms4000_cos_step3000",
+    "union": "test_2B_union_group_s3407_p0c_ms4000_cos_step2750"
+   },
+   "val_curves": {
+    "union": {
+     "250": 0.21296970042644858,
+     "500": 0.22745918257554795,
+     "750": 0.23936805810115652,
+     "1000": 0.24502068135859584,
+     "1250": 0.24818849928532932,
+     "1500": 0.25107190541539254,
+     "1750": 0.2526382575215223,
+     "2000": 0.25417633608370876,
+     "2250": 0.2548571470131088,
+     "2500": 0.2551238424770561,
+     "2750": 0.2579273292345108,
+     "3000": 0.2568068324612451,
+     "3250": 0.25619562861872125,
+     "3500": 0.2570026501172181,
+     "3750": 0.25652715693482275,
+     "4000": 0.2552196086484409
+    },
+    "single": {
+     "250": 0.20190607158828788,
+     "500": 0.21517404695061643,
+     "750": 0.22095989329225998,
+     "1000": 0.22924854182258692,
+     "1250": 0.2289323194169063,
+     "1500": 0.23108134799184205,
+     "1750": 0.23478500319740717,
+     "2000": 0.23583385749784372,
+     "2250": 0.2381373294668734,
+     "2500": 0.2410394333043476,
+     "2750": 0.2417729360300619,
+     "3000": 0.2426363724687741,
+     "3250": 0.24164060513231522,
+     "3500": 0.24109047259458546,
+     "3750": 0.24217729340588798,
+     "4000": 0.24261636690033034
+    }
+   },
+   "steps_to_rankgrpo_best_val": 894.5485670443453,
+   "rankgrpo_best_val": 0.2426363724687741,
+   "rankgrpo_best_val_step": 3000,
+   "steps_to_rankgrpo_step2000_val": 675.8074241410757,
+   "rankgrpo_step2000_val": 0.23583385749784372,
+   "test_remark_minus_rankgrpo": {
+    "row": {
+     "a": 22.381907792611212,
+     "b": 21.30145000639775,
+     "diff": 1.0804577862134597,
+     "ci_low": 0.6606331928369181,
+     "ci_high": 1.477471596450537,
+     "p_le_0": 0.0
+    },
+    "unit": {
+     "a": 23.46343703370481,
+     "b": 21.16318317929428,
+     "diff": 2.3002538544105304,
+     "ci_low": 1.5376522461454556,
+     "ci_high": 3.0656017846964456,
+     "p_le_0": 0.0
+    }
+   }
+  },
+  "42": {
+   "runs": {
+    "single": "2B_single_group_s42_p0c_ms4000_cos",
+    "union": "2B_union_group_s42_p0c_ms4000_cos"
+   },
+   "locks": {
+    "single": 4000,
+    "union": 2750
+   },
+   "tests": {
+    "single": "test_2B_single_group_s42_p0c_ms4000_cos_step4000",
+    "union": "test_2B_union_group_s42_p0c_ms4000_cos_step2750"
+   },
+   "val_curves": {
+    "union": {
+     "250": 0.21127425948411482,
+     "500": 0.22650889156019585,
+     "750": 0.23525256041611214,
+     "1000": 0.24227881698940304,
+     "1250": 0.24705437926830826,
+     "1500": 0.2524441997053244,
+     "1750": 0.2498727764157804,
+     "2000": 0.2531682861705794,
+     "2250": 0.2525023167551954,
+     "2500": 0.25515736121532495,
+     "2750": 0.25584560635213627,
+     "3000": 0.25488643658900456,
+     "3250": 0.25458057550349367,
+     "3500": 0.25474968936807035,
+     "3750": 0.25478585623962735,
+     "4000": 0.25471361765780326
+    },
+    "single": {
+     "250": 0.19939003591893298,
+     "500": 0.21066443485530978,
+     "750": 0.2207873961455746,
+     "1000": 0.22179432096658397,
+     "1250": 0.2285623696301883,
+     "1500": 0.23293860680503864,
+     "1750": 0.23075530192275465,
+     "2000": 0.23475376076192367,
+     "2250": 0.23566893934828656,
+     "2500": 0.23618403682077982,
+     "2750": 0.241082185387137,
+     "3000": 0.23995204180030127,
+     "3250": 0.23852245821140636,
+     "3500": 0.24109513882048997,
+     "4000": 0.24124099576917588
+    }
+   },
+   "steps_to_rankgrpo_best_val": 963.0734656000087,
+   "rankgrpo_best_val": 0.24124099576917588,
+   "rankgrpo_best_val_step": 4000,
+   "steps_to_rankgrpo_step2000_val": 735.7382620954655,
+   "rankgrpo_step2000_val": 0.23475376076192367,
+   "test_remark_minus_rankgrpo": {
+    "row": {
+     "a": 22.53382893765029,
+     "b": 21.418025062418426,
+     "diff": 1.1158038752318602,
+     "ci_low": 0.7369499668955184,
+     "ci_high": 1.4903005220054253,
+     "p_le_0": 0.0
+    },
+    "unit": {
+     "a": 23.054986791435418,
+     "b": 21.73788644212874,
+     "diff": 1.3171003493066844,
+     "ci_low": 0.6128639882721485,
+     "ci_high": 2.0215239115403865,
+     "p_le_0": 0.0
+    }
+   }
+  }
+ },
+ "welch_two_seeds": {
+  "row": {
+   "remark_mean": 22.45786836513075,
+   "rankgrpo_mean": 21.35973753440809,
+   "diff": 1.09813083072266,
+   "ci_low": 0.6585599931166647,
+   "ci_high": 1.5377016683286555,
+   "df": 1.8744501066981119
+  },
+  "unit": {
+   "remark_mean": 23.259211912570116,
+   "rankgrpo_mean": 21.45053481071151,
+   "diff": 1.8086771018586079,
+   "ci_low": 0.12334509323500033,
+   "ci_high": 3.4940091104822155,
+   "df": 1.8048744078201757
+  }
+ },
+ "vs_constant": {
+  "single_s3407": {
+   "main_2k": {
+    "val_run": "2B_single_group_s3407_p0c",
+    "best_val_within": 2000,
+    "const_best_val": 0.24191278951071196,
+    "cos_best_val": 0.2426363724687741,
+    "test": "test_2B_single_group_s3407_step2000",
+    "test_cos_minus_const": {
+     "row": {
+      "a": 21.30145000639775,
+      "b": 20.96521526670901,
+      "diff": 0.3362347396887425,
+      "ci_low": -0.05461678127514294,
+      "ci_high": 0.755937429209791,
+      "p_le_0": 0.042
+     },
+     "unit": {
+      "a": 21.16318317929428,
+      "b": 20.94287131126309,
+      "diff": 0.22031186803119093,
+      "ci_low": -0.4045897941512495,
+      "ci_high": 0.8475511818514678,
+      "p_le_0": 0.253
+     }
+    }
+   },
+   "const_4k": {
+    "val_run": "2B_single_group_s3407_p0c_ms4000_lr1e-6",
+    "best_val_within": 4000,
+    "const_best_val": 0.2490442919834571,
+    "cos_best_val": 0.2426363724687741,
+    "test": "test_2B_single_group_s3407_p0c_ms4000_lr1e-6_step4000",
+    "test_cos_minus_const": {
+     "row": {
+      "a": 21.30145000639775,
+      "b": 21.905296227665342,
+      "diff": -0.6038462212675936,
+      "ci_low": -1.0259973290342164,
+      "ci_high": -0.18587503717152218,
+      "p_le_0": 0.9985
+     },
+     "unit": {
+      "a": 21.16318317929428,
+      "b": 22.653404216471728,
+      "diff": -1.4902210371774498,
+      "ci_low": -2.2279229097394584,
+      "ci_high": -0.7438553834315236,
+      "p_le_0": 1.0
+     }
+    }
+   }
+  },
+  "union_s3407": {
+   "main_2k": {
+    "val_run": "2B_union_group_s3407_p0c",
+    "best_val_within": 2000,
+    "const_best_val": 0.2556689661146194,
+    "cos_best_val": 0.2579273292345108,
+    "test": "test_2B_union_group_step2000",
+    "test_cos_minus_const": {
+     "row": {
+      "a": 22.381907792611212,
+      "b": 22.53041353970365,
+      "diff": -0.14850574709244097,
+      "ci_low": -0.5111934648196992,
+      "ci_high": 0.19100713843804448,
+      "p_le_0": 0.803
+     },
+     "unit": {
+      "a": 23.46343703370481,
+      "b": 23.23532680535656,
+      "diff": 0.22811022834824984,
+      "ci_low": -0.4159983814457746,
+      "ci_high": 0.8344663753134166,
+      "p_le_0": 0.233
+     }
+    }
+   },
+   "const_4k": {
+    "val_run": "2B_union_group_s3407_p0c_ms4000",
+    "best_val_within": 4000,
+    "const_best_val": 0.26044630268279334,
+    "cos_best_val": 0.2579273292345108,
+    "test": "test_2B_union_group_s3407_p0c_ms4000_step3250",
+    "test_cos_minus_const": {
+     "row": {
+      "a": 22.381907792611212,
+      "b": 22.702469839523005,
+      "diff": -0.32056204691179474,
+      "ci_low": -0.6901218855236156,
+      "ci_high": 0.052533831383668066,
+      "p_le_0": 0.956
+     },
+     "unit": {
+      "a": 23.46343703370481,
+      "b": 23.741469340267383,
+      "diff": -0.2780323065625745,
+      "ci_low": -0.9197333491470706,
+      "ci_high": 0.3373417215724287,
+      "p_le_0": 0.797
+     }
+    }
+   }
+  },
+  "single_s42": {
+   "main_2k": {
+    "val_run": "2B_single_group_s42_p0c",
+    "best_val_within": 2000,
+    "const_best_val": 0.23858748595121584,
+    "cos_best_val": 0.24124099576917588,
+    "test": "test_2B_single_group_s42_step2000",
+    "test_cos_minus_const": {
+     "row": {
+      "a": 21.418025062418426,
+      "b": 21.066444283053894,
+      "diff": 0.3515807793645326,
+      "ci_low": -0.014384726358998658,
+      "ci_high": 0.7120181998808481,
+      "p_le_0": 0.0335
+     },
+     "unit": {
+      "a": 21.73788644212874,
+      "b": 21.632536413112973,
+      "diff": 0.10535002901576151,
+      "ci_low": -0.485190065570176,
+      "ci_high": 0.6793532377537987,
+      "p_le_0": 0.378
+     }
+    }
+   },
+   "const_8k_first4k": {
+    "val_run": "2B_single_group_s42_p0c_ms8000",
+    "best_val_within": 4000,
+    "const_best_val": 0.24920227847611753,
+    "cos_best_val": 0.24124099576917588
+   }
+  },
+  "union_s42": {
+   "main_2k": {
+    "val_run": "2B_union_group_s42_p0c",
+    "best_val_within": 2000,
+    "const_best_val": 0.25701511363824125,
+    "cos_best_val": 0.25584560635213627,
+    "test": "test_2B_union_group_s42_p0c_step2000",
+    "test_cos_minus_const": {
+     "row": {
+      "a": 22.53382893765029,
+      "b": 22.451486963977935,
+      "diff": 0.08234197367235715,
+      "ci_low": -0.2804836125110322,
+      "ci_high": 0.4174201115340008,
+      "p_le_0": 0.341
+     },
+     "unit": {
+      "a": 23.054986791435418,
+      "b": 22.983774707885036,
+      "diff": 0.07121208355038368,
+      "ci_low": -0.6374671291124178,
+      "ci_high": 0.6908918261126809,
+      "p_le_0": 0.4205
+     }
+    }
+   },
+   "const_8k_first4k": {
+    "val_run": "2B_union_group_s42_p0c_ms8000",
+    "best_val_within": 4000,
+    "const_best_val": 0.26075152704867405,
+    "cos_best_val": 0.25584560635213627
+   }
+  }
+ }
+}

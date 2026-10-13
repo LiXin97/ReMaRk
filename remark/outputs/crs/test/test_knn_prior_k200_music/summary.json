@@ -1,0 +1,15 @@
+{
+ "model": "bge-kNN prior k=200 (training split only; same-submission neighbours excluded)",
+ "data": "remark/data/crs/music/sft_dataset",
+ "split": "test",
+ "n": 15893,
+ "unique_contexts": 1931,
+ "same_submission_neighbours_excluded": 128,
+ "in_catalog_rate": 1.0,
+ "truncate_R@5": 0.03698451123247272,
+ "truncate_N@5": 0.026919803328154752,
+ "truncate_R@10": 0.058811765165615836,
+ "truncate_N@10": 0.034084173765553456,
+ "truncate_R@20": 0.09172310390819939,
+ "truncate_N@20": 0.04317816864890654
+}

@@ -1,0 +1,176 @@
+{
+ "2B": {
+  "probe_R@20_row": 0.007688759488546929,
+  "share_requests_recalled": 0.05804878048780488,
+  "rows_in_recalled_requests": 0.14345606999635435,
+  "recalled": {
+   "requests": 119,
+   "remark_minus_rankgrpo_row": 0.013451646524518092,
+   "ci95": [
+    0.0017213029234979553,
+    0.02431920146333416
+   ]
+  },
+  "not_recalled": {
+   "requests": 1931,
+   "remark_minus_rankgrpo_row": 0.01602050041321353,
+   "ci95": [
+    0.010989962324091973,
+    0.021103050607249155
+   ]
+  },
+  "all": {
+   "requests": 2050,
+   "remark_minus_rankgrpo_row": 0.01565198272994643,
+   "ci95": [
+    0.01102082586712885,
+    0.0205528823567408
+   ]
+  }
+ },
+ "4B": {
+  "probe_R@20_row": 0.01818424196932708,
+  "share_requests_recalled": 0.12634146341463415,
+  "rows_in_recalled_requests": 0.277706890266132,
+  "recalled": {
+   "requests": 259,
+   "remark_minus_rankgrpo_row": 0.010689122463972696,
+   "ci95": [
+    0.0019510340041603042,
+    0.019305296558312278
+   ]
+  },
+  "not_recalled": {
+   "requests": 1791,
+   "remark_minus_rankgrpo_row": 0.01726830031086388,
+   "ci95": [
+    0.01192446014782898,
+    0.022902509017839613
+   ]
+  },
+  "all": {
+   "requests": 2050,
+   "remark_minus_rankgrpo_row": 0.015441217290495904,
+   "ci95": [
+    0.010964532855555403,
+    0.01995901664770674
+   ]
+  }
+ },
+ "9B": {
+  "probe_R@20_row": 0.03196682732705456,
+  "share_requests_recalled": 0.18585365853658536,
+  "rows_in_recalled_requests": 0.38452424352898285,
+  "recalled": {
+   "requests": 381,
+   "remark_minus_rankgrpo_row": 0.010380883944043798,
+   "ci95": [
+    0.0029007406366224867,
+    0.017618139811937474
+   ]
+  },
+  "not_recalled": {
+   "requests": 1669,
+   "remark_minus_rankgrpo_row": 0.017220272106527275,
+   "ci95": [
+    0.011554239225331168,
+    0.02294106940862583
+   ]
+  },
+  "all": {
+   "requests": 2050,
+   "remark_minus_rankgrpo_row": 0.014590361547147235,
+   "ci95": [
+    0.010179593783421726,
+    0.019274191285193178
+   ]
+  }
+ },
+ "2B_union_batch": {
+  "probe_R@20_row": 0.007688759488546929,
+  "share_requests_recalled": 0.05804878048780488,
+  "rows_in_recalled_requests": 0.14345606999635435,
+  "recalled": {
+   "requests": 119,
+   "remark_minus_rankgrpo_row": 0.0071372722369417016,
+   "ci95": [
+    -0.0028184681330116496,
+    0.01785975225508947
+   ]
+  },
+  "not_recalled": {
+   "requests": 1931,
+   "remark_minus_rankgrpo_row": 0.00897525066239506,
+   "ci95": [
+    0.00480882196777307,
+    0.013137416644929028
+   ]
+  },
+  "all": {
+   "requests": 2050,
+   "remark_minus_rankgrpo_row": 0.008711581500741434,
+   "ci95": [
+    0.0047369102858854815,
+    0.012792565103473959
+   ]
+  }
+ },
+ "4B_union_batch": {
+  "probe_R@20_row": 0.01818424196932708,
+  "share_requests_recalled": 0.12634146341463415,
+  "rows_in_recalled_requests": 0.277706890266132,
+  "recalled": {
+   "requests": 259,
+   "remark_minus_rankgrpo_row": 0.012306764442423433,
+   "ci95": [
+    0.0034240776813093494,
+    0.021655442714580343
+   ]
+  },
+  "not_recalled": {
+   "requests": 1791,
+   "remark_minus_rankgrpo_row": 0.015424687377924849,
+   "ci95": [
+    0.01000402657565082,
+    0.02074501326137693
+   ]
+  },
+  "all": {
+   "requests": 2050,
+   "remark_minus_rankgrpo_row": 0.0145588186954173,
+   "ci95": [
+    0.00974560646021502,
+    0.019190795750824274
+   ]
+  }
+ },
+ "9B_union_batch": {
+  "probe_R@20_row": 0.03196682732705456,
+  "share_requests_recalled": 0.18585365853658536,
+  "rows_in_recalled_requests": 0.38452424352898285,
+  "recalled": {
+   "requests": 381,
+   "remark_minus_rankgrpo_row": 0.008108651432259379,
+   "ci95": [
+    0.0004056073057971897,
+    0.01550177997003481
+   ]
+  },
+  "not_recalled": {
+   "requests": 1669,
+   "remark_minus_rankgrpo_row": 0.018864181485339245,
+   "ci95": [
+    0.013163126212678419,
+    0.02467643164893161
+   ]
+  },
+  "all": {
+   "requests": 2050,
+   "remark_minus_rankgrpo_row": 0.014728419427925467,
+   "ci95": [
+    0.010320669334787341,
+    0.019313876470492146
+   ]
+  }
+ }
+}
