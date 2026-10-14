@@ -215,10 +215,13 @@ Code: Apache-2.0 (`LICENSE`). The IDs and labels in `data_release/` are released
 ## Citation
 
 ```bibtex
-@misc{li2026remark,
-  title  = {Many Right Answers, One Training Example: Removing Responder Noise from GRPO for LLM Recommenders},
-  author = {Li, Xin and Jiang, Hao and Guo, Jinghao and Lin, Weisi and Yuen, Chau},
-  year   = {2026},
-  note   = {Preprint; arXiv link coming soon}
+@misc{li2026rightanswerstrainingexample,
+      title={Many Right Answers, One Training Example: Removing Responder Noise from GRPO for LLM Recommenders},
+      author={Xin Li and Hao Jiang and Jinghao Guo and Weisi Lin and Chau Yuen},
+      year={2026},
+      eprint={2610.17771},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2610.17771},
 }
 ```

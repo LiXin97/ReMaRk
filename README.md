@@ -7,7 +7,7 @@
 [Xin Li](https://lixin.ai), Hao Jiang, Jinghao Guo, Weisi Lin, Chau Yuen<br>
 Nanyang Technological University, Singapore
 
-[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-lightgrey?logo=arxiv)](#citation)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.17771-b31b1b?logo=arxiv)](https://arxiv.org/abs/2610.17771)
 [![Project page](https://img.shields.io/badge/Project-page-059669)](https://lixin.ai/ReMaRk)
 [![Models](https://img.shields.io/badge/%F0%9F%A4%97%20Models-23%20checkpoints-ffcc4d)](https://huggingface.co/collections/XINLI1997/remark-many-right-answers-one-training-example-6acdc1cf30ec71aff2b4bd62)
 [![Data](https://img.shields.io/badge/%F0%9F%A4%97%20Data-ReMaRk--data-ffcc4d)](https://huggingface.co/datasets/XINLI1997/ReMaRk-data)
@@ -27,7 +27,8 @@ Nanyang Technological University, Singapore
 
 ## News
 
-- **2026-10-13** Code, data and 23 checkpoints are public; the [project page](https://lixin.ai/ReMaRk) is online. The arXiv link follows soon.
+- **2026-10-14** The paper is on arXiv: [2610.17771](https://arxiv.org/abs/2610.17771).
+- **2026-10-13** Code, data and 23 checkpoints are public; the [project page](https://lixin.ai/ReMaRk) is online.
 
 ## The idea in 30 seconds
 
@@ -139,11 +140,14 @@ docs/REPRODUCE.md full reproduction guide
 ## Citation
 
 ```bibtex
-@misc{li2026remark,
-  title  = {Many Right Answers, One Training Example: Removing Responder Noise from GRPO for LLM Recommenders},
-  author = {Li, Xin and Jiang, Hao and Guo, Jinghao and Lin, Weisi and Yuen, Chau},
-  year   = {2026},
-  note   = {Preprint; arXiv link coming soon}
+@misc{li2026rightanswerstrainingexample,
+      title={Many Right Answers, One Training Example: Removing Responder Noise from GRPO for LLM Recommenders},
+      author={Xin Li and Hao Jiang and Jinghao Guo and Weisi Lin and Chau Yuen},
+      year={2026},
+      eprint={2610.17771},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2610.17771},
 }
 ```
 
